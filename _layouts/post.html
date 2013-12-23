@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<h1 class="title"><a href="#">{{ page.title }}</a></h1>
+<p class="subtitle">{{ page.subtitle }}</p>
+<p class="toread"></p>
+
+<article>
+{{ content }}
+</article>
+
+<script>
+
+(function () {
+
+	'use strict';
+
+	var toread = document.querySelector('.toread'),
+		minutes = Math.ceil(document.querySelector('article').innerText.match(/\s+/g).length / 180);
+
+	toread.innerHTML = 'about ' + minutes + ' minutes to read';
+
+}());
+
+</script>

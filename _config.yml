@@ -1,0 +1,4 @@
+name: Scott Doxey
+markdown: redcarpet
+pygments: true
+permalink: articles/:title
