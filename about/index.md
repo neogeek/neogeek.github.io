@@ -1,14 +1,8 @@
 ---
-layout: default
-title: About - Scott Doxey
+layout: page
+title: Profile
 ---
 
-#About
+![profile](/images/profile.jpg)
 
-A self-proclaimed code monkey, Scott is a proficient front and back end developer. Scott brings over ten years of experience in all things web development. More recently he has taken up interest in building native apps in iOS and game development. When not focusing on new ventures, Scott can be found updating any one of his open source libraries or enjoying the great indoors.
-
-<ul>
-	<li><i class="fa fa-github"></i> <a href="http://github.com/neogeek" target="_blank">github/neogeek</a></li>
-	<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/neogeek" target="_blank">twitter/neogeek</a></li>
-	<li><i class="fa fa-linkedin"></i> <a href="http://linkein.com/in/neogeek" target="_blank">linkedin/neogeek</a></li>
-</ul>
+Hi! I'm Scott Doxey, a Boston based web developer who loves to tinker. I'm currently working as a User Experience Consultant at [Cantina](http://cantina.co). When I'm not crafting awesome user experiences at Cantina you can find me hacking away at any one of my open source projects. Most recently I have been developing an HTML5 Canvas library called [Facade.js](http://github.com/neogeek/facade.js). Previously I released [Reader.py](https://github.com/neogeek/reader.py) an inbox-zero take on RSS readers, [doxdox](https://github.com/neogeek/doxdox) a dox documentation generator and the [Overseer Framework](https://github.com/neogeek/Overseer-Framework) a PHP micro-framework.
