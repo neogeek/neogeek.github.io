@@ -13,12 +13,18 @@ title: Scott Doxey
 
 <hr>
 
-{% for post in site.posts %}
+{% assign current_year = first_post.date | date: "%Y" %}
 
-{% if post != first_post %}
+{% for post in site.posts offset: 1 %}
 
-<p>{{ post.date | date_to_string }} &mdash; <a href="{{ post.url }}">{{ post.title }}</a></p>
+{% if current_year != post.year %}
+
+{% assign current_year = post.year %}
+
+<h2>{{ current_year }}</h2>
 
 {% endif %}
+
+<p>{{ post.date | date_to_string }} &mdash; <a href="{{ post.url }}">{{ post.title }}</a></p>
 
 {% endfor %}

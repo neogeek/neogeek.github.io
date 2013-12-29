@@ -1,6 +1,7 @@
 ---
 layout: post
 title: MAMP & PEAR
+year: 2010
 ---
 
 Upon installation, MAMP already has a great deal of additional packages available to you. Besides the obvious Apache, PHP and MySQL components, MAMP also comes with Freetype, curl and gd pre-installed. The default MAMP installation can also be extended to include other components. PEAR is a distribution system for PHP libraries such as HTTP_OAuth, an implementation of the OAuth 1.0a spec. This article will cover the basics of setting up MAMP and installing PEAR libraries.
