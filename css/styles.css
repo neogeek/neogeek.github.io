@@ -43,9 +43,9 @@ blockquote {
 
 hr {
 	margin: 2em auto;
-	width: 20%;
+	width: 200px;
 	border: 0;
-	border-top: .1em solid #ddd;
+	border-top: 1px solid #ddd;
 }
 
 header {
