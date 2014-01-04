@@ -20,6 +20,14 @@ layout: default
 
 	toread.innerHTML = 'about ' + minutes + ' minutes to read';
 
+	Array.prototype.slice.call(document.querySelectorAll('h2, h3')).forEach(function (obj) {
+
+		obj.setAttribute('id', obj.innerText.toLowerCase().replace(/[^a-z0-9]+/g, '-'));
+
+		obj.innerHTML = '<a href="#' + obj.getAttribute('id') + '">' + obj.innerText + '</a>';
+
+	});
+
 }());
 
 </script>
