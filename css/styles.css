@@ -23,15 +23,19 @@ pre {
 	padding: 0;
 	font-family: 'Monaco', monospace;
 	font-size: .7em;
-	line-height: 1.3em;
+	line-height: 1.1em;
 	overflow: hidden;
 }
 
-code {
+pre code {
 	display: block;
 	padding: 1em;
 	background: #f3f3f3;
 	overflow: auto;
+}
+
+code {
+	background: #f3f3f3;
 }
 
 blockquote {
@@ -77,7 +81,7 @@ footer a {
 	margin: 1em auto;
 	padding: 1em 1em 0 1em;
 	max-width: 800px;
-	font-family: 'chaparral-pro', 'Hoefler Text', 'Palatino', serif;
+	font-family: 'chaparral-pro', 'Palatino', monospace;
 	font-weight: 100;
 	font-size: 1.3em;
 	line-height: 1.4em;
