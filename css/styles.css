@@ -22,9 +22,13 @@ a {
 pre {
 	padding: 0;
 	font-family: 'Monaco', monospace;
-	font-size: .7em;
-	line-height: 1.1em;
 	overflow: hidden;
+}
+
+code {
+	padding: .5em;
+	font-size: .7em;
+	line-height: 1.3em;
 }
 
 pre code {
