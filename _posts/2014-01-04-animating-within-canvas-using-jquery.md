@@ -10,7 +10,8 @@ If you are like me and completely enamoued with HTML 5's canvas tag you have at 
 Recently I was exploring simple ways of animating entities in canvas and happened upon this trick with the jQuery animate method.
 
 ```javascript
-$({ _x: 0 }).animate({ _x: 100 }, 500, 'swing');
+var box = { _x: 0, _y: 0 };
+$(box).animate({ _x: 100 }, 500, 'swing');
 ```
 
 Be aware, the use of an underscore in front of each key is required as the object passed to animate is not a valid DOM object.
