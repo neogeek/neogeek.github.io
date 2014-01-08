@@ -5,7 +5,7 @@ subtitle: Making animating within canvas easy using jQuery.
 year: 2014
 ---
 
-If you are like me and completely enamoued with HTML 5's canvas tag you have at one point or another setup animations for entities drawn in canvas.
+If you are like me and completely enamored with HTML 5's canvas tag you have at one point or another setup animations for entities drawn in canvas.
 
 Recently I was exploring simple ways of animating entities in canvas and happened upon this trick with the jQuery animate method.
 
