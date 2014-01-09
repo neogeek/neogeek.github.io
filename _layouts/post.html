@@ -13,20 +13,20 @@ layout: default
 
 (function () {
 
-	'use strict';
+    'use strict';
 
-	var toread = document.querySelector('.toread'),
-		minutes = Math.ceil(document.querySelector('article').innerText.match(/\s+/g).length / 180);
+    var toread = document.querySelector('.toread'),
+        minutes = Math.ceil(document.querySelector('article').innerText.match(/\s+/g).length / 180);
 
-	toread.innerHTML = 'about ' + minutes + ' minutes to read';
+    toread.innerHTML = 'about ' + minutes + ' minutes to read';
 
-	Array.prototype.slice.call(document.querySelectorAll('h2, h3')).forEach(function (obj) {
+    Array.prototype.slice.call(document.querySelectorAll('h2, h3')).forEach(function (obj) {
 
-		obj.setAttribute('id', obj.innerText.toLowerCase().replace(/[^a-z0-9]+/g, '-'));
+        obj.setAttribute('id', obj.innerText.toLowerCase().replace(/[^a-z0-9]+/g, '-'));
 
-		obj.innerHTML = '<a href="#' + obj.getAttribute('id') + '">' + obj.innerText + '</a>';
+        obj.innerHTML = '<a href="#' + obj.getAttribute('id') + '">' + obj.innerText + '</a>';
 
-	});
+    });
 
 }());
 

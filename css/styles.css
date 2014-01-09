@@ -1,122 +1,122 @@
 * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-font-smoothing: antialiased;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-	margin: 0;
-	font-family: 'Helvetica Neue', sans-serif;
-	font-size: 16px;
-	line-height: 1.3em;
-	color: #111;
-	border-top: 1em solid #9D64E6;
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 1.3em;
+    color: #111;
+    border-top: 1em solid #9D64E6;
 }
 
 a {
-	color: #9D64E6;
-	text-decoration: none;
+    color: #9D64E6;
+    text-decoration: none;
 }
 
 pre {
-	padding: 0;
-	overflow: hidden;
+    padding: 0;
+    overflow: hidden;
 }
 
 code {
-	padding: .5em;
-	font-family: 'Monaco', monospace;
-	font-size: .5em;
-	line-height: 1.3em;
-	background: #f3f3f3;
+    padding: .5em;
+    font-family: 'Monaco', monospace;
+    font-size: .5em;
+    line-height: 1.3em;
+    background: #f3f3f3;
 }
 
 pre code {
-	display: block;
-	padding: 1em;
-	line-height: 1.7em;
-	overflow: auto;
+    display: block;
+    padding: 1em;
+    line-height: 1.7em;
+    overflow: auto;
 }
 
 blockquote {
-	margin: 2em auto;
-	font-size: 1.2em;
-	font-style: italic;
-	text-align: center;
+    margin: 2em auto;
+    font-size: 1.2em;
+    font-style: italic;
+    text-align: center;
 }
 
 hr {
-	margin: 2em auto;
-	width: 200px;
-	border: 0;
-	border-top: 1px solid #ddd;
+    margin: 2em auto;
+    width: 200px;
+    border: 0;
+    border-top: 1px solid #ddd;
 }
 
 header {
-	text-align: center;
+    text-align: center;
 }
 
 footer {
-	padding: 5em 0;
-	font-size: .8em;
-	color: #555;
-	text-align: center;
+    padding: 5em 0;
+    font-size: .8em;
+    color: #555;
+    text-align: center;
 }
 
 footer a {
-	color: inherit;
+    color: inherit;
 }
 
 .logo {
-	margin: 2em auto 0;
-	height: 7em;
+    margin: 2em auto 0;
+    height: 7em;
 }
 
 .logo:after {
-	display: block;
-	content: 'Scott Doxey';
+    display: block;
+    content: 'Scott Doxey';
 }
 
 .content {
-	margin: 1em auto;
-	padding: 1em 1em 0 1em;
-	max-width: 800px;
-	font-family: 'chaparral-pro', 'Palatino', monospace;
-	font-weight: 100;
-	font-size: 1.3em;
-	line-height: 1.4em;
+    margin: 1em auto;
+    padding: 1em 1em 0 1em;
+    max-width: 800px;
+    font-family: 'chaparral-pro', 'Palatino', monospace;
+    font-weight: 100;
+    font-size: 1.3em;
+    line-height: 1.4em;
 }
 
 .content img {
-	width: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .title {
-	margin: 0;
-	font-family: 'franklin-gothic-urw', 'Helvetica Neue', sans-serif;
-	font-size: 2em;
-	line-height: 1em;
-	clear: both;
+    margin: 0;
+    font-family: 'franklin-gothic-urw', 'Helvetica Neue', sans-serif;
+    font-size: 2em;
+    line-height: 1em;
+    clear: both;
 }
 
 .subtitle {
-	font-size: 1.3em;
-	line-height: 1.3em;
-	color: #444;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    color: #444;
 }
 
 .toread {
-	font-size: .9em;
-	font-style: italic;
-	opacity: .5;
+    font-size: .9em;
+    font-style: italic;
+    opacity: .5;
 }
 
 @media screen and (min-width: 600px) {
 
-	body {
-		font-size: 1.3em;
-	}
+    body {
+        font-size: 1.3em;
+    }
 
 }
