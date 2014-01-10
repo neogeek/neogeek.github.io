@@ -14,10 +14,12 @@ For package/theme management I use the popular [Package Control](https://sublime
 
 - [GitGutter](https://github.com/jisaacks/GitGutter)
 - [MarkdownEditing](https://github.com/ttscoff/MarkdownEditing)
+- [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter)
 
 ##Theme
 
 - [Dracula](https://github.com/zenorocha/dracula-theme)
+- [Spacegray](https://github.com/kkga/spacegray)
 
 ##Settings
 
@@ -33,10 +35,13 @@ For package/theme management I use the popular [Package Control](https://sublime
 	"font_size": 14,
 	"ignored_packages":
 	[
-		"Markdown",
-		"Vintage"
+		"Vintage",
+		"Markdown"
 	],
 	"scroll_past_end": true,
+	"tab_size": 4,
+	"theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true
 }

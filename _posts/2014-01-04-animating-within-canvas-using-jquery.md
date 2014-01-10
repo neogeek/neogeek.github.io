@@ -16,7 +16,7 @@ $(box).animate({ _x: 100 }, 500, 'swing');
 
 Be aware, the use of an underscore in front of each key is required as the object passed to animate is not a valid DOM object.
 
-With the jQuery library you can set the easing of an animation to either linear or swing. However, if you also include jQuery UI you will have access to 10 more types of easing (listed below).
+With the jQuery library you can set the easing of an animation to either linear or swing. However, if you also include jQuery UI you will have access to 30 additional types of easing (listed below).
 
 - easeInQuad
 - easeOutQuad
