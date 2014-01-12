@@ -10,6 +10,8 @@ layout: default
 {{ content }}
 </article>
 
+<p class="question_or_comments"><i>If you have any questions or comments regarding this article please let me know at <a href="mailto:%email%">%email%</a>.</i></p>
+
 <script>
 
 (function () {
@@ -28,6 +30,18 @@ layout: default
         obj.innerHTML = '<a href="#' + obj.getAttribute('id') + '">' + obj.innerText + '</a>';
 
     });
+
+}());
+
+(function () {
+
+    'use strict';
+
+    var link = document.querySelector('a[href^="mailto:"]'),
+        email_address = window.atob('aGVsbG9Ac2NvdHRkb3hleS5jb20=');
+
+    link.setAttribute('href', 'mailto:' + email_address + '?subject=Re: ' + document.title);
+    link.innerHTML = email_address;
 
 }());
 

@@ -113,6 +113,10 @@ footer a {
     opacity: .5;
 }
 
+.question_or_comments {
+    margin-top: 3em;
+}
+
 @media screen and (min-width: 600px) {
 
     body {
