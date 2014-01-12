@@ -1,15 +1,14 @@
 ---
 layout: default
-title: Scott Doxey
 ---
 
 {% assign first_post = site.posts.first %}
 
-<h2><a href="{{ first_post.url }}">{{ first_post.title }}</a></h2>
+<h1 class="title"><a href="{{ first_post.url }}">{{ first_post.title }}</a></h1>
 
 {% if first_post.description %}<p>{{ first_post.description }}</p>{% endif %}
 
-{% if first_post.image %}<a href="{{ first_post.url }}"><img src="{{ first_post.image }}" /></a>{% endif %}
+{% if first_post.image %}<p><a href="{{ first_post.url }}"><img src="{{ first_post.image }}" /></a></p>{% endif %}
 
 <hr>
 
