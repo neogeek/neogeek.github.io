@@ -7,7 +7,7 @@
 body {
     margin: 0;
     font-family: 'Helvetica Neue', sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.3em;
     color: #111;
     border-top: 1em solid #1FB1D8;
@@ -76,11 +76,6 @@ footer a {
 .logo {
     margin: 2em auto 0;
     height: 7em;
-}
-
-.logo:after {
-    display: block;
-    content: 'Scott Doxey';
 }
 
 .content {
