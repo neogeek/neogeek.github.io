@@ -5,7 +5,7 @@
     var toread = document.querySelector('.toread'),
         minutes = document.querySelector('article').innerText.match(/\s+/g).length / 180,
         links = document.querySelectorAll('a[href^="mailto:"]'),
-        email_address = window.atob('aGVsbG9Ac2NvdHRkb3hleS5jb20=');;
+        email_address = window.atob('aGVsbG9Ac2NvdHRkb3hleS5jb20=');
 
     // Display duration to read per article (based on 180 words a minute).
 
