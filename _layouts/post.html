@@ -12,37 +12,4 @@ layout: default
 
 <p class="question_or_comments"><i>If you have any questions or comments regarding this article please let me know at <a href="mailto:%email%">%email%</a>.</i></p>
 
-<script>
-
-(function () {
-
-    'use strict';
-
-    var toread = document.querySelector('.toread'),
-        minutes = Math.ceil(document.querySelector('article').innerText.match(/\s+/g).length / 180);
-
-    toread.innerHTML = 'about ' + minutes + ' minutes to read';
-
-    Array.prototype.slice.call(document.querySelectorAll('h2, h3')).forEach(function (obj) {
-
-        obj.setAttribute('id', obj.innerText.toLowerCase().replace(/[^a-z0-9]+/g, '-'));
-
-        obj.innerHTML = '<a href="#' + obj.getAttribute('id') + '">' + obj.innerText + '</a>';
-
-    });
-
-}());
-
-(function () {
-
-    'use strict';
-
-    var link = document.querySelector('a[href^="mailto:"]'),
-        email_address = window.atob('aGVsbG9Ac2NvdHRkb3hleS5jb20=');
-
-    link.setAttribute('href', 'mailto:' + email_address + '?subject=Re: ' + document.title);
-    link.innerHTML = email_address;
-
-}());
-
-</script>
+<script src="/js/article.js"></script>
