@@ -4,18 +4,26 @@
 
     var toread = document.querySelector('.toread'),
         minutes = document.querySelector('article').innerText.match(/\s+/g).length / 180,
+        minutes_ceil = Math.ceil(minutes),
+        minutes_round = Math.round(minutes),
         links = document.querySelectorAll('a[href^="mailto:"]'),
         email_address = window.atob('aGVsbG9Ac2NvdHRkb3hleS5jb20=');
 
     // Display duration to read per article (based on 180 words a minute).
 
-    if (Math.ceil(minutes) === Math.round(minutes)) {
+    if (minutes_ceil === minutes_round) {
 
-        toread.innerHTML = 'about ' + Math.ceil(minutes) + ' minutes to read';
+        toread.innerHTML = 'about ' + minutes_ceil + ' minutes to read';
 
     } else {
 
-        toread.innerHTML = 'less then ' + Math.ceil(minutes) + ' minutes to read';
+        toread.innerHTML = 'less than ' + minutes_ceil + ' minutes to read';
+
+    }
+
+    if (minutes_ceil === 1) {
+
+        toread.innerHTML = toread.innerHTML.replace('minutes', 'minute');
 
     }
 
