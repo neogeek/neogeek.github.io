@@ -3,17 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1">
-<title>{{ site.name }} {% if page.title %} &mdash; {{ page.title }}{% endif %}</title>
+<title>{{ site.name }}{% if page.title %} &mdash; {{ page.title }}{% endif %}</title>
 
 <link rel="stylesheet" type="text/css" href="/css/styles.css">
 <link rel="stylesheet" type="text/css" href="/css/syntax.css">
 
-<link rel="image_src" href="http://neo-geek.net/images/logo.png">
+<link rel="image_src" href="{{ site.url }}/images/logo.png">
 
 <link rel="apple-touch-icon" href="/images/touch-icon-iphone.png">
 <link rel="apple-touch-icon" sizes="76x76" href="/images/touch-icon-ipad.png">
 <link rel="apple-touch-icon" sizes="120x120" href="/images/touch-icon-iphone-retina.png">
 <link rel="apple-touch-icon" sizes="152x152" href="/images/touch-icon-ipad-retina.png">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="neogeek">
+<meta name="twitter:title" content="{{ site.name }}{% if page.title %} — {{ page.title }}{% endif %}">
+<meta name="twitter:domain" content="{{ site.url }}">
+
+{% if page.path contains "_posts" %}
+<meta name="twitter:description" content="{{ page.content }}">
+{% else %}
+<meta name="twitter:description" content="Hi! I'm Scott Doxey, a Boston based web developer who loves to tinker. I'm currently working as a User Experience Consultant at Cantina. When I'm not crafting awesome user experiences at Cantina you can find me hacking away at any one of my open source projects. Most recently I have been developing an HTML5 Canvas library called Facade.js. Previously I released Reader.py an inbox-zero take on RSS readers, doxdox a dox documentation generator and the Overseer Framework a PHP micro-framework.">
+{% endif %}
+<meta name="twitter:creator" content="neogeek">
+
+{% if page.image %}
+<meta name="twitter:image:src" content="{{ site.url }}{{ page.image }}">
+{% else %}
+<meta name="twitter:image:src" content="{{ site.url }}/images/logo.png">
+{% endif %}
 
 <script type="text/javascript" src="//use.typekit.net/buz5exa.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
