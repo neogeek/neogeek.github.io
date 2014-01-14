@@ -2,3 +2,4 @@ name: Scott Doxey
 markdown: redcarpet
 pygments: true
 permalink: articles/:title
+url: http://neo-geek.net
