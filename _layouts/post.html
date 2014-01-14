@@ -12,7 +12,7 @@ layout: default
 <img src="{{ page.image }}" />
 {% endif %}
 
-{{ description }}
+{{ page.description | markdownify }}
 
 {{ content }}
 
