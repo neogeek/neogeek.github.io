@@ -1,11 +1,10 @@
 ---
 layout: post
 title: The Impossible Triangle
+description: I don't consider myself the artistic type. I'd like to be, but my mind works in a more programatic way. The anxiety of making a mistake while drawing with pen and paper or the difficulty of using the pen tool to draw _extactly_ what I see in my mind is often too great for me to create.
 image: /images/posts/the-impossible-triangle/impossible-triangle-header.jpg
 year: 2014
 ---
-
-I don't consider myself the artistic type. I'd like to be, but my mind works in a more programatic way. The anxiety of making a mistake while drawing with pen and paper or the difficulty of using the pen tool to draw _extactly_ what I see in my mind is often too great for me to create.
 
 So when I did have the drive to create something, I utilized the tools most familiar to me; SVG and ImageMagick.
 

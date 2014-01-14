@@ -1,10 +1,9 @@
 ---
 layout: post
 title: PHP & ImageMagick
+description: While the built-in PHP library GD is usually sufficient for modifying and/or creating images, it is always a good idea to cultivate multiple alternatives. ImageMagick is a command-line based utility which provides a multitude of functionalities from resizing to converting file formats. While not normally installed on most servers, it is easy to set up providing you have SSH access. The server specific instructions for setting up ImageMagick should be readily available through your hosting provider's control panel. This article will go over how to install ImageMagick locally (Mac instructions only) and basic PHP usage.
 year: 2014
 ---
-
-While the built-in PHP library GD is usually sufficient for modifying and/or creating images, it is always a good idea to cultivate multiple alternatives. ImageMagick is a command-line based utility which provides a multitude of functionalities from resizing to converting file formats. While not normally installed on most servers, it is easy to set up providing you have SSH access. The server specific instructions for setting up ImageMagick should be readily available through your hosting provider's control panel. This article will go over how to install ImageMagick locally (Mac instructions only) and basic PHP usage.
 
 ##Initial Setup
 
