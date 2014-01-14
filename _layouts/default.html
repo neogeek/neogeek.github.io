@@ -8,7 +8,11 @@
 <link rel="stylesheet" type="text/css" href="/css/styles.css">
 <link rel="stylesheet" type="text/css" href="/css/syntax.css">
 
+{% if page.image %}
+<link rel="image_src" href="{{ site.url }}{{ page.image }}">
+{% else %}
 <link rel="image_src" href="{{ site.url }}/images/logo.png">
+{% endif %}
 
 <link rel="apple-touch-icon" href="/images/touch-icon-iphone.png">
 <link rel="apple-touch-icon" sizes="76x76" href="/images/touch-icon-ipad.png">
