@@ -3,6 +3,14 @@ layout: page
 title: Projects
 ---
 
+##iOS Device SVG Templates
+
+A growing collection of iOS Devices built in SVG. Each template can be rendered with screenshots of appropriate sizes.
+
+![](/images/projects/ios-device-svg-templates.png)
+
+[Visit iOS Device SVG Templates on GitHub](https://github.com/neogeek/ios-device-svg-templates)
+
 ##Facade.js
 
 Facade.js is an HTML5 canvas libary built to make creating and manipulating shapes easy. Built in JavaScript, supports AMD and deployed on bower.
