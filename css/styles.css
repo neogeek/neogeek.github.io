@@ -122,6 +122,25 @@ footer a {
     margin-top: 3em;
 }
 
+.search {
+    display: block;
+    margin: 0 auto;
+    padding: .25em;
+    font-family: Helvetica;
+    font-size: .8em;
+}
+
+.hidden {
+    display: none;
+}
+
+a[href*="github.com"]:after {
+    content: ' ' attr(href);
+    font-size: .9em;
+    font-style: italic;
+    color: #111;
+}
+
 @media screen and (min-width: 600px) {
 
     body {

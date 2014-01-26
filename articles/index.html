@@ -3,6 +3,8 @@ layout: default
 title: Articles
 ---
 
+<input type="text" size="30" class="search" placeholder="Search articles by keyword" autocomplete="off" spellcheck="false" />
+
 {% assign current_year = first_post.date | date: "%Y" %}
 
 {% for post in site.posts %}
@@ -15,6 +17,8 @@ title: Articles
 
 {% endif %}
 
-<p>{{ post.date | date_to_string }} &mdash; <a href="{{ post.url }}">{{ post.title }}</a></p>
+<p class="article">{{ post.date | date_to_string }} &mdash; <a href="{{ post.url }}" data-title="{{ post.title | downcase }}" data-description="{{ post.description }}">{{ post.title }}</a></p>
 
 {% endfor %}
+
+<script src="/js/search.js"></script>
