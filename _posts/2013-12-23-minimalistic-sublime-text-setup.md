@@ -12,7 +12,9 @@ For package/theme management I use the popular [Package Control](https://sublime
 ##Packages
 
 - [GitGutter](https://github.com/jisaacks/GitGutter)
+- [Handlebars](https://github.com/daaain/Handlebars)
 - [MarkdownEditing](https://github.com/ttscoff/MarkdownEditing)
+- [Sass](https://github.com/nathos/sass-textmate-bundle)
 - [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter)
 
 ##Theme
