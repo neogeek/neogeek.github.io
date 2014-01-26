@@ -17,7 +17,7 @@ title: Articles
 
 {% endif %}
 
-<p class="article">{{ post.date | date_to_string }} &mdash; <a href="{{ post.url }}" data-title="{{ post.title | downcase }}" data-description="{{ post.description }}">{{ post.title }}</a></p>
+<p class="article">{{ post.date | date_to_string }} &mdash; <a href="{{ post.url }}" data-title="{{ post.title | downcase }}" data-description="{{ post.description | downcase }}">{{ post.title }}</a></p>
 
 {% endfor %}
 
