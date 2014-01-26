@@ -14,7 +14,7 @@ layout: default
 
 {% assign current_year = first_post.date | date: "%Y" %}
 
-{% for post in site.posts offset: 1 %}
+{% for post in site.posts offset: 1 limit: 5 %}
 
 {% if current_year != post.year %}
 
