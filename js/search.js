@@ -8,9 +8,17 @@
 
     var allArticles = document.querySelectorAll('.article');
 
-    document.querySelector('.search').addEventListener('keyup', function () {
+    document.querySelector('.search').addEventListener('keyup', function (e) {
 
         var searchQuery = [];
+
+        if (e.keyCode === 13) {
+
+            this.blur();
+
+            return false;
+
+        }
 
         Array.prototype.slice.call(this.value.split(/\s+/)).forEach(function (value) {
 
