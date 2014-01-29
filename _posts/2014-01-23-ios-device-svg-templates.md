@@ -10,8 +10,7 @@ Displaying screenshots of your application or responsive design in an iPhone jus
 
 ```html
 <object type="image/svg+xml"
-    data="iphone-5c-portrait.svg?screenshot=screenshot-portrait.png"
-    width="300" height="600"></object>
+    data="iphone-5c-portrait.svg?screenshot=screenshot-portrait.png"></object>
 ```
 
 ##iPhone 5c
@@ -30,11 +29,9 @@ Themes can be added by use of the `theme` variable in the data attribute.
 
 ```html
 <object type="image/svg+xml"
-    data="iphone-5c-portrait.svg?screenshot=screenshot-portrait.png&amp;theme=iphone-5c-red"
-    width="300" height="600"></object>
+    data="iphone-5c-portrait.svg?screenshot=screenshot-portrait.png&amp;theme=iphone-5c-red"></object>
 <object type="image/svg+xml"
-    data="iphone-5c-landscape.svg?screenshot=screenshot-landscape.png&amp;theme=iphone-5c-red"
-    width="600" height="300"></object>
+    data="iphone-5c-landscape.svg?screenshot=screenshot-landscape.png&amp;theme=iphone-5c-red"></object>
 ```
 
 [iOS Device SVG Templates at GitHub](https://github.com/neogeek/ios-device-svg-templates)
