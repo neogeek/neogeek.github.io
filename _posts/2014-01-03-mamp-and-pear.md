@@ -61,7 +61,7 @@ You can now include the installed library in any PHP script served up by this ve
 
 ```php
 <?php
-require('Overseer-Framework/framework.php');
+include('Overseer-Framework/framework.php');
 if (class_exists('DOM')) { echo 'Overseer-Framework Installed!'; }
 else { echo 'Error Loading Overseer-Framework.'; }
 ?>
