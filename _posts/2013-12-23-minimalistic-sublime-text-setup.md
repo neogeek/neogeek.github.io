@@ -22,6 +22,10 @@ For package/theme management I use the popular [Package Control](https://sublime
 - [Dracula](https://github.com/zenorocha/dracula-theme)
 - [Spacegray](https://github.com/kkga/spacegray)
 
+##Icon
+
+- [Sublime Text icon replacement for Flatland Theme](http://dribbble.com/shots/1027361-Sublime-Text-icon-replacement-for-Flatland-Theme) by [@namzo](http://dribbble.com/namzo)
+
 ##Settings
 
 ```json
@@ -33,7 +37,7 @@ For package/theme management I use the popular [Package Control](https://sublime
 		".git",
 		"venv"
 	],
-	"font_size": 14,
+	"font_size": 15,
 	"ignored_packages":
 	[
 		"Vintage",
