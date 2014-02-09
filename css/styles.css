@@ -11,6 +11,7 @@ body {
     line-height: 1.3em;
     color: #111;
     border-top: 1em solid #1FB1D8;
+    text-rendering: optimizeLegibility;
 }
 
 a {
