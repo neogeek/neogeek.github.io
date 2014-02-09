@@ -129,6 +129,13 @@ footer a {
     padding: .3em;
     font-family: Helvetica;
     font-size: .8em;
+    border: 2px solid #eee;
+    color: inherit;
+    outline: none;
+}
+
+.search:focus {
+    border-color: #ccc;
 }
 
 .hidden {
