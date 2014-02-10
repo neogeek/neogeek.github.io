@@ -133,9 +133,11 @@ footer a {
     padding: .3em;
     font-family: Helvetica;
     font-size: .8em;
-    border: 2px solid #eee;
     color: inherit;
+    border: 2px solid #eee;
+    border-radius: 0;
     outline: none;
+    -webkit-appearance: none;
 }
 
 .search:focus {
