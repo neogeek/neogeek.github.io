@@ -63,6 +63,10 @@ hr {
     border-top: 1px solid #ddd;
 }
 
+table {
+    font-size: .75em;
+}
+
 header {
     color: #999;
     text-align: center;
