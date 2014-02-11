@@ -41,8 +41,6 @@ Next, add the following lines of PHP to the beginning of the file where you plan
 putenv('MAGICK_HOME=/usr/local');
 putenv('PATH=' . getenv('MAGICK_HOME') . '/bin:' . getenv('PATH'));
 putenv('DYLD_LIBRARY_PATH=' . getenv('MAGICK_HOME') . '/lib');
-
-?>
 ```
 
 ##Example Usage
@@ -58,8 +56,6 @@ exec('convert avatar.png -resize 100x100 avatar_sm.png');
 exec('convert avatar.png -rotate 90 avatar_rotated.png');
 // Resize & Crop to 100x100
 exec('convert avatar.png -resize 100x100^ -gravity center -extent 100x100 avatar_sm.png');
-
-?>
 ```
 
 ##Conclusion

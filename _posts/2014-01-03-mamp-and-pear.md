@@ -35,10 +35,11 @@ You can now include the package in any PHP script served up by this version of P
 
 ```php
 <?php
+
 include('HTTP/OAuth.php');
+
 if (class_exists('HTTP_OAuth')) { echo 'PEAR Package Installed!'; }
 else { echo 'Error Loading PEAR Package.'; }
-?>
 ```
 
 ###git Instructions
@@ -61,8 +62,9 @@ You can now include the installed library in any PHP script served up by this ve
 
 ```php
 <?php
+
 include('Overseer-Framework/framework.php');
+
 if (class_exists('DOM')) { echo 'Overseer-Framework Installed!'; }
 else { echo 'Error Loading Overseer-Framework.'; }
-?>
 ```
