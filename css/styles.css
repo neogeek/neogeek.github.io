@@ -67,6 +67,11 @@ table {
     font-size: .75em;
 }
 
+.table-wrapper {
+    width: 100%;
+    overflow: auto;
+}
+
 header {
     color: #999;
     text-align: center;

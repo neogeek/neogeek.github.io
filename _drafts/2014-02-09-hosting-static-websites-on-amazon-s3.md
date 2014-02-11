@@ -47,12 +47,14 @@ Next up is to configure your domain registrar to correctly point to the newly cr
 
 The long URL in the second row can be found in the **Static Web Site Hosting** section of the **AWS Management Console**.
 
+<div class="table-wrapper">
 <table>
     <thead>
         <tr>
             <th>Host Name</th>
             <th>IP Address / URL</th>
             <th>Record Type</th>
+            <th>TTL</th>
         </tr>
     </thead>
     <tbody>
@@ -60,13 +62,16 @@ The long URL in the second row can be found in the **Static Web Site Hosting** s
             <td>@</td>
             <td>http://www.example.com/</td>
             <td>URL Redirect</td>
+            <td>1800</td>
         </tr>
         <tr>
             <td>www</td>
             <td>www.example.com.s3-website-us-east-1.amazonaws.com.</td>
             <td>CNAME (Alias)</td>
+            <td>1800</td>
         </tr>
     </tbody>
 </table>
+</div>
 
 **Note:** Make sure that you **DO NOT** set the **@** host name to be a CNAME (Alias) if you have MX records. This will prevent email from working.
