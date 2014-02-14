@@ -17,7 +17,7 @@ brew update; brew install imagemagick
 
 ###MacPorts Instructions
 
-**Notice:** Installing this way prevent accesing `convert` from PHP as it doesn't have the proper permissions.
+**Notice:** Installing this way prevent accessing `convert` from PHP as it doesn't have the proper permissions.
 
 If you need to convert complex SVG graphics (patterns, clipping paths) then you will need to install ImageMagic using MacPorts as it correctly supports the RSVG configuration. This will take much longer than the brew installation as there are many dependencies.
 
