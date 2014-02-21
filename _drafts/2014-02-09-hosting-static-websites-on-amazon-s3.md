@@ -34,16 +34,16 @@ Once at the S3 Manangement Console, complete the following steps:
     }
     ```
 
-5. Then open your S3 account using the credentials found in the [IAM Management Console](https://console.aws.amazon.com/iam/home?#security_credential) and open the section labeled **Access Keys (Access Key ID and Secret Access Key)**.
+5. The navigate to your [IAM Management Console](https://console.aws.amazon.com/iam/home?#security_credential) and open the section labeled **Access Keys (Access Key ID and Secret Access Key)**.
 6. Create a new key/value pair (or use a preexisting one).
-7. Enter credentials in an app like [Transmit](https://panic.com/transmit/) and then upload the contents of your static site to the bucket you created.
+7. Enter these credentials in an app like [Transmit](https://panic.com/transmit/) and then upload the contents of your static site to the bucket you created.
 
 Next up is to configure your domain registrar to correctly point to the newly created bucket. _These directions are specific to [Namecheap.com](http://namecheap.com/)._
 
 1. Login to your account and head over to the [Manage Domains](https://manage.www.namecheap.com/myaccount/domain-list.asp) page.
 2. Select the domain you want to point to the Amazon S3 bucket.
 3. Make sure you are using the registrars name servers (DNS).
-4. Edit the host records on the **All Host Records** to look like the example below:
+4. Edit the host records on the **All Host Records** page (link in sidebar) to look like the example below:
 
 The long URL in the second row can be found in the **Static Web Site Hosting** section of the **AWS Management Console**.
 
