@@ -3,6 +3,18 @@ layout: page
 title: Projects
 ---
 
+##respond2png
+
+A simple bash script for creating multiple screenshots of a responsive design.
+
+[respond2png at GitHub](https://github.com/neogeek/respond2png)
+
+##CanvasToVideo
+
+An experiment in converting Canvas animations to video.
+
+[CanvasToVideo at GitHub](https://github.com/neogeek/CanvasToVideo)
+
 ##iOS Device SVG Templates
 
 A growing collection of iOS devices built in SVG. Each template can be rendered with screenshots of appropriate sizes.
