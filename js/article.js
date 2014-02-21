@@ -14,19 +14,23 @@
 
     // Display duration to read per article (based on 180 words a minute).
 
-    if (minutes_floor === minutes_round) {
+    if (minutes_round) {
 
-        toread.innerHTML = 'about ' + minutes_round + ' minutes to read';
+        if (minutes_floor === minutes_round) {
 
-    } else {
+            toread.innerHTML = 'about ' + minutes_round + ' minutes to read';
 
-        toread.innerHTML = 'less than ' + minutes_round + ' minutes to read';
+        } else {
 
-    }
+            toread.innerHTML = 'less than ' + minutes_round + ' minutes to read';
 
-    if (minutes_round === 1) {
+        }
 
-        toread.innerHTML = toread.innerHTML.replace('minutes', 'minute');
+        if (minutes_round === 1) {
+
+            toread.innerHTML = toread.innerHTML.replace('minutes', 'minute');
+
+        }
 
     }
 
