@@ -12,7 +12,7 @@ year: 2014
 If you don't need to convert complex SVG graphics then installing using [Homebrew](http://brew.sh/) is recommended as you won't need to install extraneous dependencies.
 
 ```bash
-brew update; brew install imagemagick
+$ brew update; brew install imagemagick
 ```
 
 ###MacPorts Instructions
@@ -22,13 +22,13 @@ brew update; brew install imagemagick
 If you need to convert complex SVG graphics (patterns, clipping paths) then you will need to install ImageMagic using MacPorts as it correctly supports the RSVG configuration. This will take much longer than the brew installation as there are many dependencies.
 
 ```bash
-sudo port install ImageMagick +rsvg
+$ sudo port install ImageMagick +rsvg
 ```
 
 To ensure that ImageMagic with the RSVG configuration was installed correctly run the following command and look for the flag `--with-rsvg`.
 
 ```bash
-convert -list configure | grep rsvg
+$ convert -list configure | grep rsvg
 ```
 
 ##PHP Setup

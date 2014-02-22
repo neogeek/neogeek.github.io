@@ -14,7 +14,7 @@ Installing libraries hosted through the PEAR service is fairly straight forward.
 Open terminal and navigate to the following directory (replace the version number in the following command with the number located on the `phpinfo()` page).
 
 ```bash
-cd /Applications/MAMP/bin/php/php5.5.3/bin/
+$ cd /Applications/MAMP/bin/php/php5.5.3/bin/
 ```
 
 Now, navigate to the download page of the PEAR package you want to install. In this example we are installing **HTTP_OAuth**, so the page we need is <http://pear.php.net/package/HTTP_OAuth/download> and look for the **Easy Install** instructions.
@@ -22,13 +22,13 @@ Now, navigate to the download page of the PEAR package you want to install. In t
 Copy the command located on the download page and paste it after `./`. This will allow you to run the `pear` command from the current folder.
 
 ```bash
-./pear install HTTP_OAuth-0.3.1
+$ ./pear install HTTP_OAuth-0.3.1
 ```
 
 To test to see if the package installed correctly type the following command and look for HTTP_OAuth in the list that displays.
 
 ```bash
-./pear list
+$ ./pear list
 ```
 
 You can now include the package in any PHP script served up by this version of PHP (5.5.3 for this example).
@@ -49,13 +49,13 @@ Similar to the steps above you must first determine which version of PHP is curr
 **Note:** This directory is different than the directory mentioned above.
 
 ```bash
-cd /Applications/MAMP/bin/php/php5.5.3/lib/php/
+$ cd /Applications/MAMP/bin/php/php5.5.3/lib/php/
 ```
 
 Now clone the git repo into a folder of the same name:
 
 ```bash
-git clone https://github.com/neogeek/Overseer-Framework.git Overseer-Framework
+$ git clone https://github.com/neogeek/Overseer-Framework.git Overseer-Framework
 ```
 
 You can now include the installed library in any PHP script served up by this version of PHP (5.5.3 for this example).

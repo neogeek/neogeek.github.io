@@ -249,5 +249,5 @@ After the image was completed I converted it from SVG to JPEG with the following
 **Note:** ImageMagick must be installed with the RSVG flag enabled as the built-in SVG conversion has issues with complex SVG. Installation instructions can be found in my article [PHP & ImageMagick](/articles/php-and-imagemagick/#macports-instructions)
 
 ```bash
-convert impossible-triangle.svg impossible-triangle.png
+$ convert impossible-triangle.svg impossible-triangle.png
 ```
