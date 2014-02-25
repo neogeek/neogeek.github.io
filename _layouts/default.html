@@ -20,7 +20,7 @@
 <link rel="apple-touch-icon" sizes="152x152" href="/images/touch-icon-ipad-retina.png">
 
 {% if page.description %}
-<meta name="description" content="{{ page.description }}">
+<meta name="description" content="{{ page.description | markdownify | strip_html }}">
 {% else %}
 <meta name="description" content="Hi! I'm Scott Doxey, a Boston based web developer who loves to tinker. I'm currently working as a User Experience Consultant at Cantina. When I'm not crafting awesome user experiences at Cantina you can find me hacking away at any one of my open source projects. Most recently I have been developing an HTML5 Canvas library called Facade.js. Previously I released Reader.py an inbox-zero take on RSS readers, doxdox a dox documentation generator and the Overseer Framework a PHP micro-framework.">
 {% endif %}
@@ -32,7 +32,7 @@
 <meta name="twitter:domain" content="{{ site.url }}">
 
 {% if page.description %}
-<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:description" content="{{ page.description | markdownify | strip_html }}">
 {% else %}
 <meta name="twitter:description" content="Hi! I'm Scott Doxey, a Boston based web developer who loves to tinker. I'm currently working as a User Experience Consultant at Cantina. When I'm not crafting awesome user experiences at Cantina you can find me hacking away at any one of my open source projects. Most recently I have been developing an HTML5 Canvas library called Facade.js. Previously I released Reader.py an inbox-zero take on RSS readers, doxdox a dox documentation generator and the Overseer Framework a PHP micro-framework.">
 {% endif %}
