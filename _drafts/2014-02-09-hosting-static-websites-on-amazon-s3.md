@@ -74,4 +74,4 @@ The long URL in the second row can be found in the **Static Web Site Hosting** s
 </table>
 </div>
 
-**Note:** Make sure that you **DO NOT** set the **@** host name to be a CNAME (Alias) if you have MX records. This will prevent email from working.
+**Note:** Make sure that you **DO NOT** set the **@** host name to be a CNAME (Alias) if you have MX records. This will prevent any email you have set up from working.
