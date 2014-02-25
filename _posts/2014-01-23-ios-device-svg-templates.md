@@ -17,7 +17,7 @@ Displaying screenshots of your application or responsive design in an iPhone jus
 
 ![screenshot](/images/posts/ios-device-svg-templates/ios-device-svg-templates-orientations.png)
 
-The iPhone 5c is avalible in both portrait and landscape. Each image also includes the following color themes:
+The iPhone 5c is available in both portrait and landscape. Each image also includes the following color themes:
 
 - iphone-5c-green (default)
 - iphone-5c-blue
