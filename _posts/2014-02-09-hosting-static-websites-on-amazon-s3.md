@@ -7,10 +7,10 @@ year: 2014
 
 Assuming you already have an [Amazon Web Service](http://aws.amazon.com/) account the first step would be to open up you [AWS Management Console](https://console.aws.amazon.com/console/home) and select the [S3](https://console.aws.amazon.com/s3/home) Service.
 
-Once at the S3 Manangement Console, complete the following steps:
+Once at the S3 Management Console, complete the following steps:
 
 1. Create a new bucket with the domain you will be hosting at (including the www. for this example).
-2. Once created select **Static Web Site Hosting** under the properties of the newly created bucket.
+2. Select **Static Web Site Hosting** under the properties of the newly created bucket.
 3. Select **Enable website hosting** and enter a file name for the index document.
 4. Select **Permissions** and then open **Edit Bucket Policy**. Enter the following (change the www.example.com to your full bucket name):
 
@@ -34,9 +34,9 @@ Once at the S3 Manangement Console, complete the following steps:
     }
     ```
 
-5. The navigate to your [IAM Management Console](https://console.aws.amazon.com/iam/home?#security_credential) and open the section labeled **Access Keys (Access Key ID and Secret Access Key)**.
+5. Navigate to your [IAM Management Console](https://console.aws.amazon.com/iam/home?#security_credential) and open the section labeled **Access Keys (Access Key ID and Secret Access Key)**.
 6. Create a new key/value pair (or use a preexisting one).
-7. Enter these credentials in an app like [Transmit](https://panic.com/transmit/) and then upload the contents of your static site to the bucket you created.
+7. Enter these credentials in an app that support S3, like [Transmit](https://panic.com/transmit/), and then upload the contents of your static site to the bucket you created.
 
 Next up is to configure your domain registrar to correctly point to the newly created bucket. _These directions are specific to [Namecheap.com](http://namecheap.com/)._
 
