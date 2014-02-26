@@ -2,6 +2,7 @@
 layout: post
 title: respond2png
 description: While building a responsive site recently I experimented with capturing device specific screenshots using Grunt and webkit2png. To make things easy to manage in Grunt I placed all my commands into a simple bash script that accepted one parameter for the website URL.
+keywords: bash responsive screenshots webkit2png
 year: 2014
 ---
 

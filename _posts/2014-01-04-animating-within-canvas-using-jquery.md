@@ -3,6 +3,7 @@ layout: post
 title: Animating Within Canvas Using jQuery
 subtitle: Making animating within canvas easy using jQuery.
 description: If you are like me and completely enamored with HTML 5's canvas tag you have at one point or another setup animations for entities drawn in canvas.
+keywords: javascript canvas jquery
 year: 2014
 ---
 

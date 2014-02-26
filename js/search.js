@@ -25,7 +25,7 @@
             if (value) {
 
                 searchQuery.push('.article a[data-title*="' + value.toLowerCase() + '"]');
-                searchQuery.push('.article a[data-description*="' + value.toLowerCase() + '"]');
+                searchQuery.push('.article a[data-keywords*="' + value.toLowerCase() + '"]');
 
             }
 

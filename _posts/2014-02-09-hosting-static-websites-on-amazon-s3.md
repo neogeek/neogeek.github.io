@@ -2,6 +2,7 @@
 layout: post
 title: Hosting Static Websites on Amazon S3
 description: This article is a quick rundown on how to host a static website using Amazon S3 and your domain registrar.
+keywords: hosting amazon s3 namecheap
 year: 2014
 ---
 

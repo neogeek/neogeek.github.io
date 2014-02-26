@@ -1,8 +1,9 @@
 ---
 layout: post
 title: iOS Device SVG Templates
-image: /images/posts/ios-device-svg-templates/ios-device-svg-templates-themes.png
 description: iOS Device SVG Templates is a new project for displaying iOS screenshots in themeable iOS devices.
+image: /images/posts/ios-device-svg-templates/ios-device-svg-templates-themes.png
+keywords: svg imagemagick iphone
 year: 2014
 ---
 
