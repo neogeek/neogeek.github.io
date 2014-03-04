@@ -34,6 +34,7 @@ For package/theme management I use the popular [Package Control](https://sublime
 {
 	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
 	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
 		".git",
@@ -42,8 +43,8 @@ For package/theme management I use the popular [Package Control](https://sublime
 	"font_size": 15,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Markdown"
+		"Markdown",
+		"Vintage"
 	],
 	"scroll_past_end": true,
 	"tab_size": 4,
