@@ -9,7 +9,7 @@
         minutes = document.querySelector('article').innerText.match(/\s+/g).length / 180,
         minutes_floor = Math.floor(minutes),
         minutes_round = Math.round(minutes),
-        links = document.querySelectorAll('a[href^="mailto:"]'),
+        links = document.querySelectorAll('a[href^="#email"]'),
         email_address = window.atob('aGVsbG9Ac2NvdHRkb3hleS5jb20=');
 
     // Display duration to read per article (based on 180 words a minute).
