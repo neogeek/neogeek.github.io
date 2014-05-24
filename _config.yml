@@ -1,5 +1,5 @@
 name: Scott Doxey
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 permalink: articles/:title
 url: http://neo-geek.net
