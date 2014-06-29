@@ -1,6 +1,3 @@
-/*globals window, document */
-/*jslint regexp: true */
-
 (function () {
 
     'use strict';

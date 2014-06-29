@@ -1,0 +1,27 @@
+- name: Facade.js
+  description: Facade.js is a JavaScript library for drawing shapes, images and text in HTML5 canvas.
+  url: http://facadejs.com
+
+- name: respond2png
+  description: A simple bash script for creating multiple screenshots of a responsive design.
+  url: https://github.com/neogeek/respond2png
+
+- name: CanvasToVideo
+  description: An experiment in converting Canvas animations to video.
+  url: https://github.com/neogeek/CanvasToVideo
+
+- name: iOS Device SVG Templates
+  description: A growing collection of iOS devices built in SVG. Each template can be rendered with screenshots of appropriate sizes.
+  url: https://github.com/neogeek/ios-device-svg-templates
+
+- name: Ready.py
+  description: Reader.py is a simple, inbox-zero centric alternative to feature heavy feed readers. Built in Python to work on Heroku.
+  url: https://github.com/neogeek/reader.py
+
+- name: doxdox
+  description: doxdox is a command-line script for converting [dox](https://github.com/visionmedia/dox) output into a single HTML Bootstrap-themed documentation file. Built in Python and deployed on the [Python Package Index](https://pypi.python.org/pypi/doxdox).
+  url: https://github.com/neogeek/doxdox
+
+- name: Overseer Framework
+  description: The Overseer Framework is a collection of very useful functions and classes. From DOM manipulation to setting up a basic router, the Overseer Framework can handle common menial tasks with ease. Built in PHP.
+  url: https://github.com/neogeek/Overseer-Framework

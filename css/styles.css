@@ -6,16 +6,16 @@
 
 body {
     margin: 0;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'ff-tisa-web-pro', 'Palatino', serif;
     font-size: 1em;
     line-height: 1.3em;
-    color: #111;
-    border-top: 1em solid #1FB1D8;
+    color: #444;
+    border-top: 1em solid #D85757;
     text-rendering: optimizeLegibility;
 }
 
 a {
-    color: #1FB1D8;
+    color: #D85757;
     text-decoration: none;
 }
 
@@ -50,17 +50,15 @@ blockquote {
     text-align: center;
 }
 
-p a {
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto;
-}
-
 hr {
     margin: 2em auto;
     width: 200px;
     border: 0;
     border-top: 1px solid #ddd;
+}
+
+time {
+    font-style: italic;
 }
 
 table {
@@ -73,8 +71,12 @@ table {
 }
 
 header {
-    color: #999;
+    margin: 3em 0;
     text-align: center;
+}
+
+header nav {
+    color: #999;
 }
 
 footer {
@@ -89,18 +91,27 @@ footer a {
 }
 
 .logo {
-    margin: 2em auto 1em;
-    height: 7em;
+    margin: 0;
+}
+
+.logo a {
+    padding: 1em 0;
+    display: block;
 }
 
 .content {
     margin: 1em auto;
     padding: 1em 1em 0 1em;
     max-width: 800px;
-    font-family: 'chaparral-pro', 'Palatino', serif;
-    font-weight: 100;
     font-size: 1.3em;
     line-height: 1.4em;
+}
+
+.content p a,
+.content li a {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
 }
 
 .content img {
@@ -110,7 +121,6 @@ footer a {
 
 .title {
     margin: 0;
-    font-family: 'franklin-gothic-urw', 'Helvetica Neue', sans-serif;
     font-size: 2em;
     line-height: 1em;
     clear: both;
@@ -141,7 +151,7 @@ footer a {
     color: inherit;
     border: 2px solid #eee;
     border-radius: 0;
-    outline: none;
+    width: 100%;
     -webkit-appearance: none;
 }
 
@@ -156,7 +166,7 @@ footer a {
 @media screen and (min-width: 600px) {
 
     body {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
 }

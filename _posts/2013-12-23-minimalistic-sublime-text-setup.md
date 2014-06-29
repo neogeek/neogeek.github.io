@@ -16,17 +16,14 @@ For package/theme management I use the popular [Package Control](https://sublime
 - [GitGutter](https://github.com/jisaacks/GitGutter)
 - [Handlebars](https://github.com/daaain/Handlebars)
 - [MarkdownEditing](https://github.com/ttscoff/MarkdownEditing)
-- [Sass](https://github.com/nathos/sass-textmate-bundle)
+- [ReactJS](https://github.com/reactjs/sublime-react)
 - [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter)
+- [SublimeLinter-contrib-jslint](https://github.com/devdoc/SublimeLinter-jslint)
+- [SublimeLinter-pylint](https://github.com/SublimeLinter/SublimeLinter-pylint)
 
 ##Theme
 
 - [Dracula](https://github.com/zenorocha/dracula-theme)
-- [Spacegray](https://github.com/kkga/spacegray)
-
-##Icon
-
-- [Sublime Text icon replacement for Flatland Theme](http://dribbble.com/shots/1027361-Sublime-Text-icon-replacement-for-Flatland-Theme) by [@namzo](http://dribbble.com/namzo)
 
 ##Settings
 
@@ -40,15 +37,15 @@ For package/theme management I use the popular [Package Control](https://sublime
 		".git",
 		"venv"
 	],
-	"font_size": 15,
+	"font_size": 14,
 	"ignored_packages":
 	[
-		"Markdown",
-		"Vintage"
+		"Vintage",
+		"Markdown"
 	],
 	"scroll_past_end": true,
+	"spell_check": true,
 	"tab_size": 4,
-	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true

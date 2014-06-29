@@ -4,9 +4,20 @@ layout: default
 
 <section>
 
-{% if page.image %}
-<img src="{{ page.image }}">
-{% endif %}
+    <h1>{{ page.title }}</h1>
 
-{{ content }}
+    {% if page.image %}
+
+        <img src="{{ page.image }}">
+
+    {% endif %}
+
+    {% if page.description %}
+
+        <p>{{ page.description }}</p>
+
+    {% endif %}
+
+    {{ content }}
+
 </section>

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Articles
 ---
 
@@ -9,15 +9,15 @@ title: Articles
 
 {% for post in site.posts %}
 
-{% if current_year != post.year %}
+    {% if current_year != post.year %}
 
-{% assign current_year = post.year %}
+        {% assign current_year = post.year %}
 
-<h2>{{ current_year }}</h2>
+        <h2>{{ current_year }}</h2>
 
-{% endif %}
+    {% endif %}
 
-<p class="article">{{ post.date | date_to_string }} &mdash; <a href="{{ post.url }}" data-title="{{ post.title | downcase }}" data-keywords="{{ post.keywords | downcase }}">{{ post.title }}</a></p>
+    <p class="article">{{ post.date | date_to_string }} &mdash; <a href="{{ post.url }}" data-title="{{ post.title | downcase }}" data-keywords="{{ post.keywords | downcase }}">{{ post.title }}</a></p>
 
 {% endfor %}
 
