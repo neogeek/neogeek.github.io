@@ -23,11 +23,6 @@ img {
     border: 0;
 }
 
-pre {
-    padding: 0;
-    overflow: hidden;
-}
-
 code {
     padding: .4em;
     font-family: 'Monaco', monospace;
@@ -43,67 +38,50 @@ pre code {
     overflow: auto;
 }
 
-blockquote {
-    margin: 2em auto;
-    font-size: 1.2em;
-    font-style: italic;
+header,
+footer {
+    margin: 3em 0;
+    color: #999;
     text-align: center;
+}
+
+footer {
+    margin-top: 6em;
+    font-size: .8em;
+}
+
+article {
+    margin-bottom: 3em;
+}
+
+table {
+    font-size: 1em;
 }
 
 hr {
     margin: 2em auto;
-    width: 200px;
+    width: 15rem;
     border: 0;
     border-top: 1px solid #ddd;
 }
 
-time {
-    font-style: italic;
-}
-
-table {
-    font-size: .75em;
-}
-
-.table-wrapper {
-    width: 100%;
-    overflow: auto;
-}
-
-header {
-    margin: 3em 0;
-    text-align: center;
-}
-
-header nav {
-    color: #999;
-}
-
-footer {
-    padding: 3em 0 5em;
-    font-size: .8em;
-    color: #555;
-    text-align: center;
-}
-
-footer a {
-    color: inherit;
-}
-
 .logo {
     margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1em;
 }
 
 .logo a {
-    padding: 1em 0;
-    display: block;
+    padding: .5em 0;
+    display: inline-block;
 }
 
 .content {
     margin: 1em auto;
     padding: 1em 1em 0 1em;
     max-width: 800px;
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1.4em;
 }
 
@@ -121,15 +99,12 @@ footer a {
 
 .title {
     margin: 0;
-    font-size: 2em;
-    line-height: 1em;
-    clear: both;
+    line-height: 1.1em;
 }
 
 .subtitle {
     font-size: 1.3em;
     line-height: 1.3em;
-    color: #444;
 }
 
 .toread {
@@ -138,8 +113,9 @@ footer a {
     opacity: .5;
 }
 
-.question_or_comments {
-    margin-top: 3em;
+.year {
+    font-size: 1.4em;
+    font-weight: bold;
 }
 
 .search {
@@ -148,6 +124,7 @@ footer a {
     padding: .3em;
     font-family: Helvetica;
     font-size: .8em;
+    line-height: 1.3em;
     color: inherit;
     border: 2px solid #eee;
     border-radius: 0;
@@ -157,6 +134,11 @@ footer a {
 
 .search:focus {
     border-color: #ccc;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow: auto;
 }
 
 .hidden {
