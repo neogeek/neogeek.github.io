@@ -24,9 +24,9 @@ img {
 }
 
 code {
-    padding: .4em;
+    padding: 0.4em;
     font-family: 'Monaco', monospace;
-    font-size: .6em;
+    font-size: 0.6em;
     line-height: 1.3em;
     background: #f3f3f3;
 }
@@ -47,7 +47,7 @@ footer {
 
 footer {
     margin-top: 6em;
-    font-size: .8em;
+    font-size: 0.8em;
 }
 
 article {
@@ -66,19 +66,18 @@ hr {
 }
 
 .logo {
-    margin: 0;
+    margin-bottom: 0.5em;
     font-size: 2em;
     font-weight: bold;
     line-height: 1em;
 }
 
 .logo a {
-    padding: .5em 0;
     display: inline-block;
 }
 
 .content {
-    margin: 1em auto;
+    margin: 2em auto;
     padding: 1em 1em 0 1em;
     max-width: 800px;
     font-size: 1.2em;
@@ -108,9 +107,9 @@ hr {
 }
 
 .toread {
-    font-size: .9em;
+    font-size: 0.9em;
     font-style: italic;
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .year {
@@ -121,15 +120,16 @@ hr {
 .search {
     display: block;
     margin: 0 auto;
-    padding: .3em;
+    padding: 0.3em;
     font-family: Helvetica;
-    font-size: .8em;
+    font-size: 0.8em;
     line-height: 1.3em;
     color: inherit;
     border: 2px solid #eee;
     border-radius: 0;
     width: 100%;
     -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .search:focus {
