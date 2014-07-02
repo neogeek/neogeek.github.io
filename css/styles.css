@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    font-family: 'ff-tisa-web-pro', 'Palatino', serif;
+    font-family: 'Helvetica Neue', 'Helevetica', sans-serif;
     font-size: 1em;
     line-height: 1.3em;
     color: #444;
@@ -23,6 +23,10 @@ img {
     border: 0;
 }
 
+p {
+    font-family: leitura-news, serif;
+}
+
 code {
     padding: 0.4em;
     font-family: 'Monaco', monospace;
@@ -36,6 +40,15 @@ pre code {
     padding: 1em;
     line-height: 1.7em;
     overflow: auto;
+}
+
+blockquote {
+    margin: 0;
+    font-size: 1.4em;
+    line-height: 1.3em;
+    font-style: italic;
+    color: #666;
+    text-align: center;
 }
 
 header,
@@ -157,6 +170,17 @@ hr {
 
     body {
         font-size: 1.2em;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    blockquote {
+        position: relative;
+        margin: 1.5em 0;
+        left: -125px;
+        width: 1000px;
     }
 
 }
