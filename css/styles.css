@@ -54,6 +54,14 @@ blockquote {
     text-align: center;
 }
 
+blockquote p:first-of-type:before {
+    content: '“';
+}
+
+blockquote p:last-of-type:after {
+    content: '”';
+}
+
 header,
 footer {
     margin: 3em 0;
