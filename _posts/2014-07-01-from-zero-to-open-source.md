@@ -22,7 +22,7 @@ So I tried something that I had never done before; I started committing unfinish
 
 It was scary. It was liberating.
 
-Fast forward two years and I now have ±40 public repos on GitHub in both my [personal profile](https://github.com/neogeek) and organizations I am part of. I have also publicly announced my first major project: [Facade.js](https://github.com/facadejs), a JavaScript library that makes drawing shapes, images and text in HTML5 canvas easy. I have even submitted my first major pull request to [sniff](https://github.com/jonathanstark/sniff), a JavaScript library for when you _absolutely_ need to know what browser you are in.
+Fast forward two years and I now have ±40 public repos on GitHub in both my [personal profile](https://github.com/neogeek) and organizations I am part of. I have also publicly announced my first major project: [Facade.js](http://facadejs.com), a JavaScript library that makes drawing shapes, images and text in HTML5 canvas easy. I have even submitted my first major pull request to [sniff](https://github.com/jonathanstark/sniff), a JavaScript library for when you _absolutely_ need to know what browser you are in.
 
 And it all started because I put myself out there even when it was difficult to do so.
 
