@@ -2,6 +2,14 @@
   description: Facade.js is a JavaScript library for drawing shapes, images and text in HTML5 canvas.
   url: http://facadejs.com
 
+- name: I Know I Shouldn't
+  description: A micro-library that contains snippets of code useful for modifying strings and arrays. While it does modify the native prototype of String and Array, it does so with non-enumerable methods.
+  url: https://github.com/neogeek/iknowishouldnt.js
+
+- name: Gamepad.js
+  description: Simple customizable event binding for the HTML Gamepad API.
+  url: https://github.com/neogeek/gamepad.js
+
 - name: respond2png
   description: A simple bash script for creating multiple screenshots of a responsive design.
   url: https://github.com/neogeek/respond2png
