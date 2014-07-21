@@ -23,6 +23,11 @@ img {
     border: 0;
 }
 
+h1,
+h2 {
+    line-height: 1.1em;
+}
+
 p,
 ul,
 ol,
