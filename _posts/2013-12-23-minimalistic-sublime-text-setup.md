@@ -19,11 +19,13 @@ For package/theme management I use the popular [Package Control](https://sublime
 - [ReactJS](https://github.com/reactjs/sublime-react)
 - [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter)
 - [SublimeLinter-contrib-jslint](https://github.com/devdoc/SublimeLinter-jslint)
+- [SublimeLinter-csslint](https://github.com/SublimeLinter/SublimeLinter-csslint)
 - [SublimeLinter-pylint](https://github.com/SublimeLinter/SublimeLinter-pylint)
 
 ##Theme
 
 - [Dracula](https://github.com/zenorocha/dracula-theme)
+- [Spacegray](http://kkga.github.io/spacegray/)
 
 ##Settings
 
@@ -46,6 +48,7 @@ For package/theme management I use the popular [Package Control](https://sublime
 	"scroll_past_end": true,
 	"spell_check": true,
 	"tab_size": 4,
+	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true
