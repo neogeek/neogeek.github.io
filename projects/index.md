@@ -8,7 +8,7 @@ title: Projects
 <h2><a href="{{ project.url }}">{{ project.name }}</a></h2>
 
 {% if project.image %}
-<img src="{{ project.image }}">
+<a href="{{ project.url }}"><img src="{{ project.image }}"></a>
 {% endif %}
 
 <p>{{ project.description | markdownify }}</p>
