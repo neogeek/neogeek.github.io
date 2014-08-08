@@ -32,7 +32,7 @@
 
 - name: doxdox
   image: /images/projects/doxdox.png
-  description: doxdox is a command-line script for converting [dox](https://github.com/visionmedia/dox) output into a single HTML Bootstrap-themed documentation file. Built in Python and deployed on the [Python Package Index](https://pypi.python.org/pypi/doxdox).
+  description: doxdox is a documentation generator built in Node.js that takes output from dox, a jsdoc parser, and converts it into either HTML or Markdown.
   url: https://github.com/neogeek/doxdox
 
 - name: Overseer Framework
