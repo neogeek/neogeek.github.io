@@ -45,18 +45,17 @@ $ doxdox --help
 
  Options:
 
-  -h, --help		Display this help message.
-  -v, --version		Display the current installed version.
-  -t, --title		Sets title.
-  -d, --description	Sets description.
-  -l, --layout		Template to render the documentation with.
-  -l, --layout		Template to render the documentation with.
-  -o, --output		File to save documentation to. Default to stdout.
+  -h, --help        Display this help message.
+  -v, --version     Display the current installed version.
+  -t, --title       Sets title.
+  -d, --description Sets description.
+  -l, --layout      Template to render the documentation with.
+  -o, --output      File to save documentation to. Default to stdout.
 
  Available Layouts:
 
-  - Bootstrap (default)	  (http://getbootstrap.com/)
-  - Markdown		  (http://daringfireball.net/projects/markdown/)
+  - Bootstrap (default)   (http://getbootstrap.com/)
+  - Markdown          (http://daringfireball.net/projects/markdown/)
 ```
 
 Finally, run the following command to generate documentation (replace `facade.js` with your own filename).
