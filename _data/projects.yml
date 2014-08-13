@@ -8,6 +8,10 @@
   description: doxdox is a documentation generator built in Node.js that takes output from dox, a jsdoc parser, and converts it into either HTML or Markdown.
   url: https://github.com/neogeek/doxdox
 
+- name: de-pre.js
+  description: Removes excess indentation from the contents of pre tags, allowing proper indentation in HTML.
+  url: https://github.com/neogeek/de-pre.js
+
 - name: I Know I Shouldn't
   description: A micro-library that contains snippets of code useful for modifying strings and arrays. While it does modify the native prototype of String and Array, it does so with non-enumerable methods.
   url: https://github.com/neogeek/iknowishouldnt.js
