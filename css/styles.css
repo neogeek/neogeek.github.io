@@ -10,12 +10,12 @@ body {
     font-size: 1em;
     line-height: 1.3em;
     color: #444;
-    border-top: 1em solid #D85757;
+    border-top: 1em solid #75A6E7;
     text-rendering: optimizeLegibility;
 }
 
 a {
-    color: #D85757;
+    color: #75A6E7;
     text-decoration: none;
 }
 
