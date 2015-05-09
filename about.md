@@ -1,7 +1,7 @@
 ---
 layout: page
 class: about
-title: Hello, I'm Scott.
+title: Hi, I'm Scott.
 permalink: /about/
 ---
 
