@@ -2,7 +2,11 @@
 
     <div class="wrapper">
 
+    {% if page.content.length %}
+
     {% include social.html %}
+
+    {% endif %}
 
     <p>&copy; {{ site.time | date: '%Y' }} Scott Doxey</p>
 
