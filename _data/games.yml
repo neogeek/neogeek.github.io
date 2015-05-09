@@ -1,8 +1,0 @@
-- name: Memory
-  image: /images/games/memory.png
-  description: A web based, mobile friendly version of the classic game <a href="http://en.wikipedia.org/wiki/Concentration_(game)">Concentration</a>. Built in HTML, JavaScript and CSS3.
-  url: http://robotmonsterlovesyou.github.io/memory/
-
-- name: Exquisite Corpse
-  description: A web based, mobile friendly version of the game [Exquisite Corpse](http://en.wikipedia.org/wiki/Exquisite_corpse). Built in HTML and JavaScript utilizing LocalStorage, Canvas and Application Cache.
-  url: http://robotmonsterlovesyou.github.io/exquisitecorpse/

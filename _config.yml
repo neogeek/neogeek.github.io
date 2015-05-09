@@ -1,5 +1,4 @@
-name: Scott Doxey
-markdown: redcarpet
-highlighter: pygments
+title: Scott Doxey
+baseurl: ""
+markdown: kramdown
 permalink: articles/:title
-url: http://neo-geek.net

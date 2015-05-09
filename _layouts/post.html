@@ -1,23 +1,27 @@
 ---
 layout: default
 ---
+<div class="post">
 
-<h1 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
-{% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
-<p class="toread"></p>
+    <div class="wrapper">
 
-<article>
+        <header class="post-header">
 
-{% if page.image %}
-<img src="{{ page.image }}">
-{% endif %}
+            <h1 class="post-title">{{ page.title }}</h1>
 
-{{ page.description | markdownify }}
+        </header>
 
-{{ content }}
+        <article class="post-content">
 
-</article>
+            {% if page.description %}
 
-<p><i>If you have any questions or comments regarding this article please let me know on <a href="https://github.com/neogeek/feedback">GitHub</a> or via email at <a href="#email">%email%</a>.</i></p>
+            {{ page.description | markdownify }}
 
-<script src="/js/article.js"></script>
+            {% endif %}
+            {{ content }}
+
+        </article>
+
+    </div>
+
+</div>

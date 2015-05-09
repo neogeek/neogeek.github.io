@@ -1,0 +1,189 @@
+* {
+    margin: 0; padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'proxima-nova', serif;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    color: $text;
+}
+
+h1 {
+    font-weight: 600;
+    line-height: 1em;
+}
+
+a {
+    color: $link;
+}
+
+.site-header {
+
+    text-align: center;
+
+    a {
+        color: $text;
+    }
+
+    .logo {
+
+        img {
+            display: inline-block;
+            border-radius: 50%;
+        }
+
+    }
+
+    ul {
+
+        margin: 1em 0;
+
+        li {
+
+            display: inline-block;
+
+            a {
+                display: block;
+                padding: 1em;
+                text-transform: uppercase;
+                text-decoration: none;
+                letter-spacing: 0.1em;
+                &:hover {
+                    color: lighten($text, 25%);
+                }
+            }
+
+        }
+
+    }
+
+}
+
+.site-footer {
+
+    color: lighten($text, 50%);
+    text-align: center;
+
+}
+
+.social {
+
+    margin: 1em 0;
+    font-size: 2.5rem;
+    text-align: center;
+
+    a {
+        padding: .35em;
+        color: #aaa;
+        text-decoration: none;
+
+        &.icon-twitter:hover {
+            color: $social-twitter;
+        }
+
+        &.icon-github:hover {
+            color: $social-github;
+        }
+
+        &.icon-instagram:hover {
+            color: $social-instagram;
+        }
+
+        &.icon-dribbble:hover {
+            color: $social-dribbble;
+        }
+
+    }
+
+}
+
+.wrapper {
+
+    margin: 4em auto;
+
+}
+
+.post,
+.page {
+
+    .wrapper {
+        padding: 0 1em;
+        max-width: $max-width;
+    }
+
+    p,
+    ul,
+    ol,
+    blockquote {
+        margin: 1em 0;
+    }
+
+    blockquote {
+        font-style: italic;
+    }
+
+    blockquote p:first-of-type:before {
+        content: '“';
+    }
+
+    blockquote p:last-of-type:after {
+        content: '”';
+    }
+
+    img[width] {
+        max-width: 100%;
+    }
+
+    img:not([width]) {
+        width: 100%;
+    }
+
+}
+
+.post {
+
+    blockquote {
+        font-size: 1.8em;
+        line-height: 1.1em;
+        text-align: center;
+    }
+
+}
+
+@include media-min-query($max-width) {
+
+    body {
+        font-size: 1.2em;
+        line-height: 1.3em;
+    }
+
+    .post {
+
+        blockquote {
+            position: relative;
+            width: 100vw;
+            left: calc((100% - 100vw) / 2);
+        }
+
+    }
+
+}
+
+@include media-max-query($max-width) {
+
+    .post,
+    .page {
+
+        img:not([width]) {
+            position: relative;
+            margin: 0 -1em;
+            width: calc(100% + 2em);
+        }
+
+    }
+
+}
