@@ -6,11 +6,11 @@
 }
 
 body {
-    font-family: 'proxima-nova', serif;
+    font-family: 'proxima-nova', sans-serif;
     font-size: 1.1em;
     line-height: 1.3em;
     color: $text;
-    border-top: 5px solid $link-color;
+    border-top: 5px solid $link;
     background-color: #FAFAFA;
 }
 
