@@ -1,16 +1,18 @@
 ---
 layout: page
-class: articles
+class: article-list
 title: Articles
 ---
 
 {% for post in site.posts %}
 
-<a href="{{ post.url }}">
+<a href="{{ post.url }}" class="article">
+
+    <p class="date">{{ post.date | date: "%B %Y" }}</p>
 
     <h1>{{ post.title }}</h1>
 
-    {{ post.description | markdownify }}
+    <p>{{ post.description | markdownify | strip_html }}</p>
 
 </a>
 

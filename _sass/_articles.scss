@@ -1,9 +1,19 @@
-.articles {
+.article-list {
 
-    a {
+    .article {
 
+        margin: 1em 0 2em;
+        display: block;
         color: $text;
         text-decoration: none;
+
+        .date {
+            margin: 1em 0 0;
+            font-size: .85em;
+            line-height: 1em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
 
         h1 {
             color: $link;
