@@ -121,10 +121,13 @@ a {
     }
 
     p,
-    ul,
-    ol,
     blockquote {
         margin: 1em 0;
+    }
+
+    ul,
+    ol {
+        margin: 1em 2em;
     }
 
     blockquote {
