@@ -7,11 +7,11 @@ favorite: true
 year: 2014
 ---
 
-> Name one thing you have ever finished.
+> "Name one thing you have ever finished."
 
 It should have been frustrating, but it didn't phase me; I never finished a project. I would start something I was passionate about and then drop it before it was ever fully realized. I was an established failure.
 
-One day I thought to myself "Why do I need to _finish_ something to release it to the public?".
+One day I thought to myself, why do I need to _finish_ something to release it to the public?.
 
 > Why do I need to _finish_ something to release it to the public?
 
