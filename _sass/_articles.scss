@@ -22,3 +22,52 @@
     }
 
 }
+
+.post {
+
+    .post-header {
+        margin: 0 0 4em;
+        text-align: center;
+    }
+
+    .post-title {
+        font-size: 3em;
+        line-height: 1em;
+    }
+
+    .post-date {
+        margin: 1em 0 0;
+        font-size: .85em;
+        line-height: 1em;
+        b {
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+
+    blockquote {
+        font-size: 1.8em;
+        line-height: 1.1em;
+        text-align: center;
+    }
+
+    pre {
+        padding: .5em;
+        overflow: auto;
+    }
+
+}
+
+@include media-min-query($max-width) {
+
+    .post {
+
+        blockquote {
+            position: relative;
+            width: 100vw;
+            left: calc((100% - 100vw) / 2);
+        }
+
+    }
+
+}
