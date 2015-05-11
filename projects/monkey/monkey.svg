@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+
+    <clipPath id="split-left">
+        <rect x="0" y="0" width="50%" height="100%" />
+    </clipPath>
+
+    <clipPath id="split-right">
+        <rect x="50%" y="0" width="50%" height="100%" />
+    </clipPath>
+
+    <!-- background -->
+    <circle cx="250" cy="250" r="250" fill="#A6D5E1" />
+
+    <g fill="#705CA0" transform="translate(0, 10)">
+
+        <!-- left ear -->
+        <circle cx="90" cy="125" r="65" />
+        <!-- right ear -->
+        <circle cx="410" cy="125" r="65" fill="#655194" />
+
+        <!-- head (light) -->
+        <circle cx="250" cy="250" r="190" />
+        <!-- head (dark) -->
+        <circle cx="250" cy="250" r="190" fill="#655194" clip-path="url(#split-right)" />
+
+        <!-- face (light) -->
+        <g fill="#fff">
+
+            <circle cx="185" cy="190" r="70" />
+
+            <circle cx="315" cy="190" r="70" />
+
+            <circle cx="250" cy="280" r="120" />
+
+        </g>
+
+        <!-- face (darker) -->
+        <g fill="#f8f8f8" clip-path="url(#split-left)">
+
+            <circle cx="185" cy="190" r="70" />
+
+            <circle cx="315" cy="190" r="70" />
+
+            <circle cx="250" cy="280" r="120" />
+
+        </g>
+
+        <!-- features -->
+        <g fill="#705CA0">
+
+            <!-- left eye -->
+            <circle cx="185" cy="190" r="35" /> <circle cx="205" cy="160" r="20" fill="#f8f8f8" />
+            <!-- right eye -->
+            <circle cx="315" cy="190" r="35" /> <circle cx="335" cy="160" r="20" fill="#fff" />
+
+            <!-- nose -->
+            <circle cx="235" cy="250" r="11" />
+            <circle cx="265" cy="250" r="11" />
+
+            <!-- mouth -->
+            <circle cx="250" cy="350" r="20" />
+
+        </g>
+
+    </g>
+
+</svg>
