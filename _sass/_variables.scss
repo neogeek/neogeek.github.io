@@ -8,3 +8,12 @@ $social-instagram: #3F729B;
 $social-dribbble: #EA4C89;
 
 $max-width: 43.750em;
+
+.datetime {
+    font-size: .85em;
+    line-height: 1em;
+    b {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}

@@ -8,11 +8,8 @@
         text-decoration: none;
 
         .date {
-            margin: 1em 0 0;
-            font-size: .85em;
-            line-height: 1em;
-            font-weight: 600;
-            text-transform: uppercase;
+            margin: 1em 0 .5em;
+            @extend .datetime;
         }
 
         h1 {
@@ -37,12 +34,7 @@
 
     .post-date {
         margin: 1em 0 0;
-        font-size: .85em;
-        line-height: 1em;
-        b {
-            font-weight: 600;
-            text-transform: uppercase;
-        }
+        @extend .datetime;
     }
 
     blockquote {
