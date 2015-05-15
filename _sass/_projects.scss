@@ -27,8 +27,10 @@
     }
 
     &.monkey,
-    &.the-impossible-triangle {
-        img {
+    &.the-impossible-triangle,
+    &.ios-device-svg-templates {
+        img,
+        object {
             margin: 0 auto;
             padding: 1em;
             display: block;
@@ -51,6 +53,15 @@
         background-color: #7AE1FA;
         img {
             max-width: 500px;
+        }
+    }
+
+    &.ios-device-svg-templates {
+        color: #333;
+        background-color: #eee;
+        object {
+            padding: 1em 1em 2em;
+            max-width: 600px;
         }
     }
 
