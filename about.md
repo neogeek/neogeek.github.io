@@ -2,7 +2,7 @@
 layout: page
 class: about
 title: Hi, I'm Scott.
-permalink: /about/
+permalink: /
 ---
 
 ![](/images/profile.jpg)
