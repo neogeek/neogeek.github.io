@@ -11,21 +11,25 @@
 
     padding: 2em;
     text-align: center;
+    background-color: #eee;
 
     a {
         color: inherit;
     }
 
     p {
-        margin: 2em 0;
+        margin: 2em auto;
+        max-width: 42em;
     }
 
     .project-type {
-        font-size: .9em;
-        font-weight: 600;
+        font-size: .8em;
+        font-weight: 400;
         text-transform: uppercase;
+        opacity: 0.75;
     }
 
+    &.facadejs,
     &.monkey,
     &.the-impossible-triangle,
     &.ios-device-svg-templates {
@@ -39,29 +43,44 @@
         }
     }
 
+    &.facadejs {
+        color: #eee;
+        background-color: lighten(#322957, 10);
+        img {
+            padding: 1em 1em 2em;
+            max-width: 45em;
+        }
+    }
+
+    &.doxdox {
+        color: #eee;
+        background-color: lighten(#2C313D, 10);
+        img {
+            padding: 1em 1em 2em;
+            max-width: 45em;
+        }
+    }
+
     &.monkey {
-        color: #333;
         background-color: #eee;
         img {
             padding: 1em 1em 2em;
-            max-width: 400px;
+            max-width: 20em;
         }
     }
 
     &.the-impossible-triangle {
-        color: #333;
-        background-color: #7AE1FA;
+        background-color: lighten(#6FCEE4, 10);
         img {
-            max-width: 500px;
+            max-width: 30em;
         }
     }
 
     &.ios-device-svg-templates {
-        color: #333;
         background-color: #eee;
         object {
             padding: 1em 1em 2em;
-            max-width: 600px;
+            max-width: 40em;
         }
     }
 
