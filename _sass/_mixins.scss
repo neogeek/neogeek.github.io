@@ -1,0 +1,19 @@
+@mixin media-min-query($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+@mixin media-max-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+$prefixes: '-webkit-', '-moz-', '-ms-', '-o-', '';
+
+@mixin transition($args...) {
+    @each $prefix in $prefixes {
+        #{$prefix}transition: $args;
+    }
+}

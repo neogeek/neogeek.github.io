@@ -3,19 +3,8 @@
 ---
 @charset "utf-8";
 
-@mixin media-min-query($device) {
-    @media screen and (min-width: $device) {
-        @content;
-    }
-}
-
-@mixin media-max-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
 @import
+    "mixins",
     "variables",
     "fonts",
     "base",
