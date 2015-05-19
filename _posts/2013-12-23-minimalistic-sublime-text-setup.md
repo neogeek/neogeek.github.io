@@ -13,6 +13,7 @@ For package/theme management I use the popular [Package Control](https://sublime
 
 ##Packages
 
+- [DocBlockr](https://github.com/spadgos/sublime-jsdocs/)
 - [GitGutter](https://github.com/jisaacks/GitGutter)
 - [Handlebars](https://github.com/daaain/Handlebars)
 - [MarkdownEditing](https://github.com/ttscoff/MarkdownEditing)
@@ -25,7 +26,6 @@ For package/theme management I use the popular [Package Control](https://sublime
 ##Theme
 
 - [Dracula](https://github.com/zenorocha/dracula-theme)
-- [Spacegray](http://kkga.github.io/spacegray/)
 
 ##Settings
 
@@ -37,18 +37,17 @@ For package/theme management I use the popular [Package Control](https://sublime
 	"folder_exclude_patterns":
 	[
 		".git",
+		".sass-cache",
 		"venv"
 	],
 	"font_size": 14,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Markdown"
+		"Vintage"
 	],
 	"scroll_past_end": true,
 	"spell_check": true,
 	"tab_size": 4,
-	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true
