@@ -37,6 +37,16 @@
         @extend .datetime;
     }
 
+    h2 {
+        margin: 1em 0;
+        font-size: 2em;
+    }
+
+    h3 {
+        margin: 1em 0;
+        font-size: 1.3em;
+    }
+
     blockquote {
         font-size: 1.8em;
         line-height: 1.1em;
@@ -46,6 +56,7 @@
     pre {
         padding: .5em;
         overflow: auto;
+        line-height: 1.2em;
     }
 
 }

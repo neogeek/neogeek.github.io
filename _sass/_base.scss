@@ -20,6 +20,16 @@ h1 {
 
 a {
     color: $link;
+    @include transition(color .2s ease);
+}
+
+pre, code {
+    font-family: 'Monaco', monospace;
+}
+
+code {
+    font-size: 0.8em;
+    line-height: 1.3em;
 }
 
 .site-header {
