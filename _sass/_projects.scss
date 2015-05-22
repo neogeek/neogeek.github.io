@@ -45,6 +45,8 @@
     }
 
     &.linear {
+        color: #eee;
+        background-color: lighten(#F94B43, 3);
         img {
             padding: 1em 1em 2em;
             max-width: 45em;
