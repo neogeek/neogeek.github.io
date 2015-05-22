@@ -29,6 +29,7 @@
         opacity: 0.75;
     }
 
+    &.linear,
     &.facadejs,
     &.monkey,
     &.the-impossible-triangle,
@@ -40,6 +41,13 @@
             display: block;
             width: 100%;
             height: auto;
+        }
+    }
+
+    &.linear {
+        img {
+            padding: 1em 1em 2em;
+            max-width: 45em;
         }
     }
 
