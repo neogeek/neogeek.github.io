@@ -55,9 +55,9 @@ $ doxdox --help
  Available Layouts:
 
   - Bootstrap (default)     (http://getbootstrap.com/)
-  - Markdown            (http://daringfireball.net/projects/markdown/)
-  - Dash            (http://kapeli.com/docsets/)
-  - Wiki            (https://help.github.com/articles/about-github-wikis/)
+  - Markdown                (http://daringfireball.net/projects/markdown/)
+  - Dash                    (http://kapeli.com/docsets/)
+  - Wiki                    (https://help.github.com/articles/about-github-wikis/)
 ```
 
 Finally, run the following command to generate documentation (replace `facade.js` with your own filename).
