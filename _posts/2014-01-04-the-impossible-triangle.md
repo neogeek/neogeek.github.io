@@ -246,7 +246,7 @@ The last step was to create the clippings paths that would be applied to each on
 
 After the image was completed I converted it from SVG to JPEG with the following command.
 
-**Note:** ImageMagick must be installed with the RSVG flag enabled as the built-in SVG conversion has issues with complex SVG. Installation instructions can be found in my article [PHP & ImageMagick](/articles/php-and-imagemagick/#macports-instructions)
+**Note:** ImageMagick must be installed with the RSVG flag enabled as the built-in SVG conversion has issues with complex SVG. Installation instructions can be found in my article [PHP & ImageMagick](/articles/php-and-imagemagick/)
 
 ```bash
 $ convert impossible-triangle.svg impossible-triangle.png
