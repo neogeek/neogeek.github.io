@@ -5,7 +5,7 @@ title: Hi, I'm Scott.
 permalink: /
 ---
 
-![](/images/profile.jpg)
+![Profile photo of Scott Doxey](/images/profile.jpg)
 
 # Hi!
 
