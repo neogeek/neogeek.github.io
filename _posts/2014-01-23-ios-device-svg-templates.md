@@ -2,7 +2,7 @@
 layout: post
 title: iOS Device SVG Templates
 description: iOS Device SVG Templates is a new project for displaying iOS screenshots in themeable iOS devices.
-image: /images/posts/ios-device-svg-templates/ios-device-svg-templates-themes.png
+image: /images/posts/ios-device-svg-templates/screenshot.png
 keywords: svg imagemagick iphone
 year: 2014
 ---
@@ -15,8 +15,6 @@ Displaying screenshots of your application or responsive design in an iPhone jus
 ```
 
 ##iPhone 5c
-
-![screenshot](/images/posts/ios-device-svg-templates/ios-device-svg-templates-orientations.png)
 
 The iPhone 5c is available in both portrait and landscape. Each image also includes the following color themes:
 
