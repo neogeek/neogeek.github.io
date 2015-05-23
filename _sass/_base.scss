@@ -167,6 +167,21 @@ code {
         height: 100%;
     }
 
+    .table-wrapper {
+        width: 100%;
+        overflow: auto;
+
+        table {
+
+            td {
+                padding: .5em;
+                vertical-align: top;
+            }
+
+        }
+
+    }
+
 }
 
 @include media-min-query($max-width) {
