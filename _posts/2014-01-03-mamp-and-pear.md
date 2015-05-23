@@ -6,9 +6,9 @@ keywords: php mamp pear
 year: 2014
 ---
 
-##Installing PEAR Libraries
+## Installing PEAR Libraries
 
-###PEAR CLI Instructions
+### PEAR CLI Instructions
 
 Installing libraries hosted through the PEAR service is fairly straight forward. The first step is to determine which version of PHP is currently active as MAMP has available to it multiple versions. To do this, navigate to the built in `phpinfo()` page located at <http://localhost/MAMP/phpinfo.php>. Make note of the version number located at the top of this page for the next step.
 
@@ -43,7 +43,7 @@ if (class_exists('HTTP_OAuth')) { echo 'PEAR Package Installed!'; }
 else { echo 'Error Loading PEAR Package.'; }
 ```
 
-###git Instructions
+### git Instructions
 
 Similar to the steps above you must first determine which version of PHP is currently active and then navigate to the following directory.
 

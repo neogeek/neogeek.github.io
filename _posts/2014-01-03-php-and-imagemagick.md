@@ -6,9 +6,9 @@ keywords: php imagemagick brew
 year: 2014
 ---
 
-##Initial Setup
+## Initial Setup
 
-###Brew Instructions
+### Brew Instructions
 
 If you don't need to convert complex SVG graphics then installing using [Homebrew](http://brew.sh/) is recommended as you won't need to install extraneous dependencies.
 
@@ -16,7 +16,7 @@ If you don't need to convert complex SVG graphics then installing using [Homebre
 $ brew update; brew install imagemagick
 ```
 
-###MacPorts Instructions
+### MacPorts Instructions
 
 **Notice:** Installing this way prevent accessing `convert` from PHP as it doesn't have the proper permissions.
 
@@ -32,7 +32,7 @@ To ensure that ImageMagic with the RSVG configuration was installed correctly ru
 $ convert -list configure | grep rsvg
 ```
 
-##PHP Setup
+## PHP Setup
 
 Next, add the following lines of PHP to the beginning of the file where you plan on utilizing ImageMagick.
 
@@ -44,7 +44,7 @@ putenv('PATH=' . getenv('MAGICK_HOME') . '/bin:' . getenv('PATH'));
 putenv('DYLD_LIBRARY_PATH=' . getenv('MAGICK_HOME') . '/lib');
 ```
 
-##Example Usage
+## Example Usage
 
 ```php
 <?php
@@ -59,6 +59,6 @@ exec('convert avatar.png -rotate 90 avatar_rotated.png');
 exec('convert avatar.png -resize 100x100^ -gravity center -extent 100x100 avatar_sm.png');
 ```
 
-##Conclusion
+## Conclusion
 
 Now that you have ImageMagick setup in both the command line and in PHP, you can start to utilize it in future projects. It is recommended that when you use ImageMagick, you take into consideration the load it places on the server each time you convert, resize or rotate an image.

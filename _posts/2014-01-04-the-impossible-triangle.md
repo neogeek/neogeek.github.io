@@ -10,9 +10,9 @@ So when I did have the drive to create something, I utilized the tools most fami
 
 The impossible triangle and the art of Brazilian artist Romero Britto are both such major inspirations in my life I wanted to create something that not only captured the essence of these two inspirations but presented them in my own way.
 
-##SVG
+## SVG
 
-###Paths
+### Paths
 
 First step was to setup the triangle, which was easily achieved by using multiple paths.
 
@@ -40,7 +40,7 @@ First step was to setup the triangle, which was easily achieved by using multipl
 </svg>
 ```
 
-###Patterns
+### Patterns
 
 The next step was to create each of the patterns that would be used to fill each of the three parts of the triangle.
 
@@ -101,7 +101,7 @@ The next step was to create each of the patterns that would be used to fill each
 </svg>
 ```
 
-###Clipping Paths
+### Clipping Paths
 
 The last step was to create the clippings paths that would be applied to each one of the patterns.
 
@@ -152,7 +152,7 @@ The last step was to create the clippings paths that would be applied to each on
 </svg>
 ```
 
-###Completed
+### Completed
 
 ![final](/images/posts/the-impossible-triangle/impossible-triangle.jpg)
 
@@ -242,7 +242,7 @@ The last step was to create the clippings paths that would be applied to each on
 </svg>
 ```
 
-##Converting SVG to JPEG
+## Converting SVG to JPEG
 
 After the image was completed I converted it from SVG to JPEG with the following command.
 

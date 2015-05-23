@@ -7,11 +7,11 @@ keywords: sublime text
 year: 2013
 ---
 
-##Package Control
+## Package Control
 
 For package/theme management I use the popular [Package Control](https://sublime.wbond.net) plugin. Installation is simple and can be achieved by accessing the console in Sublime Text and pasting in the command found on the [Package Control's installation page](https://sublime.wbond.net/installation).
 
-##Packages
+## Packages
 
 - [DocBlockr](https://github.com/spadgos/sublime-jsdocs/)
 - [GitGutter](https://github.com/jisaacks/GitGutter)
@@ -23,11 +23,11 @@ For package/theme management I use the popular [Package Control](https://sublime
 - [SublimeLinter-csslint](https://github.com/SublimeLinter/SublimeLinter-csslint)
 - [SublimeLinter-pylint](https://github.com/SublimeLinter/SublimeLinter-pylint)
 
-##Theme
+## Theme
 
 - [Dracula](https://github.com/zenorocha/dracula-theme)
 
-##Settings
+## Settings
 
 ```json
 {

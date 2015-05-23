@@ -14,7 +14,7 @@ Displaying screenshots of your application or responsive design in an iPhone jus
     data="iphone-5c-portrait.svg?screenshot=screenshot-portrait.png"></object>
 ```
 
-##iPhone 5c
+## iPhone 5c
 
 The iPhone 5c is available in both portrait and landscape. Each image also includes the following color themes:
 

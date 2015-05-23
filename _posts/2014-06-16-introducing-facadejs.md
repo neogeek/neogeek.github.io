@@ -6,7 +6,7 @@ keywords: html5 canvas javascript
 year: 2014
 ---
 
-##Development
+## Development
 
 Development on Facade.js started as a game engine for the [GitHub Game Off](https://github.com/blog/1303-github-game-off) in November of 2012. The topic was loosely based around forking, branching and cloning (or forks, tree branches and clones). The game concept I arrived at was to be a simple point and click adventure based on a discarded robot and his journey to find purpose.
 
@@ -14,7 +14,7 @@ Soon after starting I realized that I had not built a game engine, but instead b
 
 Two years, three rewrites and ±500 commits later I finally have something I am ready to share.
 
-##Goals
+## Goals
 
 Below are the goals that I set in place for Facade.js after the initial version was completed. The concept of breaking out additional non-core functionality into plugins was a day-one decision as I knew that without it there would be insurmountable feature creep.
 
@@ -23,7 +23,7 @@ Below are the goals that I set in place for Facade.js after the initial version 
 - Third is that the codebase should be easily digestible for referential and educational purposes.
 - Fourth is that Facade.js is easily extensible through the use of third party built plugins. These plugins should fill in the gaps that aren't covered by core functionality.
 
-##Community
+## Community
 
 Many popular libraries have vibrant communities and anyone who has developed a library can only hope that their contribution will have a similar impact on the open source community.
 
