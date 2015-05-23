@@ -29,4 +29,4 @@ Many popular libraries have vibrant communities and anyone who has developed a l
 
 Again, from day one I built Facade.js around the concept of supporting additional functionality through the use of third-party plugins. Because of this I wanted to create a way for users of Facade.js and plugin developers alike to be able to search through and register plugins in a centralized place.
 
-Shortly after the first public release of Facade.js I launched the [Facade.js plugins registry](http://plugins.facadejs.com/). Currently the only way to register plugins through this site is to contact me directly at [%email%](#email).
+Shortly after the first public release of Facade.js I launched the [Facade.js plugins registry](http://plugins.facadejs.com/). Currently the only way to register plugins through this site is to contact me directly.
