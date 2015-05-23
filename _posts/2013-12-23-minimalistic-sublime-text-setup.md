@@ -9,7 +9,7 @@ year: 2013
 
 ##Package Control
 
-For package/theme management I use the popular [Package Control](https://sublime.wbond.net) plugin. Installation is simple and can be achieved by accessing the console in Sublime Text (ctrl + `) and pasting in the command found on the [Package Control's installation page](https://sublime.wbond.net/installation).
+For package/theme management I use the popular [Package Control](https://sublime.wbond.net) plugin. Installation is simple and can be achieved by accessing the console in Sublime Text and pasting in the command found on the [Package Control's installation page](https://sublime.wbond.net/installation).
 
 ##Packages
 
