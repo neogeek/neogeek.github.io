@@ -3,9 +3,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1">
 
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
 
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    {% if page.image %}
+    <link rel="image_src" href="{{ site.url }}{{ page.image }}">
+    {% else %}
+    <link rel="image_src" href="{{ site.url }}/images/logo.png">
+    {% endif %}
+
+    <link rel="apple-touch-icon" href="/images/logo.jpg">
+
+    {% if page.description %}
+    {% assign description = page.description %}
+    {% else %}
+    {% assign description = site.description %}
+    {% endif %}
+
+    <meta name="description" content="{{ description | markdownify | strip_html | strip_newlines }}">
+    <meta name="twitter:description" content="{{ description | markdownify | strip_html | strip_newlines }}">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="neogeek">
+    <meta name="twitter:creator" content="neogeek">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} — {% endif %}{{ site.name }}">
+    <meta name="twitter:domain" content="{{ site.url }}">
+
+    {% if page.image %}
+    <meta name="twitter:image:src" content="{{ site.url }}{{ page.image }}">
+    {% else %}
+    <meta name="twitter:image:src" content="{{ site.url }}/images/logo.png">
+    {% endif %}
 
     <script>
     (function(d) {
