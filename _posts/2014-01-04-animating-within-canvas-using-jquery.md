@@ -49,6 +49,7 @@ With the jQuery library you can set the easing of an animation to either linear 
 - easeOutBounce
 - easeInOutBounce
 
-To demonstrate how easy it is to use $.animate with canvas I put together this demo on [JSFiddle](http://jsfiddle.net/neogeek/z4VhV/).
+To demonstrate how easy it is to use $.animate with canvas I put together this demo on [CodePen](http://codepen.io/neogeek/pen/RPRzjG).
 
-<iframe width="100%" height="380" src="http://jsfiddle.net/neogeek/z4VhV/embedded/result,js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<p data-height="400" data-theme-id="0" data-slug-hash="RPRzjG" data-default-tab="result" data-user="neogeek" class='codepen'>See the Pen <a href='http://codepen.io/neogeek/pen/RPRzjG/'>RPRzjG</a> by Scott Doxey (<a href='http://codepen.io/neogeek'>@neogeek</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>

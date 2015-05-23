@@ -1,24 +1,19 @@
 ---
 layout: page
+class: article-list
 title: Articles
 ---
 
-<input type="text" size="25" class="search" placeholder="Filter articles by keyword" autocapitalize="off" autocomplete="off" spellcheck="false" />
-
-{% assign current_year = first_post.date | date: "%Y" %}
-
 {% for post in site.posts %}
 
-    {% if current_year != post.year %}
+<a href="{{ post.url }}" class="article">
 
-        {% assign current_year = post.year %}
+    <p class="date"><b>{{ post.date | date: "%B %Y" }}</b></p>
 
-        <p class="year">{{ current_year }}</p>
+    <h1>{{ post.title }}</h1>
 
-    {% endif %}
+    <p>{{ post.description | markdownify | strip_html }}</p>
 
-    <p class="article">{{ post.date | date_to_string }} &mdash; <a href="{{ post.url }}" data-title="{{ post.title | downcase }}" data-keywords="{{ post.keywords | downcase }}">{% if post.favorite %}★ {% endif %}{{ post.title }}</a></p>
+</a>
 
 {% endfor %}
-
-<script src="/js/search.js"></script>

@@ -7,12 +7,13 @@ keywords: sublime text
 year: 2013
 ---
 
-##Package Control
+## Package Control
 
-For package/theme management I use the popular [Package Control](https://sublime.wbond.net) plugin. Installation is simple and can be achieved by accessing the console in Sublime Text (ctrl + `) and pasting in the command found on the [Package Control's installation page](https://sublime.wbond.net/installation).
+For package/theme management I use the popular [Package Control](https://sublime.wbond.net) plugin. Installation is simple and can be achieved by accessing the console in Sublime Text and pasting in the command found on the [Package Control's installation page](https://sublime.wbond.net/installation).
 
-##Packages
+## Packages
 
+- [DocBlockr](https://github.com/spadgos/sublime-jsdocs/)
 - [GitGutter](https://github.com/jisaacks/GitGutter)
 - [Handlebars](https://github.com/daaain/Handlebars)
 - [MarkdownEditing](https://github.com/ttscoff/MarkdownEditing)
@@ -22,12 +23,11 @@ For package/theme management I use the popular [Package Control](https://sublime
 - [SublimeLinter-csslint](https://github.com/SublimeLinter/SublimeLinter-csslint)
 - [SublimeLinter-pylint](https://github.com/SublimeLinter/SublimeLinter-pylint)
 
-##Theme
+## Theme
 
 - [Dracula](https://github.com/zenorocha/dracula-theme)
-- [Spacegray](http://kkga.github.io/spacegray/)
 
-##Settings
+## Settings
 
 ```json
 {
@@ -37,18 +37,17 @@ For package/theme management I use the popular [Package Control](https://sublime
 	"folder_exclude_patterns":
 	[
 		".git",
+		".sass-cache",
 		"venv"
 	],
 	"font_size": 14,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Markdown"
+		"Vintage"
 	],
 	"scroll_past_end": true,
 	"spell_check": true,
 	"tab_size": 4,
-	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true

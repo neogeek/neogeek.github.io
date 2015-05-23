@@ -1,23 +1,51 @@
 ---
 layout: default
 ---
+<div class="post">
 
-<h1 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
-{% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
-<p class="toread"></p>
+    <div class="wrapper">
 
-<article>
+        <header class="post-header">
 
-{% if page.image %}
-<img src="{{ page.image }}">
-{% endif %}
+            <h1 class="post-title">{{ page.title }}</h1>
 
-{{ page.description | markdownify }}
+            <p class="post-date">Published <b>{{ page.date | date: "%B %Y" }}</b></p>
 
-{{ content }}
+        </header>
 
-</article>
+        <article class="post-content">
 
-<p><i>If you have any questions or comments regarding this article please let me know on <a href="https://github.com/neogeek/feedback">GitHub</a> or via email at <a href="#email">%email%</a>.</i></p>
+            {% if page.image %}
+            <img src="{{ page.image }}" alt="Header image for {{ page.title }} article">
+            {% endif %}
 
-<script src="/js/article.js"></script>
+            {% if page.description %}
+
+            {{ page.description | markdownify }}
+
+            {% endif %}
+            {{ content }}
+
+        </article>
+
+        <div class="feedback">
+
+            <p>If you have any questions or comments regarding this article please let me know on <a href="https://github.com/neogeek/feedback/">GitHub</a> or via email at <a href="mailto:hello@scottdoxey.com">hello@scottdoxey.com</a>.</p>
+
+        </div>
+
+    </div>
+
+    <div class="post-navigation">
+
+        {% if page.previous.url %}
+        <a href="{{ page.previous.url }}" class="previous">&#171; {{ page.previous.title }}</a>
+        {% endif %}
+
+        {% if page.next.url %}
+        <a href="{{ page.next.url }}" class="next">{{ page.next.title }} &#187;</a>
+        {% endif %}
+
+    </div>
+
+</div>
