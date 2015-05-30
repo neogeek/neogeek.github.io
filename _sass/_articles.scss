@@ -40,11 +40,13 @@
     h2 {
         margin: 1em 0;
         font-size: 2em;
+        line-height: 1em;
     }
 
     h3 {
         margin: 1em 0;
         font-size: 1.3em;
+        line-height: 1em;
     }
 
     blockquote {
@@ -96,10 +98,12 @@
     .post-navigation {
 
         display: -webkit-flex;
+        display: flex;
 
         .previous,
         .next {
             -webkit-flex: 1;
+            flex: 1;
         }
 
     }
