@@ -5,12 +5,16 @@
 
 @import
     'mixins',
-    'variables',
-    'fonts',
-    'base',
     'syntax-highlighting',
+    'variables'
+;
+
+@import
     'articles',
+    'base',
+    'books',
+    'fonts',
+    'photos',
     'projects',
-    'talks',
-    'photos'
+    'talks'
 ;
