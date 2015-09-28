@@ -13,13 +13,16 @@
     text-align: center;
     background-color: #eee;
 
-    a {
-        color: inherit;
-    }
-
     p {
+
         margin: 2em auto;
         max-width: 42em;
+
+        a {
+            color: $text;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 93%, $text 93%);
+        }
+
     }
 
     .project-type {
@@ -46,7 +49,7 @@
     }
 
     &.linear {
-        color: #eee;
+        @extend .dark-project;
         background-color: lighten(#F94B43, 3);
         img {
             padding: 1em 1em 2em;
@@ -55,7 +58,7 @@
     }
 
     &.facadejs {
-        color: #eee;
+        @extend .dark-project;
         background-color: lighten(#322957, 10);
         img {
             padding: 1em 1em 2em;
@@ -64,7 +67,7 @@
     }
 
     &.doxdox {
-        color: #eee;
+        @extend .dark-project;
         background-color: lighten(#2C313D, 10);
         img {
             padding: 1em 1em 2em;
@@ -95,4 +98,12 @@
         }
     }
 
+}
+
+.dark-project {
+    color: #eee;
+    p a {
+        color: #eee;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 93%, #eee 93%);
+    }
 }
