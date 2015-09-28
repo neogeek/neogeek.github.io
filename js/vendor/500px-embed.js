@@ -64,7 +64,6 @@ window.pxembed.resizeEmbed = function(embedElement) {
   originalHeight = embedElement.getAttribute("data-height")
 
   // Getting container width from computed CSS (actual width without padding and margin)
-  // newWidth = parseInt(window.getComputedStyle(embedElement.parentNode).getPropertyValue("width"))
   obj = window.getComputedStyle(embedElement.parentNode);
   newWidth = parseInt(obj.getPropertyValue("width")) - (parseInt(obj.getPropertyValue("padding-left")) + parseInt(obj.getPropertyValue("padding-right")));
   newHeight = ( newWidth * originalHeight) / originalWidth
@@ -97,9 +96,19 @@ window.pxembed.onBasicImageLoad = function (anchor, embedElement, replacement) {
 };
 
 window.pxembed.onEmbeddedLoad = function(anchor, embedElement, replacement) {
-  var imageElement;
+  var imageElement, img_url;
 
   imageElement = window.pxembed.findElementWith(embedElement.getElementsByTagName("img"), window.pxembed.pxImagePredicate);
+
+  img_url = imageElement.src;
+
+  if (!!img_url.match("edgecastcdn.net")){
+    // replace unsupported edgecast urls with correct ones
+    // old: https://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/15238249/263c8e63df254eef0752cb23b53d6c37ca5fd657/4.jpg
+    // new: https://ppcdn.500px.org/15238249/263c8e63df254eef0752cb23b53d6c37ca5fd657/4.jpg
+    var url_suffix = img_url.substring(img_url.indexOf("500px.net/") + 10); // 10 == '500px.net/'.length
+    imageElement.src = "https://ppcdn.500px.org/" + url_suffix; //should set imageElement.complete = false
+  }
 
   if (imageElement.complete || imageElement.readyState === "complete") {
     window.pxembed.onBasicImageLoad(anchor, embedElement, replacement);
@@ -110,13 +119,8 @@ window.pxembed.onEmbeddedLoad = function(anchor, embedElement, replacement) {
   return true;
 };
 
-window.pxembed.init = (function() {
+window.pxembed.scan = (function() {
   var anchor, createBasicEmbeddable, embedElement, embeddedPhotos, onEmbeddedLoad, photoId, replacement, _i, _len;
-  if (window.pxembed.references || /MSIE (5|6|7|8)/i.test(navigator.userAgent)) {
-    return false;
-  }
-
-  window.pxembed.references = [];
 
   embeddedPhotos = document.querySelectorAll('.pixels-photo, .prime-photo');
 
@@ -142,6 +146,15 @@ window.pxembed.init = (function() {
     anchor.insertBefore(replacement, embedElement);
     window.pxembed.references.push(replacement);
   }
+});
+
+window.pxembed.init = (function() {
+  if (window.pxembed.references || /MSIE (5|6|7|8)/i.test(navigator.userAgent)) {
+    return false;
+  }
+
+  window.pxembed.references = [];
+  window.pxembed.scan();
 
   if(window.attachEvent) {
     window.attachEvent('onresize', window.pxembed.onWindowResize);
