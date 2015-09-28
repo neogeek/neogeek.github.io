@@ -185,7 +185,7 @@ code {
 
 }
 
-@media (min-width:$max-width) {
+@media (min-width: $max-width) {
 
     body {
         font-size: 1.2em;
@@ -198,7 +198,7 @@ code {
 
 }
 
-@media (max-width:$max-width) {
+@media (max-width: $max-width) {
 
     .post,
     .page {
