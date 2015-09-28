@@ -20,7 +20,7 @@ h1 {
 
 a {
     color: $link;
-    @include transition(color .2s ease);
+    @include prefix('transition', 'color .2s ease');
 }
 
 pre, code {
@@ -185,7 +185,7 @@ code {
 
 }
 
-@include media-min-query($max-width) {
+@media (min-width:$max-width) {
 
     body {
         font-size: 1.2em;
@@ -198,7 +198,7 @@ code {
 
 }
 
-@include media-max-query($max-width) {
+@media (max-width:$max-width) {
 
     .post,
     .page {

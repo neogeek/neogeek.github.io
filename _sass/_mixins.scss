@@ -1,19 +1,13 @@
-@mixin media-min-query($device) {
-    @media screen and (min-width: $device) {
-        @content;
-    }
-}
-
-@mixin media-max-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
 $prefixes: '-webkit-', '-moz-', '-ms-', '-o-', '';
 
-@mixin transition($args...) {
+@mixin prefix($key, $value) {
     @each $prefix in $prefixes {
-        #{$prefix}transition: $args;
+        #{$prefix}#{unquote($key)}: #{unquote($value)};
+    }
+}
+
+@mixin prefix-value($key, $value) {
+    @each $prefix in $prefixes {
+        #{unquote($key)}: #{$prefix}#{unquote($value)};
     }
 }

@@ -83,7 +83,7 @@
 
 }
 
-@include media-min-query($max-width) {
+@media (min-width:$max-width) {
 
     .post {
 
