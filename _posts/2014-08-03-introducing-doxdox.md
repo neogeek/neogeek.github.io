@@ -3,7 +3,6 @@ layout: post
 title: Introducing doxdox
 description: Managing documentation can be a tedious task, especially if you want to keep it usable and easy to read. While working on [Facade.js](http://facade.js/) I built a Python script for converting JSON files exported from [dox](https://github.com/tj/dox), a JSDoc parser for JavaScript, into formatted HTML. Today I re-released that library in the form of a Node.js package complete with dox included.
 keywords: nodejs
-year: 2014
 ---
 
 To get started, ensure that your script is utilizing the [JSDoc](http://usejsdoc.org) format properly. Below is an excerpt from core Facade.js:

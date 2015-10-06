@@ -4,7 +4,6 @@ title: Minimalistic Sublime Text Setup
 description: Recently I made the switch from Textmate to Sublime Text. Detailed below is my custom setup of Sublime Text 3.
 image: /images/posts/minimalistic-sublime-text-setup/screenshot.png
 keywords: sublime text
-year: 2013
 ---
 
 ## Package Control

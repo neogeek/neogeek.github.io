@@ -3,7 +3,6 @@ layout: post
 title: Introducing Facade.js
 description: Over two years ago I set out to build a game with HTML5 canvas and other emerging technologies like the GamePad API, localStorage and ApplicationCache. What I built instead was a JavaScript library for drawing shapes, text and images in HTML5 canvas.
 keywords: html5 canvas javascript
-year: 2014
 ---
 
 ## Development

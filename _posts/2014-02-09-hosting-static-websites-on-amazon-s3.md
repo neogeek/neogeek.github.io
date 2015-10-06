@@ -3,7 +3,6 @@ layout: post
 title: Hosting Static Websites on Amazon S3
 description: This article is a quick rundown on how to host a static website using Amazon S3 and your domain registrar.
 keywords: hosting amazon s3 namecheap
-year: 2014
 ---
 
 Assuming you already have an [Amazon Web Service](http://aws.amazon.com/) account the first step would be to open up you [AWS Management Console](https://console.aws.amazon.com/console/home) and select the [S3](https://console.aws.amazon.com/s3/home) Service.

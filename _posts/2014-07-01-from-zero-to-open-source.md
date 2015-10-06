@@ -4,7 +4,6 @@ title: From Zero To Open Source
 description: I used to be well known amongst my peers as the developer who built 80% of something and then gave up or lost interest. "Name one thing you have ever finished" is something that I would often hear in jest.
 keywords: open source github bitbucket facade sniff
 favorite: true
-year: 2014
 ---
 
 > "Name one thing you have ever finished."

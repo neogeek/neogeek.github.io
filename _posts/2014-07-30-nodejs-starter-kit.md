@@ -3,7 +3,6 @@ layout: post
 title: Node.js Starter Kit
 description: Lately I've been finding myself setting up what seems to be the same Node.js application over and over again. In an effort to mitigate some of the initial setup of these sometimes one-off projects I've released a very simple to use starter kit.
 keywords: nodejs
-year: 2014
 ---
 
 Instructions for getting started can be found in the project's repo <https://github.com/neogeek/nodejs-starter-kit>.
