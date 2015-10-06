@@ -45,7 +45,7 @@ To make things even easier I've created a tool for generating the command used t
 
         }
 
-        $form.find('pre').text('curl -s https://raw.githubusercontent.com/xdissent/ievms/master/ievms.sh | env IEVMS_VERSIONS="' + versions + '" bash');
+        $form.find('pre code').text('curl -s https://raw.githubusercontent.com/xdissent/ievms/master/ievms.sh | env IEVMS_VERSIONS="' + versions + '" bash');
 
     });
 
