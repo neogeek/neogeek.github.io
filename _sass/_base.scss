@@ -29,6 +29,10 @@ a {
             color: inherit;
             text-decoration: none;
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 93%, $link 93%);
+            @include prefix('transition', 'color 0.1s linear');
+            &:hover {
+                color: $link;
+            }
         }
     }
 
