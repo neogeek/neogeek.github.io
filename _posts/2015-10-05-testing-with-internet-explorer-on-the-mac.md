@@ -37,7 +37,7 @@ To make things even easier I've created a tool for generating the command used t
 
     $form.on('change', 'input[type="checkbox"]', function (e) {
 
-        versions = $form.find('input[type="checkbox"]:checked').map(function () { return this.value; }).get().join(', ');
+        versions = $form.find('input[type="checkbox"]:checked').map(function () { return this.value; }).get().join(' ');
 
         if (!versions) {
 
