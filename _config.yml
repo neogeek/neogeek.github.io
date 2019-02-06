@@ -1,2 +1,4 @@
 markdown: kramdown
 highlighter: rouge
+
+exclude: ['CNAME', 'README.md']
