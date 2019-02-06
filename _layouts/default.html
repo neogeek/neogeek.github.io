@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %}
-<body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1" />
 
-{% include header.html %}
+        <title>
+            {% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}
+        </title>
 
-<div class="page-content">
+        <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    </head>
 
-    {{ content }}
-
-</div>
-
-{% include footer.html %}
-
-</body>
+    <body>
+        <div class="page-content">
+            {{ content }}
+        </div>
+    </body>
 </html>
