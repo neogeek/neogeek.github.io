@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<h1>neo-geek.net</h1>
+
+{% for post in site.posts %}
+
+<a
+    href="{{ post.url }}"
+    class="post-list--item"
+    style="background-color: {{ post.color }}"
+>
+    <div class="post-list--item-emoji">{{ post.emoji }}</div>
+    <p class="post-list--item-title">{{ post.title }}</p>
+</a>
+
+{% endfor %}

@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: 'Building an AR app without code'
 emoji: 📱
-color: #666666
+color: '#7EEEDA'
 permalink: /building-an-ar-app-without-code/
 ---
 
