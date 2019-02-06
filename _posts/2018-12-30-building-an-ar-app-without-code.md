@@ -6,7 +6,7 @@ color: '#7EEEDA'
 permalink: /building-an-ar-app-without-code/
 ---
 
-# Building an AR app without code
+# Building an AR app without code
 
 > tl:dr - Use the [AR Foundation Components](https://github.com/CandyCoded/ARFoundation-Components) plugin to get a basic AR app or game working without writing any additional code.
 
@@ -18,7 +18,7 @@ I've been working on an AR game for the better part of a year and I have come to
 
 ## Prerequisites
 
-1. Unity 2018.3 or later - this version allows for installing custom plugins with git URLs
+1. Unity 2018.3 or later - this version allows for installing custom plugins with git URLs
 1. The latest Xcode
 1. An iPhone with at least iOS 11 - ARKit was first made available on iOS 11
 
@@ -80,17 +80,17 @@ Create a new **Cube** and set the scale to `Vector3(0.1f, 0.1f, 0.1f)`. Drag the
 
 Drag the **Cube** prefab into the **Object to Place** property of the **AR Place Object On Plane** component and enable the option **Place Multiple**.
 
-Create a new event in the **Plane Touched** with **Touch Position** event section of the **AR Plane Events** component and drag the **AR Place Object On Plane** component into the object box. Then select the dynamic function **ARPlaceObjectOnPlane** > **PlaceObjectOnPlane**.
+Create a new event in the **Plane Touched with Touch Position** event section of the **AR Plane Events** component and drag the **AR Place Object On Plane** component into the object box. Then select the dynamic function **ARPlaceObjectOnPlane** > **PlaceObjectOnPlane**.
 
 ![](/images/building-an-ar-app-without-code--custom-ar-components-inspector-events.png)
 
-## Setup and Build iOS app
+## Setup and Build iOS app
 
 Now it's time to put all of this on your phone or tablet.
 
-Confirm that the scene is in the **Build Settings** panel and **iOS** is selected as the build target.
+Confirm that the scene is in the **Build Settings** panel and that **iOS** is selected as the build target.
 
-Next, in the **Player** settings panel found in **Editor** > **Project Settings**, make sure there is a description in the **Camera Usage Description** field, the **Target minimum iOS Version** is at least `11`, and Architecture is set to `ARM64`.
+Next, in the **Player** settings panel found in **Editor** > **Project Settings**, make sure there is a description in the **Camera Usage Description** field, the **Target minimum iOS Version** is at least `11`, and **Architecture** is set to `ARM64`.
 
 Then press Build and Run.
 
