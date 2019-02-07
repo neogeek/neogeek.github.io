@@ -1,5 +1,6 @@
 name: neo-geek.net
 markdown: kramdown
 highlighter: rouge
+url: https://neo-geek.net
 
 exclude: ['CNAME', 'README.md']

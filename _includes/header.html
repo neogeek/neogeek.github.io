@@ -7,4 +7,17 @@
     </title>
 
     <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+
+    <meta name="twitter:description" content="{{ description }}" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="neogeek" />
+    <meta name="twitter:creator" content="neogeek" />
+    <meta
+        name="twitter:title"
+        content="{% if page.title %}{{ page.title }} — {% endif %}{{
+            site.name
+        }}"
+    />
+    <meta name="twitter:domain" content="{{ site.url }}" />
 </head>
