@@ -4,6 +4,7 @@ title: 'Building an AR app without code'
 emoji: 📱
 color: '#7EEEDA'
 permalink: /building-an-ar-app-without-code/
+description: 'Use the AR Foundation Components plugin to get a basic AR app or game working without writing any additional code.'
 ---
 
 > **tl:dr** - Use the [AR Foundation Components](https://github.com/CandyCoded/ARFoundation-Components) plugin to get a basic AR app or game working without writing any additional code.

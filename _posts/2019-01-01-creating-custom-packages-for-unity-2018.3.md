@@ -4,6 +4,7 @@ title: 'Creating Custom Packages for Unity 2018.3'
 emoji: 📦
 color: '#FCF7C1'
 permalink: /creating-custom-packages-for-unity-2018.3/
+description: 'With the release of Unity 2018.3, the Unity Package Manager finally supports custom packages using git URLs! There are just a few things needed to get a repo setup to be compatible with the package manager.'
 ---
 
 > **tl:dr** - Check out <https://github.com/neogeek/unity-package-example> to see what is required for publishing a custom Unity Package using git.
