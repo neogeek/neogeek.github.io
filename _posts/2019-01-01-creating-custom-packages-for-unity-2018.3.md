@@ -14,7 +14,7 @@ There are just a few things needed to get a repo setup to be compatible with the
 
 ## Setup
 
-Create a new Unity project (unless you are starting with an existing one). Setup the project as a git repo and add the recommended [`.gitignore`](https://github.com/github/gitignore/blob/master/Unity.gitignore) file from GitHub.
+Create a new Unity project (unless you are starting with an existing one). Setup the project as a git repo and add the recommended `.gitignore` file from [GitHub](<(https://github.com/github/gitignore/blob/master/Unity.gitignore)>).
 
 If you find yourself creating many Unity projects managed by git, you can add a function to your `~/.bash_profile` like this one:
 
