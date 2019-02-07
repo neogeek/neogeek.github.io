@@ -6,15 +6,11 @@ color: '#FCF7C1'
 permalink: /creating-custom-packages-for-unity-2018.3/
 ---
 
-> tl:dr - Check out <https://github.com/neogeek/unity-package-example> to see what is required for publishing a custom Unity Package using git.
+> **tl:dr** - Check out <https://github.com/neogeek/unity-package-example> to see what is required for publishing a custom Unity Package using git.
 
---
-
-**With the release of Unity 2018.3, the Unity Package Manager finally supports custom packages using git URLs!**
+With the release of Unity 2018.3, the Unity Package Manager finally supports custom packages using git URLs!
 
 There are just a few things needed to get a repo setup to be compatible with the package manager.
-
-> Note: All of the following steps are _required_. There are additional things you can add like documentation, tests and other properties to the `package.json` file as recommended by the [Package Validation Suite](https://docs.unity3d.com/Packages/com.unity.package-validation-suite@0.4/manual/index.html), which only works on local packages, not custom git installs.
 
 ## Setup
 
@@ -34,6 +30,8 @@ setupunity() {
 ```
 
 ## Create required files
+
+> **Note:** All of the following steps are _required_. There are additional things you can add like documentation, tests and other properties to the `package.json` file as recommended by the [Package Validation Suite](https://docs.unity3d.com/Packages/com.unity.package-validation-suite@0.4/manual/index.html), which only works on local packages, not custom git installs.
 
 ### `package.json`
 
@@ -72,7 +70,7 @@ deploy:
 	git subtree push --prefix Assets origin upm
 ```
 
-Note: The Makefile will only work on MacOS, not Windows.
+> **Note:** The Makefile will only work on MacOS, not Windows.
 
 ## Pushing git repo
 

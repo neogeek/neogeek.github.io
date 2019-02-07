@@ -106,9 +106,26 @@ article img {
     height: auto;
 }
 
-.post-meta-data {
+article .post-meta-data {
     margin: 0 0 5em;
     text-align: center;
+}
+
+article blockquote {
+    padding: 1em;
+    font-style: italic;
+    color: #555;
+    background-color: #eee;
+}
+
+article blockquote p {
+    margin: 0;
+}
+
+article > p:first-of-type {
+    font-size: 1.2em;
+    line-height: 1.4;
+    font-weight: 600;
 }
 
 .post-list--item {

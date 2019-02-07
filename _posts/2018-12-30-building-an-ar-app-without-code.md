@@ -6,11 +6,9 @@ color: '#7EEEDA'
 permalink: /building-an-ar-app-without-code/
 ---
 
-> tl:dr - Use the [AR Foundation Components](https://github.com/CandyCoded/ARFoundation-Components) plugin to get a basic AR app or game working without writing any additional code.
+> **tl:dr** - Use the [AR Foundation Components](https://github.com/CandyCoded/ARFoundation-Components) plugin to get a basic AR app or game working without writing any additional code.
 
---
-
-**AR is amazing. You hold up your phone or tablet, point it at the world you know, and it changes right in front of you. The immersion isn't on the level that VR is known for, but it's enough to enjoy. For me, it's about giving the user the ability to cause a digital object to collide or interact with objects in the real world.**
+AR is amazing. You hold up your phone or tablet, point it at the world you know, and it changes right in front of you. The immersion isn't on the level that VR is known for, but it's enough to enjoy. For me, it's about giving the user the ability to cause a digital object to collide or interact with objects in the real world.
 
 I've been working on an AR game for the better part of a year and I have come to the following conclusion: developing a game in AR is very time consuming and not for reasons that are fun. The majority of the time working on AR aspects of an game is spent waiting on builds, testing and repeating the process until you achieve success. So while this process is inevitable in any situation where hardware is involved, there are open source projects that can help alleviate a portion of this wasted time.
 
