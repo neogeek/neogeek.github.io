@@ -16,7 +16,7 @@ There are just a few things needed to get a repo setup to be compatible with the
 
 ## Setup
 
-Create a new Unity project (unless you are starting with an existing one). Setup the project as a git repo and add the the recommended [`.gitignore`](https://github.com/github/gitignore/blob/master/Unity.gitignore) file from GitHub.
+Create a new Unity project (unless you are starting with an existing one). Setup the project as a git repo and add the recommended [`.gitignore`](https://github.com/github/gitignore/blob/master/Unity.gitignore) file from GitHub.
 
 If you find yourself creating many Unity projects managed by git, you can add a function to your `~/.bash_profile` like this one:
 
@@ -117,7 +117,7 @@ Create a personal access token with the git hosting service you are using. Links
 
 When making the personal access token, make sure it has at least read access to private repos.
 
-Copy and paste the token into the manifest.json file before the domain name of the HTTPS URL with an `@` symbol seperating them.
+Copy and paste the token into the manifest.json file before the domain name of the HTTPS URL with an `@` symbol separating them.
 
 ```json
 {
