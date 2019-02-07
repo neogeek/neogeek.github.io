@@ -6,8 +6,6 @@ color: '#FCF7C1'
 permalink: /creating-custom-packages-for-unity-2018.3/
 ---
 
-# Creating Custom Packages for Unity 2018.3
-
 With the release of Unity 2018.3, the Unity Package Manager finally supports custom packages using git URLs!
 
 There are just a few things needed to get a repo setup to be compatible with the package manager.
