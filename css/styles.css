@@ -24,7 +24,7 @@ html {
 
 body {
     padding: 1em;
-    font-size: 1em;
+    font-size: 18px;
     line-height: 1.4;
     color: #333;
     letter-spacing: 0.01em;
@@ -75,19 +75,22 @@ code {
     background-color: #eee;
 }
 
-pre {
-    margin: 1em 0;
-    font-size: 1em;
-    line-height: 1.4;
-    padding: 0.75em;
-    overflow: auto;
-}
-
 code {
-    display: inline-block;
-    padding: 0.15em 0.3em;
     font-size: 0.8em;
     line-height: 1.4;
+}
+
+code.highlighter-rouge {
+    display: inline-block;
+    padding: 0.15em 0.3em;
+    word-break: break-all;
+}
+
+pre {
+    margin: 1em 0;
+    line-height: 1.1;
+    padding: 0.75em;
+    overflow: auto;
 }
 
 .page-content .inner-wrapper {
