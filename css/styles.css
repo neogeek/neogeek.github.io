@@ -160,3 +160,9 @@ article > p:first-of-type {
     margin: 1em 0 0;
     font-weight: 600;
 }
+
+.twitter-tweets {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1em;
+}
