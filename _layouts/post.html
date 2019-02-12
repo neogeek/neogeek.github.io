@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html>
-    {% include header.html %}
-    <body>
-        <div class="page-content">
-            <article class="inner-wrapper">
-                <h1>{{ page.title }}</h1>
-                <div class="post-meta-data">
-                    <p>
-                        Written by
-                        <a href="https://twitter.com/@neogeek">Scott Doxey</a>
-                        on {{ page.date | date: '%B %-d, %Y' }}
-                    </p>
-                </div>
+---
+layout: default
+---
 
-                {{ content }}
-            </article>
-        </div>
-    </body>
-</html>
+<article>
+    <h1>{{ page.title }}</h1>
+    <div class="post-meta-data">
+        <p>
+            Written by
+            <a href="https://twitter.com/@neogeek">Scott Doxey</a>
+            on {{ page.date | date: '%B %-d, %Y' }}
+        </p>
+    </div>
+
+    {{ content }}
+</article>
