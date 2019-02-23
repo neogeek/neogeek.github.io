@@ -2,6 +2,11 @@
 <html>
     {% include header.html %}
     <body>
+        {% if page.url != "/" %}
+
+        <div><a href="/">Back</a></div>
+
+        {% endif %}
         <div class="page-content">
             <div class="inner-wrapper">
                 {{ content }}
