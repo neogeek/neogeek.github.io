@@ -1,4 +1,4 @@
-const cacheName = 'neo-geek.net';
+const cacheName = 'neogeek.dev';
 const cacheVersion = `${cacheName}::1.0.0`;
 
 const cachedFiles = ['/', '/css/styles.css'];
