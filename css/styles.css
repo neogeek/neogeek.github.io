@@ -164,8 +164,10 @@ article > p:first-of-type {
     font-weight: 600;
 }
 
-.twitter-tweets {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: 1em;
+@media (min-width: 50rem) {
+    .twitter-tweets {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 1em;
+    }
 }
