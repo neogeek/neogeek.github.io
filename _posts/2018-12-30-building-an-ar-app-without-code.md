@@ -39,7 +39,7 @@ Open up the file `Packages/manifest.json` in your favorite text editor and add t
 {
     "dependencies": {
         "com.candycoded.arfoundation-components": "https://github.com/CandyCoded/ARFoundation-Components.git#upm",
-        "com.candycoded.candycoded": "https://github.com/CandyCoded/CandyCoded.git#v1.1.0",
+        "com.candycoded.candycoded": "https://github.com/CandyCoded/CandyCoded.git#v1.1.6",
         ...
     }
 }
