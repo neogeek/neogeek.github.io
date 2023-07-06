@@ -68,15 +68,18 @@ html {
 body {
   padding: 1em;
   font-family: Merriweather;
-  font-size: 2em;
-  line-height: 1.8;
+  font-size: 1.6em;
+  line-height: 1.6;
   color: var(--main-foreground-color);
   letter-spacing: 0.01em;
 }
 
 @media (min-width: 50rem) {
   body {
+    max-width: 60em;
     padding: 2.5em;
+    font-size: 1.8em;
+    line-height: 1.8;
   }
 }
 
