@@ -19,7 +19,7 @@ export function ListItem({
     <li>
       <Link href={href}>
         <>
-          <a>{title}</a>
+          {title}
           {date && (
             <>
               - <time>{date}</time>

@@ -11,8 +11,8 @@ export default function BackLink({
 }) {
   return (
     <div>
-      <Link href={href}>
-        <a className={styles.BackLinkAnchor}>{label}</a>
+      <Link href={href} className={styles.BackLinkAnchor}>
+        {label}
       </Link>
     </div>
   );
