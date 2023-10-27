@@ -3,14 +3,13 @@
 import nextMdx from '@next/mdx';
 
 import remarkGfx from 'remark-gfm';
-import rehypeAccessibleEmojis from 'rehype-accessible-emojis';
 import rehypeSlug from 'rehype-slug';
 
 const withMDX = nextMdx({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [remarkGfx],
-    rehypePlugins: [rehypeAccessibleEmojis, rehypeSlug],
+    rehypePlugins: [rehypeSlug],
     providerImportSource: '@mdx-js/react',
   },
 });
