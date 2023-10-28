@@ -1,7 +1,5 @@
 import Link from 'next/link';
 
-import styles from './List.module.scss';
-
 export default function List({ children }: { children: any }) {
   return <ol>{children}</ol>;
 }
