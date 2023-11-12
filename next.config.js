@@ -16,6 +16,7 @@ const withMDX = nextMdx({
 
 export default withMDX({
   output: 'export',
+  images: { unoptimized: true },
   reactStrictMode: true,
   swcMinify: true,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
