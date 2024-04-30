@@ -1,0 +1,126 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', 'Arial',
+    sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: var(--main-foreground-color);
+  letter-spacing: 0.01rem;
+  background-color: var(--main-background-color);
+}
+
+a {
+  color: var(--link-color);
+  font-weight: 600;
+  overflow-wrap: break-word;
+}
+
+a:hover,
+a:active {
+  color: var(--link-hover-color);
+  background-color: var(--link-color);
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+h2 {
+  margin: 3rem 0 1rem;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+h3 {
+  margin: 3rem 0 1rem;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+p {
+  margin: 1.5rem 0;
+}
+
+ol,
+ul {
+  margin: 1rem 1rem 1rem 2rem;
+}
+
+pre {
+  margin: var(--vertical-margin) 0;
+  overflow: auto;
+}
+
+p > code,
+li > code,
+td > code,
+h2 > code,
+h3 > code {
+  padding: 0.25rem 0.5rem;
+  color: var(--code-foreground-color);
+  background-color: var(--code-background-color);
+  overflow-wrap: break-word;
+}
+
+blockquote {
+  border-left: 0.5rem solid var(--main-foreground-color);
+}
+
+blockquote > p {
+  padding: 1rem;
+}
+
+hr {
+  margin: 4rem auto;
+  border: 0;
+  width: 2rem;
+  border-bottom: 0.25rem dashed var(--main-foreground-color);
+}
+
+table {
+  margin: var(--vertical-margin) 0;
+  width: 100%;
+  border-spacing: 1rem;
+  border-collapse: separate;
+  overflow: auto;
+}
+
+table tr th {
+  text-align: left;
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid var(--main-foreground-color);
+}
+
+table tr td {
+  vertical-align: top;
+}
+
+table tbody {
+  width: 100%;
+  overflow: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header,
+main {
+  margin: 2rem auto;
+  max-width: var(--width);
+}

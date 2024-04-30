@@ -1,0 +1,79 @@
+:root {
+  --section-margin: 2rem;
+}
+
+@media (min-width: 70rem) {
+  :root {
+    --section-margin: 4rem;
+  }
+}
+
+.post {
+  margin: 5rem auto 10rem;
+}
+
+.images {
+  margin: var(--section-margin) 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.images figure {
+  max-width: 100%;
+  height: auto;
+}
+
+.images figure figcaption {
+  padding: 0.5em;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+@media (min-width: 70rem) {
+  .images {
+    flex-direction: row;
+  }
+}
+
+.repos {
+  margin: var(--section-margin) 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+github-repo {
+  max-width: 100%;
+  --margin: 0;
+  --font-size: 12px;
+  --text-color: var(--github-repo-foreground-color);
+  --background-color: var(--github-repo-background-color);
+}
+
+.responsive-table {
+  overflow: auto;
+}
+
+.youtube-video-container {
+  margin: var(--section-margin) 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.youtube-video-container::after {
+  display: block;
+  content: '';
+  padding-top: 56.25%;
+}
+
+.youtube-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,15 @@
+{
+  "name": "neogeek.dev",
+  "dependencies": {
+    "highlight.js": "11.9.0",
+    "marked": "12.0.2",
+    "marked-highlight": "2.1.1",
+    "onlybuild": "1.1.0"
+  },
+  "scripts": {
+    "build": "onlybuild",
+    "watch": "npx nodemon --ext js,mjs,md,css --ignore ./build -x \"npm run build\"",
+    "serve": "npx http-server build"
+  },
+  "private": true
+}

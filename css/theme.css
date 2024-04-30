@@ -1,0 +1,44 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/github.min.css')
+(prefers-color-scheme: light);
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/dracula.min.css')
+(prefers-color-scheme: dark);
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+
+  :root {
+    --link-color: #8728e6;
+    --link-hover-color: #fff;
+    --main-foreground-color: #222;
+    --main-background-color: #eee;
+    --code-foreground-color: #0086b3;
+    --code-background-color: #ffffff;
+    --github-repo-foreground-color: #000;
+    --github-repo-background-color: #ffffff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  :root {
+    --link-color: #ebff87;
+    --link-hover-color: #1d1d21;
+    --main-foreground-color: #eee;
+    --main-background-color: #1d1d21;
+    --code-foreground-color: #ebff87;
+    --code-background-color: #292937;
+    --github-repo-foreground-color: #fff;
+    --github-repo-background-color: #292937;
+  }
+}
+
+:root {
+  --width: 75rem;
+  --vertical-margin: 2rem;
+}
