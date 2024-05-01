@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "onlybuild",
-    "watch": "npx nodemon --ext js,mjs,md,css --ignore ./build -x \"npm run build\"",
+    "watch": "npx nodemon --ext js,mjs,md,css,png,jpg,svg --ignore ./build -x \"npm run build\"",
     "serve": "npx http-server build"
   },
   "private": true
