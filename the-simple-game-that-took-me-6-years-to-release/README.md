@@ -122,7 +122,7 @@ Wait, before you go, I should probably share the link to the game I've been talk
 <div style="margin: 3rem 0; text-align: center;">
   <div>
     <a href="https://flipjacksgame.com">
-      <img src="/images/the-simple-game-that-took-me-6-years-to-release/thumbnail.png" width="600" style="margin: 1.5rem 0; border-radius: 1rem; filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));">
+      <img src="/images/the-simple-game-that-took-me-6-years-to-release/thumbnail.png" width="600" style="width: 600px; margin: 1.5rem 0; border-radius: 1rem; filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));">
     </a>
   </div>
   <a href="https://flipjacksgame.com">flipjacksgame.com</a>
