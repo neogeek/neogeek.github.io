@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Flip Jacks",
+    "url": "https://flipjacksgame.com",
+    "description": "🃏 A physics based poker game in AR",
+    "current": true
+  },
+  {
+    "name": "rhythm-game-utilities",
+    "url": "https://github.com/neogeek/rhythm-game-utilities",
+    "description": "A collection of utilities for creating rhythm games.",
+    "current": true
+  },
+  {
+    "name": "Handcrank Engine",
+    "url": "https://github.com/HandcrankEngine/HandcrankEngine",
+    "description": "An open source game engine built in C++ with SDL.",
+    "current": true
+  },
+  {
+    "name": "onlybuild",
+    "url": "https://github.com/neogeek/onlybuild",
+    "description": "A zero-config cli for building static websites."
+  },
+  {
+    "name": "generate-local-changelog",
+    "url": "https://github.com/neogeek/generate-local-changelog",
+    "description": "📘 Generate a CHANGELOG for your project using only local git history."
+  },
+  {
+    "name": "doxdox",
+    "url": "https://github.com/docsbydoxdox/doxdox",
+    "description": "📘 Documentation, simple."
+  },
+  {
+    "name": "CandyCoded",
+    "url": "https://github.com/CandyCoded/CandyCoded",
+    "description": "🍭 Custom Unity Components that are delightful"
+  }
+]

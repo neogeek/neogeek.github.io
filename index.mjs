@@ -13,13 +13,14 @@ import header from './_includes/header.mjs';
 
 import config from './_data/config.json' assert { type: 'json' };
 import posts from './_data/posts.json' assert { type: 'json' };
+import projects from './_data/projects.json' assert { type: 'json' };
 
 await Promise.all(
   posts
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
     .map(async post => {
       await writeFileAndMakeDir(
-        dirname(post.path),
+        post.path.replace(dirname(post.path), '').replace(/\.md$/, ''),
         'build/',
         html`<!DOCTYPE html>
           <html lang="en">
@@ -61,7 +62,10 @@ export default html`<!DOCTYPE html>
             )
             .map(post => {
               return html`<li>
-                <a href="${post.path.replace('/README.md', '')}"
+                <a
+                  href="${post.path
+                    .replace(dirname(post.path), '')
+                    .replace(/\.md$/, '')}"
                   >${post.title}</a
                 >
                 -
@@ -74,7 +78,29 @@ export default html`<!DOCTYPE html>
             })}
         </ul>
 
-        ${renderMarkdown(await readFile('./README.md', 'utf8'))}
+        <h2>Current Projects</h2>
+        <ul>
+          ${projects
+            .filter(project => project.current)
+            .map(project => {
+              return html`<li>
+                <a href="${project.url}">${project.name}</a>
+                - ${project.description}
+              </li>`;
+            })}
+        </ul>
+
+        <h2>Open Source Projects</h2>
+        <ul>
+          ${projects
+            .filter(project => !project.current)
+            .map(project => {
+              return html`<li>
+                <a href="${project.url}">${project.name}</a>
+                - ${project.description}
+              </li>`;
+            })}
+        </ul>
       </main>
     </body>
   </html>`;

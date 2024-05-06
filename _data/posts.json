@@ -1,25 +1,25 @@
 [
   {
     "date": "12/30/2018",
-    "path": "./building-an-ar-app-without-code/README.md",
+    "path": "./posts/building-an-ar-app-without-code.md",
     "title": "Building an AR App Without Code 2018.3",
     "subtitle": "Use the AR Foundation Components plugin to get a basic AR app or game working without writing any additional code."
   },
   {
     "date": "02/01/2019",
-    "path": "./creating-custom-packages-for-unity-2018.3/README.md",
+    "path": "./posts/creating-custom-packages-for-unity-2018.3.md",
     "title": "Creating Custom Packages for Unity 2018.3",
     "subtitle": "With the release of Unity 2018.3, the Unity Package Manager finally supports custom packages using git URLs! There are just a few things needed to get a repo setup to be compatible with the package manager."
   },
   {
     "date": "10/27/2023",
-    "path": "./scott-makes-a-game-engine/README.md",
+    "path": "./posts/scott-makes-a-game-engine.md",
     "title": "Scott Makes a Game Engine",
     "subtitle": "It happened. It finally happened. I'm building my own custom game engine."
   },
   {
     "date": "04/29/2024",
-    "path": "./the-simple-game-that-took-me-6-years-to-release/README.md",
+    "path": "./posts/the-simple-game-that-took-me-6-years-to-release.md",
     "title": "The Simple Game That Took Me 6 Years to Release",
     "subtitle": "I came up with an idea in January 2018 and demoed a fully functional game in September of the same year. I released it in April 2024."
   }
