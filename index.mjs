@@ -21,6 +21,7 @@ const sortedPosts = [
   ...(process.env.NODE_ENV === 'development' ? drafts : [])
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
+/** @type {{[key: string]: typeof posts}} */
 const postsGroupedByYear = sortedPosts.reduce((years, post) => {
   const date = new Date(post.date);
 
