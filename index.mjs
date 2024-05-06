@@ -16,9 +16,14 @@ import drafts from './_data/drafts.json' assert { type: 'json' };
 import posts from './_data/posts.json' assert { type: 'json' };
 import projects from './_data/projects.json' assert { type: 'json' };
 
+/**
+ * @type {typeof posts}
+ */
+const typedDrafts = drafts;
+
 const sortedPosts = [
   ...posts,
-  ...(process.env.NODE_ENV === 'development' ? drafts : [])
+  ...(process.env.NODE_ENV === 'development' ? typedDrafts : [])
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 /** @type {{[key: string]: typeof posts}} */
@@ -82,7 +87,7 @@ export default html`<!DOCTYPE html>
                 ${postsGroupedByYear[year].map(post => {
                   return html`<li>
                     <p>
-                      ${drafts.includes(post) ? '[DRAFT]' : ''}
+                      ${typedDrafts.includes(post) ? '[DRAFT]' : ''}
                       <a
                         href="${post.path
                           .replace(dirname(post.path), '')
