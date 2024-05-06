@@ -3,13 +3,13 @@
     "date": "12/30/2018",
     "path": "./posts/building-an-ar-app-without-code.md",
     "title": "Building an AR App Without Code 2018.3",
-    "subtitle": "Use the AR Foundation Components plugin to get a basic AR app or game working without writing any additional code."
+    "subtitle": "Build an AR experience for iOS or Android in Unity without writing a line of code."
   },
   {
     "date": "02/01/2019",
     "path": "./posts/creating-custom-packages-for-unity-2018.3.md",
     "title": "Creating Custom Packages for Unity 2018.3",
-    "subtitle": "With the release of Unity 2018.3, the Unity Package Manager finally supports custom packages using git URLs! There are just a few things needed to get a repo setup to be compatible with the package manager."
+    "subtitle": "Isolate key components of your Unity game or app using Unity's new package manager."
   },
   {
     "date": "10/27/2023",
@@ -21,6 +21,6 @@
     "date": "04/29/2024",
     "path": "./posts/the-simple-game-that-took-me-6-years-to-release.md",
     "title": "The Simple Game That Took Me 6 Years to Release",
-    "subtitle": "I came up with an idea in January 2018 and demoed a fully functional game in September of the same year. I released it in April 2024."
+    "subtitle": "I created a prototype for a simple game in 2018, then it took until 2024 to release it."
   }
 ]
