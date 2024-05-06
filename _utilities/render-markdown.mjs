@@ -14,6 +14,10 @@ const marked = new Marked(
   })
 );
 
+/**
+ * @param {string} contents
+ * @returns {string | Promise<string>}
+ */
 const renderMarkdown = contents => marked.parse(contents);
 
 export default renderMarkdown;

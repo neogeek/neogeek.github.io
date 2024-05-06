@@ -1,7 +1,5 @@
 # The Simple Game That Took Me 6 Years to Release
 
-<i>Published on <time>April 29th, 2024</time></i>
-
 ![](/images/the-simple-game-that-took-me-6-years-to-release/header.svg)
 
 I wanted to make a simple game that would take 30 seconds to play while you were commuting to work, standing in line, or otherwise bored. I came up with an idea in January 2018 and demoed a fully functional game in September of the same year. I finally released it in April 2024.

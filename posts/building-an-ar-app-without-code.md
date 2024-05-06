@@ -1,7 +1,5 @@
 # Building an AR App Without Code 2018.3
 
-<i>Published on <time>December 30th, 2018</time></i>
-
 > **tl:dr** - Use the [AR Foundation Components](https://github.com/CandyCoded/ARFoundation-Components) plugin to get a basic AR app or game working without writing any additional code.
 
 AR is amazing. You hold up your phone or tablet, point it at the world you know, and it changes right in front of you. The immersion isn't on the level that VR is known for, but it's enough to enjoy. For me, it's about giving the user the ability to cause a digital object to collide or interact with objects in the real world.

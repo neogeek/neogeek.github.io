@@ -1,7 +1,5 @@
 # Creating Custom Packages for Unity 2018.3
 
-<i>Published on <time>February 1st, 2019</time></i>
-
 > **tl:dr** - Check out [https://github.com/neogeek/unity-package-example](https://github.com/neogeek/unity-package-example) to see what is required for publishing a custom Unity Package using git.
 
 With the release of Unity 2018.3, the Unity Package Manager finally supports custom packages using git URLs!

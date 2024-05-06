@@ -5,6 +5,7 @@ import { html } from 'onlybuild';
 
 import { writeFileAndMakeDir } from 'onlybuild/src/build.js';
 
+import calculateTimeToRead from './_utilities/calc-ttr.mjs';
 import renderMarkdown from './_utilities/render-markdown.mjs';
 import renderRss from './_utilities/render-rss.mjs';
 
@@ -26,7 +27,22 @@ const sortedPosts = [
   ...(process.env.NODE_ENV === 'development' ? typedDrafts : [])
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-/** @type {{[key: string]: typeof posts}} */
+await Promise.all(
+  sortedPosts.map(async post => {
+    post['dateString'] = new Date(post.date).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+
+    post['content'] = await readFile(post.path, 'utf8');
+
+    post['markdown'] = renderMarkdown(post['content']);
+
+    post['ttr'] = calculateTimeToRead(post['content']).toString();
+  })
+);
+
 const postsGroupedByYear = sortedPosts.reduce((years, post) => {
   const date = new Date(post.date);
 
@@ -53,11 +69,17 @@ await Promise.all(
             })}
           </head>
           <body>
+            <div class="progress"></div>
             <header>
               <a href="/">← Back</a>
             </header>
             <main class="post">
-              ${renderMarkdown(await readFile(post.path, 'utf8'))}
+              <h1>${post.title}</h1>
+              <p>
+                Published <time>${post['dateString']}</time> &#8226;
+                ${post['ttr']}
+              </p>
+              ${post['markdown'].replace(/<h1>.+\<\/h1>/gis, '')}
             </main>
           </body>
         </html>`
@@ -86,7 +108,7 @@ export default html`<!DOCTYPE html>
               <ul>
                 ${postsGroupedByYear[year].map(post => {
                   return html`<li>
-                    <p>
+                    <h4>
                       ${typedDrafts.includes(post) ? '[DRAFT]' : ''}
                       <a
                         href="${post.path
@@ -94,16 +116,11 @@ export default html`<!DOCTYPE html>
                           .replace(/\.md$/, '')}"
                         >${post.title}</a
                       >
-                      -
-                      <time
-                        >${new Date(post.date).toLocaleDateString('en-US', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric'
-                        })}</time
-                      >
-                    </p>
+                    </h4>
                     <p>${post.subtitle}</p>
+                    <p>
+                      <time>${post['dateString']}</time> &#8226; ${post['ttr']}
+                    </p>
                   </li>`;
                 })}
               </ul>

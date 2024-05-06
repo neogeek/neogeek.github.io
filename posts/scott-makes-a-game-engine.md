@@ -1,7 +1,5 @@
 # Scott Makes a Game Engine
 
-<i>Published on <time>October 27th, 2023</time></i>
-
 It happened. It finally happened. I'm building my own custom game engine.
 
 > _"Oh no, [Scott] has entered the "I'm gonna build my own engine" phase of game dev"_ - Coworker via Slack
