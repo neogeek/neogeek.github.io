@@ -62,6 +62,7 @@ export default html`<!DOCTYPE html>
         <ul>
           ${sortedPosts.map(post => {
             return html`<li>
+              ${drafts.includes(post) ? '[DRAFT]' : ''}
               <a
                 href="${post.path
                   .replace(dirname(post.path), '')
