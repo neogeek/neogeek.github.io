@@ -11,6 +11,7 @@ import renderRss from './_utilities/render-rss.mjs';
 
 import head from './_includes/head.mjs';
 import header from './_includes/header.mjs';
+import footer from './_includes/footer.mjs';
 
 import config from './_data/config.json' assert { type: 'json' };
 import drafts from './_data/drafts.json' assert { type: 'json' };
@@ -81,6 +82,7 @@ await Promise.all(
               </p>
               ${post['markdown'].replace(/<h1>.+\<\/h1>/gis, '')}
             </main>
+            <footer>${footer}</footer>
           </body>
         </html>`
     );
@@ -95,19 +97,19 @@ export default html`<!DOCTYPE html>
       ${head()}
     </head>
     <body>
-      ${header}
+      <header>${header}</header>
       <main>
-        <h2>Articles</h2>
+        <h2>Posts</h2>
 
         ${Object.keys(postsGroupedByYear)
           .sort()
           .reverse()
           .map(year => {
             return html`
-              <h3>${year}</h3>
-              <ul>
+              <!-- <h3>${year}</h3> -->
+              <ul class="blog-posts">
                 ${postsGroupedByYear[year].map(post => {
-                  return html`<li>
+                  return html`<li class="blog-post">
                     <h4>
                       ${typedDrafts.includes(post) ? '[DRAFT]' : ''}
                       <a
@@ -153,5 +155,6 @@ export default html`<!DOCTYPE html>
             })}
         </ul>
       </main>
+      <footer>${footer}</footer>
     </body>
   </html>`;

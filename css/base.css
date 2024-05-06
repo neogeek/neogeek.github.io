@@ -22,6 +22,7 @@ body {
 
 a {
   color: var(--link-color);
+  fill: var(--link-color);
   font-weight: 600;
   overflow-wrap: break-word;
 }
@@ -29,6 +30,7 @@ a {
 a:hover,
 a:active {
   color: var(--link-hover-color);
+  fill: var(--link-hover-color);
   background-color: var(--link-color);
   text-decoration: none;
 }
@@ -124,11 +126,57 @@ img {
 }
 
 header,
-main {
-  margin: 2rem auto;
+main,
+footer {
+  margin: 0 auto;
   max-width: var(--width);
 }
 
-ul li p {
-  margin: 0.5rem 0 0 0;
+header {
+  padding: 3rem 0 1rem;
+}
+
+footer {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.blog-posts {
+  margin: 0;
+  list-style: none;
+}
+
+.blog-post {
+  margin: 2rem 0;
+}
+
+.blog-post h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.blog-post p {
+  margin: 0 0 0.5rem;
+}
+
+a .icon {
+  margin-left: 0.5rem;
+  width: auto;
+  height: 1em;
+  fill: var(--link-color);
+  vertical-align: middle;
+}
+
+a .icon {
+  margin-left: 0.5rem;
+  width: auto;
+  height: 1em;
+  fill: inherit;
+  vertical-align: middle;
+}
+
+a:hover .icon,
+a:active .icon {
+  fill: inherit;
 }
