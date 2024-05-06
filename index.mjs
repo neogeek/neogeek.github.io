@@ -21,6 +21,18 @@ const sortedPosts = [
   ...(process.env.NODE_ENV === 'development' ? drafts : [])
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
+const postsGroupedByYear = sortedPosts.reduce((years, post) => {
+  const date = new Date(post.date);
+
+  if (!years[date.getFullYear()]) {
+    years[date.getFullYear()] = [];
+  }
+
+  years[date.getFullYear()].push(post);
+
+  return years;
+}, {});
+
 await Promise.all(
   sortedPosts.map(async post => {
     await writeFileAndMakeDir(
@@ -59,27 +71,37 @@ export default html`<!DOCTYPE html>
       <main>
         <h2>Articles</h2>
 
-        <ul>
-          ${sortedPosts.map(post => {
-            return html`<li>
-              ${drafts.includes(post) ? '[DRAFT]' : ''}
-              <a
-                href="${post.path
-                  .replace(dirname(post.path), '')
-                  .replace(/\.md$/, '')}"
-                >${post.title}</a
-              >
-              -
-              <time
-                >${new Date(post.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}</time
-              >
-            </li>`;
+        ${Object.keys(postsGroupedByYear)
+          .sort()
+          .reverse()
+          .map(year => {
+            return html`
+              <h3>${year}</h3>
+              <ul>
+                ${postsGroupedByYear[year].map(post => {
+                  return html`<li>
+                    ${drafts.includes(post) ? '[DRAFT]' : ''}
+                    <a
+                      href="${post.path
+                        .replace(dirname(post.path), '')
+                        .replace(/\.md$/, '')}"
+                      >${post.title}</a
+                    >
+                    -
+                    <time
+                      >${new Date(post.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                      })}</time
+                    >
+                  </li>`;
+                })}
+              </ul>
+            `;
           })}
-        </ul>
+
+        <hr />
 
         <h2>Current Projects</h2>
         <ul>
