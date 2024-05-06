@@ -69,11 +69,13 @@ export default html`<!DOCTYPE html>
                   >${post.title}</a
                 >
                 -
-                ${new Date(post.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}
+                <time
+                  >${new Date(post.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}</time
+                >
               </li>`;
             })}
         </ul>

@@ -91,6 +91,10 @@ hr {
   border-bottom: 0.25rem dashed var(--main-foreground-color);
 }
 
+time {
+  font-style: italic;
+}
+
 table {
   margin: var(--vertical-margin) 0;
   width: 100%;
