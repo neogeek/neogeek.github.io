@@ -1,6 +1,6 @@
 import { html } from 'onlybuild';
 
-import config from '../_data/config.json' with { type: "json" };
+import config from '../_data/config.json' assert { type: 'json' };
 
 const header = ({ title, subtitle } = { title: '', subtitle: '' }) => html`
   <meta charset="utf-8" />
@@ -14,6 +14,13 @@ const header = ({ title, subtitle } = { title: '', subtitle: '' }) => html`
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="${config.title}"
+    href="feed.xml"
+  />
 
   <script src="/js/responsive-tables.js" defer></script>
   <script src="/js/web-components/GitHubRepo.js" defer></script>
