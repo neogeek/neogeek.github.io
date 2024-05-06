@@ -129,3 +129,7 @@ main {
   margin: 2rem auto;
   max-width: var(--width);
 }
+
+ul li p {
+  margin: 1rem 0 0 0;
+}

@@ -81,21 +81,24 @@ export default html`<!DOCTYPE html>
               <ul>
                 ${postsGroupedByYear[year].map(post => {
                   return html`<li>
-                    ${drafts.includes(post) ? '[DRAFT]' : ''}
-                    <a
-                      href="${post.path
-                        .replace(dirname(post.path), '')
-                        .replace(/\.md$/, '')}"
-                      >${post.title}</a
-                    >
-                    -
-                    <time
-                      >${new Date(post.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                      })}</time
-                    >
+                    <p>
+                      ${drafts.includes(post) ? '[DRAFT]' : ''}
+                      <a
+                        href="${post.path
+                          .replace(dirname(post.path), '')
+                          .replace(/\.md$/, '')}"
+                        >${post.title}</a
+                      >
+                      -
+                      <time
+                        >${new Date(post.date).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric'
+                        })}</time
+                      >
+                    </p>
+                    <p>${post.subtitle}</p>
                   </li>`;
                 })}
               </ul>
