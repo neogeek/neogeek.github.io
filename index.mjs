@@ -3,7 +3,7 @@ import { dirname } from 'node:path';
 
 import { html } from 'onlybuild';
 
-import { writeFileAndMakeDir } from 'onlybuild/src/build.js';
+import { writeFileAndMakeDir } from 'onlybuild/build';
 
 import calculateTimeToRead from './_utilities/calc-ttr.mjs';
 import renderMarkdown from './_utilities/render-markdown.mjs';
