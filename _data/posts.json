@@ -21,6 +21,18 @@
     "date": "04/29/2024",
     "path": "./posts/the-simple-game-that-took-me-6-years-to-release.md",
     "title": "The Simple Game That Took Me 6 Years to Release",
-    "subtitle": "I created a prototype for a simple game in 2018, then it took until 2024 to release it."
+    "subtitle": "I created a playable prototype for a simple game in 2018, but it took until 2024 to release it."
+  },
+  {
+    "date": "05/07/2024",
+    "path": "./posts/deploy-a-static-site-to-cloudflare-in-seconds.md",
+    "title": "Deploy a Static Site to Cloudflare in Seconds",
+    "subtitle": "I used Amazon S3 for years, but Cloudflare Pages won me over instantly for hosting simple static sites."
+  },
+  {
+    "date": "05/07/2024",
+    "path": "./posts/yet-another-static-site-generator.md",
+    "title": "Yet Another Static Site Generator",
+    "subtitle": "There are hundreds of static site generators. Why not one more?"
   }
 ]
