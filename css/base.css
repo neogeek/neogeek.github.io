@@ -35,6 +35,27 @@ a:active {
   text-decoration: none;
 }
 
+a .icon {
+  margin-left: 0.5rem;
+  width: auto;
+  height: 1em;
+  fill: var(--link-color);
+  vertical-align: middle;
+}
+
+a .icon {
+  margin-left: 0.5rem;
+  width: auto;
+  height: 1em;
+  fill: inherit;
+  vertical-align: middle;
+}
+
+a:hover .icon,
+a:active .icon {
+  fill: inherit;
+}
+
 h1 {
   font-size: 4rem;
   line-height: 1;
@@ -129,11 +150,12 @@ header,
 main,
 footer {
   margin: 0 auto;
+  padding: 0 2rem;
   max-width: var(--width);
 }
 
 header {
-  padding: 3rem 0 1rem;
+  padding: 3rem 2rem 1rem;
 }
 
 footer {
@@ -141,42 +163,25 @@ footer {
   text-align: center;
 }
 
+.project-list,
 .blog-posts {
   margin: 0;
   list-style: none;
 }
 
+.project-item,
 .blog-post {
   margin: 2rem 0;
 }
 
+.project-item h4,
 .blog-post h4 {
   margin: 0 0 0.5rem;
   font-size: 1.5rem;
   line-height: 1;
 }
 
+.project-item p,
 .blog-post p {
   margin: 0 0 0.5rem;
-}
-
-a .icon {
-  margin-left: 0.5rem;
-  width: auto;
-  height: 1em;
-  fill: var(--link-color);
-  vertical-align: middle;
-}
-
-a .icon {
-  margin-left: 0.5rem;
-  width: auto;
-  height: 1em;
-  fill: inherit;
-  vertical-align: middle;
-}
-
-a:hover .icon,
-a:active .icon {
-  fill: inherit;
 }

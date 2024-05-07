@@ -132,25 +132,25 @@ export default html`<!DOCTYPE html>
         <hr />
 
         <h2>Current Projects</h2>
-        <ul>
+        <ul class="project-list">
           ${projects
             .filter(project => project.current)
             .map(project => {
-              return html`<li>
-                <a href="${project.url}">${project.name}</a>
-                - ${project.description}
+              return html`<li class="project-item">
+                <h4><a href="${project.url}">${project.name}</a></h4>
+                <p>${project.description}</p>
               </li>`;
             })}
         </ul>
 
         <h2>Open Source Projects</h2>
-        <ul>
+        <ul class="project-list">
           ${projects
             .filter(project => !project.current)
             .map(project => {
-              return html`<li>
-                <a href="${project.url}">${project.name}</a>
-                - ${project.description}
+              return html`<li class="project-item">
+                <h4><a href="${project.url}">${project.name}</a></h4>
+                <p>${project.description}</p>
               </li>`;
             })}
         </ul>
