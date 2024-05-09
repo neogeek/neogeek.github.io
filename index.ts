@@ -5,27 +5,22 @@ import { html } from 'onlybuild';
 
 import { writeFileAndMakeDir } from 'onlybuild/build';
 
-import calculateTimeToRead from './_utilities/calc-ttr.mjs';
-import renderMarkdown from './_utilities/render-markdown.mjs';
-import renderRss from './_utilities/render-rss.mjs';
+import calculateTimeToRead from './_utilities/calc-ttr.js';
+import renderMarkdown from './_utilities/render-markdown.js';
+import renderRss from './_utilities/render-rss.js';
 
-import head from './_includes/head.mjs';
-import header from './_includes/header.mjs';
-import footer from './_includes/footer.mjs';
+import head from './_includes/head.js';
+import header from './_includes/header.js';
+import footer from './_includes/footer.js';
 
-import config from './_data/config.json' assert { type: 'json' };
-import drafts from './_data/drafts.json' assert { type: 'json' };
-import posts from './_data/posts.json' assert { type: 'json' };
-import projects from './_data/projects.json' assert { type: 'json' };
-
-/**
- * @type {typeof posts}
- */
-const typedDrafts = drafts;
+import config from './_data/config.json';
+import drafts from './_data/drafts.json';
+import posts from './_data/posts.json';
+import projects from './_data/projects.json';
 
 const sortedPosts = [
   ...posts,
-  ...(process.env.NODE_ENV === 'development' ? typedDrafts : [])
+  ...(process.env.NODE_ENV === 'development' ? drafts : [])
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 await Promise.all(
@@ -110,7 +105,7 @@ export default html`<!DOCTYPE html>
                 ${postsGroupedByYear[year].map(post => {
                   return html`<li class="blog-post">
                     <h4>
-                      ${typedDrafts.includes(post) ? '[DRAFT]' : ''}
+                      ${drafts.includes(post) ? '[DRAFT]' : ''}
                       <a
                         href="${post.path
                           .replace(dirname(post.path), '')

@@ -1,10 +1,6 @@
 const averageWPM = 240;
 
-/**
- * @param {string} content
- * @returns {string}
- */
-const calculateTimeToRead = content => {
+const calculateTimeToRead = (content: string) => {
   const words = content
     .replace(/(<([^>]+)>)/gi, '')
     .replace(/```.+?```/gs, '')
