@@ -1,5 +1,5 @@
 import { readFile, writeFile } from 'node:fs/promises';
-import { dirname } from 'node:path';
+import { dirname, join, parse } from 'node:path';
 
 import { html } from 'onlybuild';
 
@@ -59,8 +59,7 @@ const postsGroupedByYear = sortedPosts.reduce((years, post) => {
 await Promise.all(
   sortedPosts.map(async post => {
     await writeFileAndMakeDir(
-      post.path.replace(dirname(post.path), '').replace(/\.md$/, ''),
-      'build/',
+      join('build', parse(post.path).name, 'index.html'),
       html`<!DOCTYPE html>
         <html lang="en">
           <head>
