@@ -71,8 +71,11 @@ await Promise.all(
             <main class="post">
               <h1>${post.title}</h1>
               <p>
-                Published <time>${post['dateString']}</time> &#8226;
-                ${post['ttr']}
+                Published
+                <time datetime="${new Date(post['dateString']).toISOString()}"
+                  >${post['dateString']}</time
+                >
+                &#8226; ${post['ttr']}
               </p>
               ${post['markdown'].replace(/<h1>.+\<\/h1>/gis, '')}
             </main>
@@ -115,7 +118,11 @@ export default html`<!DOCTYPE html>
                     </h4>
                     <p>${post.subtitle}</p>
                     <p>
-                      <time>${post['dateString']}</time> &#8226; ${post['ttr']}
+                      <time
+                        datetime="${new Date(post['dateString']).toISOString()}"
+                        >${post['dateString']}</time
+                      >
+                      &#8226; ${post['ttr']}
                     </p>
                   </li>`;
                 })}
