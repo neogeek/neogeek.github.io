@@ -163,4 +163,4 @@ For the final example, we will take an example often found in React tutorials wh
 
 That's it for now!
 
-I'll be sure to check back in a few years and see how things are going with Web Components. For now, I'll probably try to integrate some small-footprint Web Components into my work and maybe even check out React's new Web Component support
+I'll be sure to check back in a few years and see how things are going with Web Components. For now, I'll probably try to integrate some small-footprint Web Components into my work and maybe even check out React's new Web Component support.
