@@ -6,6 +6,12 @@
     "subtitle": "I used to be well known amongst my peers as the developer who built 80% of something and then gave up or lost interest."
   },
   {
+    "date": "12/31/2016",
+    "path": "./posts/animating-within-canvas-using-jquery.md",
+    "title": "Animating Within Canvas Using jQuery",
+    "subtitle": "Recently I was exploring simple ways of animating entities in canvas and happened upon this trick with the jQuery animate method."
+  },
+  {
     "date": "02/28/2017",
     "path": "./posts/the-impossible-triangle.md",
     "title": "The Impossible Triangle",
