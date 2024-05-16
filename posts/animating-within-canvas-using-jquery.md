@@ -8,38 +8,38 @@ Be aware, the use of an underscore in front of each key is required as the objec
 
 With the jQuery library you can set the easing of an animation to either linear or swing. However, if you also include jQuery UI you will have access to 30 additional types of easing (listed below).
 
-- easeInQuad
-- easeOutQuad
-- easeInOutQuad
-- easeInCubic
-- easeOutCubic
-- easeInOutCubic
-- easeInQuart
-- easeOutQuart
-- easeInOutQuart
-- easeInQuint
-- easeOutQuint
-- easeInOutQuint
-- easeInExpo
-- easeOutExpo
-- easeInOutExpo
-- easeInSine
-- easeOutSine
-- easeInOutSine
-- easeInCirc
-- easeOutCirc
-- easeInOutCirc
-- easeInElastic
-- easeOutElastic
-- easeInOutElastic
-- easeInBack
-- easeOutBack
-- easeInOutBack
-- easeInBounce
-- easeOutBounce
-- easeInOutBounce
+- `easeInQuad`
+- `easeOutQuad`
+- `easeInOutQuad`
+- `easeInCubic`
+- `easeOutCubic`
+- `easeInOutCubic`
+- `easeInQuart`
+- `easeOutQuart`
+- `easeInOutQuart`
+- `easeInQuint`
+- `easeOutQuint`
+- `easeInOutQuint`
+- `easeInExpo`
+- `easeOutExpo`
+- `easeInOutExpo`
+- `easeInSine`
+- `easeOutSine`
+- `easeInOutSine`
+- `easeInCirc`
+- `easeOutCirc`
+- `easeInOutCirc`
+- `easeInElastic`
+- `easeOutElastic`
+- `easeInOutElastic`
+- `easeInBack`
+- `easeOutBack`
+- `easeInOutBack`
+- `easeInBounce`
+- `easeOutBounce`
+- `easeInOutBounce`
 
-To demonstrate how easy it is to use $.animate with canvas I put together this demo on [CodePen](http://codepen.io/neogeek/pen/RPRzjG).
+To demonstrate how easy it is to use `$.animate` with canvas I put together this demo on [CodePen](http://codepen.io/neogeek/pen/RPRzjG).
 
 <iframe height="500" style="width: 100%;" scrolling="no" title="Animating Within Canvas Using jQuery" src="https://codepen.io/neogeek/embed/RPRzjG?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
 </iframe>
