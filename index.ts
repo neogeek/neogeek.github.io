@@ -103,7 +103,7 @@ export default html`<!DOCTYPE html>
           .reverse()
           .map(year => {
             return html`
-              <!-- <h3>${year}</h3> -->
+              <h3>${year}</h3>
               <ul class="blog-posts">
                 ${postsGroupedByYear[year].map(post => {
                   return html`<li class="blog-post">
