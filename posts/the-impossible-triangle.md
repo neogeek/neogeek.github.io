@@ -51,7 +51,7 @@
   </g>
 </svg>
 
-I don’t consider myself the artistic type. I’d like to be, but my mind works in a more programmatic way. The anxiety of making a mistake while drawing with pen and paper or the difficulty of using the pen tool to draw exactly what I see in my mind is often too great for me to create.
+I don't consider myself the artistic type. I'd like to be, but my mind works in a more programmatic way. The anxiety of making a mistake while drawing with pen and paper or the difficulty of using the pen tool to draw exactly what I see in my mind is often too great for me to create.
 
 So when I did have the drive to create something, I utilized tools familiar to me; SVG and ImageMagick.
 
