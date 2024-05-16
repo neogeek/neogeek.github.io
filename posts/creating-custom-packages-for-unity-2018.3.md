@@ -14,10 +14,10 @@ If you find yourself creating many Unity projects managed by git, you can add a 
 
 ```bash
 setupunity() {
-    git init
-    curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/master/Unity.gitignore
-    git add .
-    git commit -m "Initial commit."
+  git init
+  curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/master/Unity.gitignore
+  git add .
+  git commit -m "Initial commit."
 }
 ```
 

@@ -1,9 +1,21 @@
 [
   {
+    "date": "06/02/2014",
+    "path": "./posts/from-zero-to-open-source.md",
+    "title": "From Zero to Open Source",
+    "subtitle": "I used to be well known amongst my peers as the developer who built 80% of something and then gave up or lost interest."
+  },
+  {
     "date": "02/28/2017",
     "path": "./posts/the-impossible-triangle.md",
     "title": "The Impossible Triangle",
     "subtitle": "The impossible triangle and the art of Brazilian artist Romero Britto are both inspirations of mine and I wanted to create something that not only captured the essence of these two inspirations but presented them in my own way."
+  },
+  {
+    "date": "03/25/2018",
+    "path": "./posts/candycoded-first-public-beta.md",
+    "title": "CandyCoded First Public Beta!",
+    "subtitle": "I’m super excited to announce the first public beta of my Unity library CandyCoded!"
   },
   {
     "date": "12/30/2018",

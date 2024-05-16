@@ -28,22 +28,22 @@ This wouldn't work if I were making a lot of files, so I looked into something m
 #!/bin/bash
 
 find . -type f -name "*.mjs" | while read -r FILEPATH; do
-    DIR=$(dirname "${FILEPATH}")
-    FILENAME=$(basename "${FILEPATH}")
+  DIR=$(dirname "${FILEPATH}")
+  FILENAME=$(basename "${FILEPATH}")
 
-    HTML=$(cd "${DIR}" && node "${FILENAME}")
+  HTML=$(cd "${DIR}" && node "${FILENAME}")
 
-    DIRECTORY=""
+  DIRECTORY=""
 
-    if [ "${FILENAME%.mjs}" == "index" ]; then
-        DIRECTORY="build${DIR:1}"
-    else
-        DIRECTORY="build${DIR:1}/${FILENAME%.mjs}"
-    fi
+  if [ "${FILENAME%.mjs}" == "index" ]; then
+    DIRECTORY="build${DIR:1}"
+  else
+    DIRECTORY="build${DIR:1}/${FILENAME%.mjs}"
+  fi
 
-    mkdir -p "${DIRECTORY}"
+  mkdir -p "${DIRECTORY}"
 
-    echo "${HTML}" > "${DIRECTORY}/index.html"
+  echo "${HTML}" > "${DIRECTORY}/index.html"
 done
 ```
 

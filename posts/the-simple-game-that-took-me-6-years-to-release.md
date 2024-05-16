@@ -25,7 +25,7 @@ A few nights later, I was sitting in my living room fiddling with a deck of card
 
 And so it was. Over the next few months, I built a working prototype. I even demoed it at an event before PAX East 2018. This prototype was built to be pretty simple. It worked on a desktop with mouse controls and on mobile with touch controls. Simple enough.
 
-<div class="youtube-video-container">
+<div class="video-container">
   <iframe
     width="560"
     height="315"
@@ -84,7 +84,7 @@ This process took years. And because I found excitement in releasing open source
 
 Within the first year of development, I rekindled my interest in the game after demoing it at a local game showcase called BostonFIG.
 
-<div class="youtube-video-container">
+<div class="video-container">
   <iframe
     width="560"
     height="315"
