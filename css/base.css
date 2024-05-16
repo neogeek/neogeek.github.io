@@ -85,6 +85,7 @@ ul {
 pre {
   margin: var(--vertical-margin) 0;
   overflow: auto;
+  font-size: 1rem;
 }
 
 p > code,
