@@ -68,3 +68,5 @@ npx onlybuild
 This command achieves the same thing as my bash scripts without installing anything.
 
 The CLI does include additional, but minimal, features like ignoring specific files or paths and copying static files. My goal for this project is to prevent building a system where anyone would have to refer to the documentation to get things to work.
+
+Check it out on GitHub! <https://github.com/neogeek/onlybuild>
