@@ -10,8 +10,8 @@
   },
   "scripts": {
     "build": "onlybuild",
-    "watch": "npx nodemon --ext \"*.*\" --ignore ./build -x \"npm run build\"",
-    "serve": "npx http-server build"
+    "watch": "NODE_ENV=development npx nodemon --ext \"*.*\" --ignore ./build -x \"npm run build\"",
+    "serve": "npx http-server ./build -o"
   },
   "private": true
 }

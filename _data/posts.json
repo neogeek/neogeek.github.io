@@ -1,5 +1,11 @@
 [
   {
+    "date": "02/28/2017",
+    "path": "./posts/the-impossible-triangle.md",
+    "title": "The Impossible Triangle",
+    "subtitle": "The impossible triangle and the art of Brazilian artist Romero Britto are both inspirations of mine and I wanted to create something that not only captured the essence of these two inspirations but presented them in my own way."
+  },
+  {
     "date": "12/30/2018",
     "path": "./posts/building-an-ar-app-without-code.md",
     "title": "Building an AR App Without Code",
