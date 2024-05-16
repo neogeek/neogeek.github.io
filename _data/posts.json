@@ -24,6 +24,12 @@
     "subtitle": "I'm super excited to announce the first public beta of my Unity library CandyCoded!"
   },
   {
+    "date": "08/16/2018",
+    "path": "./posts/your-build-process-is-too-damn-slow.md",
+    "title": "Your build process is too damn slow",
+    "subtitle": "Load AssetBundles from a local server to speed up mobile development testing."
+  },
+  {
     "date": "12/30/2018",
     "path": "./posts/building-an-ar-app-without-code.md",
     "title": "Building an AR App Without Code",
