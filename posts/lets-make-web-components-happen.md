@@ -1,4 +1,4 @@
-# Let's make Web Components happen
+# Let's Make Web Components Happen
 
 <div class="images">
   <figure>

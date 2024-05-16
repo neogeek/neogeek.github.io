@@ -1,4 +1,4 @@
-# Your build process is too damn slow
+# Your Build Process Is Too Damn Slow
 
 **TL:DR** — Load AssetBundles from a local server to speed up mobile development testing. See repo linked below.
 

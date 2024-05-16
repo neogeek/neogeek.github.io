@@ -2,7 +2,7 @@
   {
     "date": "05/16/2024",
     "path": "./posts/lets-make-web-components-happen.md",
-    "title": "Let's make Web Components happen",
+    "title": "Let's Make Web Components Happen",
     "subtitle": "Stop trying to make Web Components happen! It's not going to happen."
   },
   {
@@ -32,7 +32,7 @@
   {
     "date": "08/16/2018",
     "path": "./posts/your-build-process-is-too-damn-slow.md",
-    "title": "Your build process is too damn slow",
+    "title": "Your Build Process Is Too Damn Slow",
     "subtitle": "Load AssetBundles from a local server to speed up mobile development testing."
   },
   {
