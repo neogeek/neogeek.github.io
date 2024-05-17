@@ -132,7 +132,9 @@ export default html`<!DOCTYPE html>
 
         <hr />
 
-        <h2>Current Projects</h2>
+        <h2>Projects</h2>
+
+        <h3>Active Projects</h3>
         <ul class="project-list">
           ${projects
             .filter(project => project.current)
@@ -144,7 +146,7 @@ export default html`<!DOCTYPE html>
             })}
         </ul>
 
-        <h2>Open Source Projects</h2>
+        <h3>Open Source Projects</h3>
         <ul class="project-list">
           ${projects
             .filter(project => !project.current)
