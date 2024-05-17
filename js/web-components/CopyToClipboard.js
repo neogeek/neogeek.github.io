@@ -114,7 +114,16 @@
 
         button.addEventListener('click', () => {
           if (preTag.textContent) {
-            navigator.clipboard.writeText(preTag.textContent);
+            let content = preTag.textContent.trim();
+
+            if (
+              preTag.querySelector('.language-bash') &&
+              !content.match(/\n/)
+            ) {
+              content = content.replace(/^\$\s+/, '');
+            }
+
+            navigator.clipboard.writeText(content);
 
             button.classList.add('active');
 
