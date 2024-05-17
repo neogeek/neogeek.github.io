@@ -1,5 +1,12 @@
 # Yet Another Static Site Generator
 
+<div class="images">
+  <figure>
+    <a href="https://xkcd.com/927"><img src="https://imgs.xkcd.com/comics/standards.png" alt="A comic strip showing two people talking about existing standards and how there should be one to cover all of them, resulting in a new competing standard." /></a>
+    <figcaption><a href="https://xkcd.com/927">https://xkcd.com/927</a></figcaption>
+  </figure>
+</div>
+
 I've had a sorted past with static site generators. I've bounced between Jekyll, Eleventy, Next.js, Astro and even React and Handlebars each with custom build output tools. Each time I found it an arduous task to learn something new for such little reward.
 
 So, after rebuilding my blog and portfolio with a different tool for the umpteenth time, I realized I wanted something different.
