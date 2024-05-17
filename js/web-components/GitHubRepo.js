@@ -1,85 +1,91 @@
 {
-  const styles = `
-  :host {
-    --margin: 1em;
-    --font-size: 16px;
-    --text-color: #000;
-    --background-color: #fff;
-  }
+  const css = content => content;
 
-  *, *:before, *:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-  }
+  const styles = css`
+    :host {
+      --margin: 1em;
+      --font-size: 16px;
+      --text-color: #000;
+      --background-color: #fff;
+    }
 
-  a {
-    margin: var(--margin);
-    padding: 2em;
-    display: inline-block;
-    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', 'Arial', sans-serif;
-    font-size: var(--font-size);
-    line-height: 1.3;
-    color: var(--text-color);
-    max-width: 100%;
-    width: 37.5em;
-    min-height: 18.75em;
-    display: grid;
-    gap: 1em;
-    grid-template-columns: auto 6.25em;
-    grid-template-areas: 'header icon' 'header icon' 'url logo';
-    text-decoration: none;
-    border-radius: 0.25em;
-    background-color: var(--background-color);
-    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
-  }
+    *,
+    *:before,
+    *:after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
 
-  header {
-    grid-area: header
-  }
+    a {
+      margin: var(--margin);
+      padding: 2em;
+      display: inline-block;
+      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', 'Arial',
+        sans-serif;
+      font-size: var(--font-size);
+      line-height: 1.3;
+      color: var(--text-color);
+      max-width: 100%;
+      width: 37.5em;
+      min-height: 18.75em;
+      display: grid;
+      gap: 1em;
+      grid-template-columns: auto 6.25em;
+      grid-template-areas: 'header icon' 'header icon' 'url logo';
+      text-decoration: none;
+      border-radius: 0.25em;
+      background-color: var(--background-color);
+      filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+        drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+    }
 
-  h1 {
-    font-size: 2em;
-    font-weight: 400;
-    text-wrap: wrap;
-    overflow-wrap: break-word;
-  }
+    header {
+      grid-area: header;
+    }
 
-  h1 b {
-    display: inline-block;
-  }
+    h1 {
+      font-size: 2em;
+      font-weight: 400;
+      text-wrap: wrap;
+      overflow-wrap: break-word;
+    }
 
-  p {
-    margin: 1em 0 0;
-    color: var(--text-color);
-    opacity: 0.8;
-  }
+    h1 b {
+      display: inline-block;
+    }
 
-  img {
-    width: 6.25em;
-    height: 6.25em;
-    align-self: start;
-    justify-self: end;
-    grid-area: icon;
-    border-radius: 0.5em;
-  }
+    p {
+      margin: 1em 0 0;
+      color: var(--text-color);
+      opacity: 0.8;
+    }
 
-  .url {
-    color: var(--text-color);
-    opacity: 0.5;
-    align-self: end;
-    grid-area: url;
-    overflow-wrap: break-word;
-    overflow: auto;
-  }
+    img {
+      width: 6.25em;
+      height: 6.25em;
+      align-self: start;
+      justify-self: end;
+      grid-area: icon;
+      border-radius: 0.5em;
+    }
 
-  svg {
-    grid-area: logo;
-    align-self: end;
-    justify-self: end;
-    opacity: 0.5;
-    fill: var(--text-color);
-  }
+    .url {
+      color: var(--text-color);
+      opacity: 0.5;
+      align-self: end;
+      grid-area: url;
+      overflow-wrap: break-word;
+      overflow: auto;
+    }
+
+    svg {
+      grid-area: logo;
+      align-self: end;
+      justify-self: end;
+      opacity: 0.5;
+      fill: var(--text-color);
+    }
   `;
 
   const createSVGClipboard = () => {

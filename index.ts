@@ -35,6 +35,10 @@ await Promise.all(
 
     post['markdown'] = renderMarkdown(post['content']);
 
+    post['markdown'] = post['markdown']
+      .replace(/<pre>/g, '<copy-to-clipboard><pre>')
+      .replace(/<\/pre>/g, '</pre></copy-to-clipboard>');
+
     post['ttr'] = calculateTimeToRead(post['content']).toString();
   })
 );

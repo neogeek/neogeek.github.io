@@ -23,6 +23,7 @@ const header = ({ title, subtitle } = { title: '', subtitle: '' }) => html`
   />
 
   <script src="/js/responsive-tables.js" defer></script>
+  <script src="/js/web-components/CopyToClipboard.js" defer></script>
   <script src="/js/web-components/GitHubRepo.js" defer></script>
 `;
 
