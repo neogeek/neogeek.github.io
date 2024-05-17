@@ -1,5 +1,7 @@
 # Web Components vs. the World
 
+![](/images/web-components-vs-the-world/header.svg)
+
 This isn't a "Web Components is the only way to make components" post, and neither was my [last post](/lets-make-web-components-happen/). This is an attempt to present you (and myself) with as close to a 1-to-1 comparison of select frameworks so you can decide which one is best for you and your project.
 
 Each snippet below contains a button with an event handler that, when clicked, increments a value, and that change to the value appears within the button's label.
