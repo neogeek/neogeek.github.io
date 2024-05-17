@@ -1,7 +1,7 @@
 import { html } from 'onlybuild';
 
 export default html`<p>
-  &copy; Scott Doxey 2006&ndash;2024 &#8226;
+  &copy; Scott Doxey 2006&ndash;${new Date().getFullYear()} &#8226;
   <a href="/feed.xml"
     >RSS Feed<svg
       xmlns="http://www.w3.org/2000/svg"
