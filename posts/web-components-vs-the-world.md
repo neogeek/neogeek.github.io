@@ -4,7 +4,7 @@ This isn't a "Web Components is the only way to make components" post, and neith
 
 Each snippet below contains a button with an event handler that, when clicked, increments a value, and that change to the value appears within the button's label.
 
-## [Web Component](https://developer.mozilla.org/en-US/docs/Web/API/Web_Components)
+## [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_Components)
 
 ```javascript
 class InteractionExample extends HTMLElement {
