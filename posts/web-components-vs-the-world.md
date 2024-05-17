@@ -91,6 +91,26 @@ render(
 <button on:click="{handleClick}">You clicked me {count} times!</button>
 ```
 
+## [Angular](https://angular.io/)
+
+```javascript
+import { Component } from '@angular/core';
+import { bootstrapApplication } from '@angular/platform-browser';
+
+@Component({
+  selector: 'add-one-button',
+  standalone: true,
+  template: `<button (click)="count = count + 1">
+    You clicked me {{ count }} times!
+  </button>`
+})
+export class AddOneButtonComponent {
+  count = 0;
+}
+
+bootstrapApplication(AddOneButtonComponent);
+```
+
 As to which one I prefer, my choices are Web Components (obviously) and React. My choice of React is primarily due to exposure via personal and client projects.
 
 I'm not much of a fan of magic. Or, more clearly put, I'd rather work with functional programming and built-in JavaScript functionality over most things.
