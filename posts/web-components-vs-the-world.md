@@ -91,4 +91,4 @@ render(
 
 As to which one I prefer, my choices are Web Components (obviously) and React. My choice of React is primarily due to exposure via personal and client projects.
 
-I'm not much of a fan of magic. Or, more succinctly put, I'd rather work with functional programming and built-in JavaScript functionality over most things.
+I'm not much of a fan of magic. Or, more clearly put, I'd rather work with functional programming and built-in JavaScript functionality over most things.
