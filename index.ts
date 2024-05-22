@@ -138,6 +138,11 @@ export default html`<!DOCTYPE html>
 
         <h2>Projects</h2>
 
+        <p>
+          You can see all projects on my
+          <a href="https://scottdoxey.com">portfolio</a>.
+        </p>
+
         <h3>Active Projects</h3>
         <ul class="project-list">
           ${projects
