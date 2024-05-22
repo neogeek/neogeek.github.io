@@ -137,9 +137,12 @@ table {
 }
 
 table tr th {
-  text-align: left;
   padding-bottom: 1rem;
   border-bottom: 0.1rem solid var(--main-foreground-color);
+}
+
+table tr th:not([align]) {
+  text-align: left;
 }
 
 table tr td {
@@ -171,8 +174,12 @@ header {
 }
 
 footer {
-  padding: 5rem 2rem;
+  padding: 2rem;
   text-align: center;
+}
+
+footer:last-of-type {
+  padding: 5rem 2rem;
 }
 
 .project-list,
