@@ -21,18 +21,19 @@ I have a two-computer setup, one PC and one Mac. This was mostly due to the game
 
 My PC is a custom-built PC, my first, as I've been a Mac user my entire career.
 
-| Type              | Part                                        |                                              Link                                              |
-| ----------------- | ------------------------------------------- | :--------------------------------------------------------------------------------------------: |
-| **Processor**     | Intel Core i9                               |   [Intel](https://www.intel.com/content/www/us/en/products/details/processors/core/i9.html)    |
-| **Motherboard**   | Asus ROG STRIX Z490-E GAMING                |     [Asus](https://rog.asus.com/us/motherboards/rog-strix/rog-strix-z490-e-gaming-model/)      |
-| **Graphics Card** | GIGABYTE Gaming OC GeForce RTX 3080 10GB    |        [GIGABYTE](https://www.gigabyte.com/Graphics-Card/GV-N3080GAMING-OC-10GD-rev-10)        |
-| **RAM**           | G.Skill Ripjaws V 64 GB                     |                 [G.Skill](https://www.gskill.com/products/1/165/184/Ripjaws-V)                 |
-| **Monitor**       | LG 27UL600-W 27.0" 3840 x 2160 60 Hz        |              [LG](https://www.lg.com/us/monitors/lg-27ul600-w-4k-uhd-led-monitor)              |
-| **Monitor**       | LG 27GP95R 26.9" 4K UHD (3840 x 2160) 160Hz |                [LG](https://www.lg.com/us/monitors/lg-27gp95r-b-gaming-monitor)                |
-| **Mouse**         | Razer Mamba Tournament                      |                                               -                                                |
-| **Camera**        | Logitech C920 HD Pro Webcam                 | [Logitech](https://www.logitech.com/en-gb/products/webcams/c920-pro-hd-webcam.960-001055.html) |
-| **Microphone**    | Blue Yeti                                   |                          [Blue Yeti](https://blueyetimicrophone.com/)                          |
-| **Controller**    | 8Bitdo Ultimate Bluetooth Controller        |                [8Bitdo](https://www.8bitdo.com/ultimate-bluetooth-controller/)                 |
+| Type              | Part                                        |                                                Link                                                |
+| ----------------- | ------------------------------------------- | :------------------------------------------------------------------------------------------------: |
+| **Processor**     | Intel Core i9                               |     [Intel](https://www.intel.com/content/www/us/en/products/details/processors/core/i9.html)      |
+| **Motherboard**   | Asus ROG STRIX Z490-E GAMING                |       [Asus](https://rog.asus.com/us/motherboards/rog-strix/rog-strix-z490-e-gaming-model/)        |
+| **Graphics Card** | GIGABYTE Gaming OC GeForce RTX 3080 10GB    |          [GIGABYTE](https://www.gigabyte.com/Graphics-Card/GV-N3080GAMING-OC-10GD-rev-10)          |
+| **RAM**           | G.Skill Ripjaws V 64 GB                     |                   [G.Skill](https://www.gskill.com/products/1/165/184/Ripjaws-V)                   |
+| **Monitor**       | LG 27UL600-W 27.0" 3840 x 2160 60 Hz        |                [LG](https://www.lg.com/us/monitors/lg-27ul600-w-4k-uhd-led-monitor)                |
+| **Monitor**       | LG 27GP95R 26.9" 4K UHD (3840 x 2160) 160Hz |                  [LG](https://www.lg.com/us/monitors/lg-27gp95r-b-gaming-monitor)                  |
+| **Audio Mixer**   | Moukey Mini Audio Mixer Line Mixer          | [Amazon](https://www.amazon.com/Moukey-Low-Noise-Sub-Mixing-Microphones-Mixer-MAMX1/dp/B08393DLGV) |
+| **Mouse**         | Razer Mamba Tournament                      |                                                 -                                                  |
+| **Camera**        | Logitech C920 HD Pro Webcam                 |   [Logitech](https://www.logitech.com/en-gb/products/webcams/c920-pro-hd-webcam.960-001055.html)   |
+| **Microphone**    | Blue Yeti                                   |                            [Blue Yeti](https://blueyetimicrophone.com/)                            |
+| **Controller**    | 8Bitdo Ultimate Bluetooth Controller        |                  [8Bitdo](https://www.8bitdo.com/ultimate-bluetooth-controller/)                   |
 
 <center><i>The links above are free of any affiliate links.</i></center>
 
