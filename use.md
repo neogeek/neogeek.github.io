@@ -17,7 +17,7 @@ I got an [UPLIFT Desk](https://www.upliftdesk.com/) about a year ago, and it's
 
 I have a two-computer setup, one PC and one Mac. This was mostly due to the game development aspect of my career rather than the web development side. Doing game development on a Mac is fine until it isn't. Although, I did build most, if not all, of [Flip Jacks](https://flipjacksgame.com/) on my Mac. I have two monitors, one for each computer, so I can easily switch between them. I have a KVM switch for my keyboard, mouse, and microphone, although I don't use it unless I need to because I keep a separate keyboard and mouse for each computer.
 
-## PC
+### PC
 
 My PC is a custom-built PC, my first, as I've been a Mac user my entire career.
 
@@ -38,7 +38,7 @@ My PC is a custom-built PC, my first, as I've been a Mac user my entire career.
 
 <center><i>The links above are free of any affiliate links.</i></center>
 
-## Mac
+### Mac
 
 This is my first Mac desktop, and I love it. I've been a laptop Mac user since I got my first MacBook with a white plastic polycarbonate shell in the early 2000s.
 
