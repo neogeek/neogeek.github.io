@@ -70,7 +70,7 @@ await Promise.all(
           <body>
             <div class="progress"></div>
             <header>
-              <a href="/">← Back</a>
+              <a href="/">← Home</a>
             </header>
             <main class="post">
               <h1>${post.title}</h1>
