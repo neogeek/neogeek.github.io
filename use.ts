@@ -28,7 +28,7 @@ export default html`<!DOCTYPE html>
         <p>
           <i
             >Last Updated:
-            <time datetime="${mtime}"
+            <time datetime="${mtime.toString()}"
               >${mtime.toLocaleDateString('en-us', {
                 year: 'numeric',
                 month: 'long',
