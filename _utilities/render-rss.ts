@@ -30,7 +30,7 @@ const renderRss = (
           <link>${href}</link>
           <description>${post.subtitle}</description>
           <guid isPermaLink="true">${href}</guid>
-          <pubDate>${new Date(post.date).toISOString()}</pubDate>
+          <pubDate>${new Date(post.date).toUTCString()}</pubDate>
         </item>`;
       })
       .join('')}
