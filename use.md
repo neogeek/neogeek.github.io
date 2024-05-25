@@ -31,6 +31,7 @@ My PC is a custom-built PC, my first, as I've been a Mac user my entire career.
 | **Monitor**       | LG 27GP95R 26.9" 4K UHD (3840 x 2160) 160Hz |                  [LG](https://www.lg.com/us/monitors/lg-27gp95r-b-gaming-monitor)                  |
 | **Audio Mixer**   | Moukey Mini Audio Mixer Line Mixer          | [Amazon](https://www.amazon.com/Moukey-Low-Noise-Sub-Mixing-Microphones-Mixer-MAMX1/dp/B08393DLGV) |
 | **Speakers**      | Logitech Multimedia Speakers Z200           |                                                 -                                                  |
+| **Keyboard**      | Keychron K1 Bluetooth Mechanical Keyboard   |       [Keychron](https://www.keychron.com/products/keychron-k1-wireless-mechanical-keyboard)       |
 | **Mouse**         | Razer Mamba Tournament                      |                                                 -                                                  |
 | **Camera**        | Logitech C920 HD Pro Webcam                 |   [Logitech](https://www.logitech.com/en-gb/products/webcams/c920-pro-hd-webcam.960-001055.html)   |
 | **Microphone**    | Blue Yeti                                   |                            [Blue Yeti](https://blueyetimicrophone.com/)                            |
