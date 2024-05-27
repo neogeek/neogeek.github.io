@@ -97,7 +97,7 @@ li > code,
 td > code,
 h2 > code,
 h3 > code {
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem;
   color: var(--code-foreground-color);
   background-color: var(--code-background-color);
   overflow-wrap: break-word;
