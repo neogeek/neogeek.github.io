@@ -92,12 +92,6 @@ li > ul {
   margin: 0.5rem 0 0 2rem;
 }
 
-pre {
-  margin: var(--vertical-margin) 0;
-  overflow: auto;
-  font-size: 1rem;
-}
-
 p > code,
 li > code,
 td > code,
@@ -107,6 +101,7 @@ h3 > code {
   color: var(--code-foreground-color);
   background-color: var(--code-background-color);
   overflow-wrap: break-word;
+  font-size: 0.8em;
 }
 
 blockquote {
