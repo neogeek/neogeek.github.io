@@ -1,6 +1,10 @@
 # Web Components vs. the World
 
-![](/images/web-components-vs-the-world/header.svg)
+<div class="image">
+  <figure>
+    <img src="/images/web-components-vs-the-world/header.svg" alt="The phrase web components on the left with the right populated with five different logos of other javascript frameworks like React and Angular." />
+  </figure>
+</div>
 
 This isn't a "Web Components is the only way to make components" post, and neither was my [last post](/lets-make-web-components-happen/). This is an attempt to present you (and myself) with as close to a 1-to-1 comparison of select frameworks so you can decide which one is best for you and your project.
 

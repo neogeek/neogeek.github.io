@@ -2,7 +2,7 @@
 
 What does Scott use for development/gaming?
 
-<div class="images">
+<div class="image">
   <figure>
     <img src="/images/use/desk.jpg" alt="Picture of my abnormally clean desk." />
     <figcaption>My desk never looks this clean.</figcaption>

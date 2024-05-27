@@ -14,7 +14,7 @@ I just wanted to make a game. I had just shelved a prototype I had been working 
 
 A few nights later, I was sitting in my living room fiddling with a deck of cards. Then I started tossing them onto my card table to see if I could get them to land face up. I began to see if I could throw a specific number of cards onto the table to make a decent poker hand.
 
-<div class="images">
+<div class="image">
   <figure>
     <img src="/images/the-simple-game-that-took-me-6-years-to-release/irl-prototype.jpg" alt="Picture of a coffee table with playing cards on and around it." />
     <figcaption>This is my first attempt at playing Flip Jacks on a coffee table with real playing cards.</figcaption>
