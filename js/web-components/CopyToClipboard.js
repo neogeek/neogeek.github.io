@@ -18,7 +18,6 @@
       margin: 2rem 0;
       font-family: inherit;
       font-size: 1rem;
-      user-select: all;
     }
 
     button {
