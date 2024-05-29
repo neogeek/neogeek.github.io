@@ -23,7 +23,7 @@ export default html`<!DOCTYPE html>
       <header>
         <a href="/">← Home</a>
       </header>
-      <main class="now">
+      <main class="use">
         ${new Marked().parse(await readFile('use.md', 'utf8'))}
       </main>
       <footer>
