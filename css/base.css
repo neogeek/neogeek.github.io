@@ -105,7 +105,7 @@ h3 > code {
 }
 
 blockquote {
-  border-left: 0.5rem solid var(--main-foreground-color);
+  border-left: 0.5rem solid var(--link-color);
 }
 
 blockquote > p {
