@@ -6,6 +6,7 @@ import { html } from 'onlybuild';
 import { writeFileAndMakeDir } from 'onlybuild/build';
 
 import calculateTimeToRead from './_utilities/calc-ttr.js';
+import getModifiedDate from './_utilities/get-modified-date.js';
 import renderMarkdown from './_utilities/render-markdown.js';
 import renderRss from './_utilities/render-rss.js';
 
@@ -26,6 +27,14 @@ const sortedPosts = [
 await Promise.all(
   sortedPosts.map(async post => {
     post['dateString'] = new Date(post.date).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+
+    post['lastModifiedDateString'] = (
+      await getModifiedDate(post.path)
+    ).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
@@ -79,6 +88,15 @@ await Promise.all(
                 <time datetime="${new Date(post['dateString']).toISOString()}"
                   >${post['dateString']}</time
                 >
+                ${post['dateString'] !== post['lastModifiedDateString']
+                  ? html`&#8226; Last Updated
+                      <time
+                        datetime="${new Date(
+                          post['lastModifiedDateString']
+                        ).toISOString()}"
+                        >${post['lastModifiedDateString']}</time
+                      >`
+                  : ''}
                 &#8226; ${post['ttr']}
               </p>
               ${post['markdown'].replace(/<h1>.+\<\/h1>/gis, '')}
