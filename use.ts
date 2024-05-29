@@ -1,13 +1,15 @@
-import { readFile, stat } from 'node:fs/promises';
+import { readFile } from 'node:fs/promises';
 
 import { html } from 'onlybuild';
 
 import { Marked } from 'marked';
 
+import getModifiedDate from './_utilities/get-modified-date.js';
+
 import head from './_includes/head.js';
 import footer from './_includes/footer.js';
 
-const { mtime } = await stat('use.md');
+const lastModifiedDate = await getModifiedDate('use.md');
 
 export default html`<!DOCTYPE html>
   <html lang="en">
@@ -28,8 +30,8 @@ export default html`<!DOCTYPE html>
         <p>
           <i
             >Last Updated:
-            <time datetime="${mtime.toString()}"
-              >${mtime.toLocaleDateString('en-us', {
+            <time datetime="${lastModifiedDate.toString()}"
+              >${lastModifiedDate.toLocaleDateString('en-us', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
