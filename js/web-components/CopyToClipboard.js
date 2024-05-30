@@ -92,6 +92,9 @@
   `;
 
   class CopyToClipboard extends HTMLElement {
+    /** @type {any} */
+    timeout = null;
+
     constructor() {
       super();
 
@@ -158,7 +161,11 @@
 
       button.classList.add('copied');
 
-      setTimeout(() => {
+      if (this.timeout) {
+        clearTimeout(this.timeout);
+      }
+
+      this.timeout = setTimeout(() => {
         button.classList.remove('copied');
       }, delayBeforeHidingCopyCheckmark);
     };
