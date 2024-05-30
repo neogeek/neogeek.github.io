@@ -36,17 +36,21 @@
     }
 
     button span {
-      display: none;
-    }
-
-    button.copied span {
       display: block;
       position: absolute;
       padding: 0.25rem 0.5rem;
       border-radius: 0.25rem;
-      animation-duration: 200ms;
-      animation-name: slide-in;
-      animation-timing-function: ease;
+      opacity: 0;
+      right: calc(100% + 1rem);
+    }
+
+    button.copied span {
+      animation: slide-in 200ms;
+      animation-fill-mode: forwards;
+    }
+
+    button.slide-out span {
+      animation: slide-out 200ms;
       animation-fill-mode: forwards;
     }
 
@@ -59,7 +63,7 @@
         stroke: #fff;
       }
 
-      button.copied span {
+      button span {
         color: #000;
         background-color: #fff;
       }
@@ -74,7 +78,7 @@
         stroke: #000;
       }
 
-      button.copied span {
+      button span {
         color: #fff;
         background-color: #000;
       }
@@ -82,11 +86,25 @@
 
     @keyframes slide-in {
       from {
-        right: calc(100% + 1rem);
+        opacity: 0;
+        right: calc(100% + 0.75rem);
       }
 
       to {
+        opacity: 1;
         right: calc(100% + 0.5rem);
+      }
+    }
+
+    @keyframes slide-out {
+      from {
+        opacity: 1;
+        right: calc(100% + 0.5rem);
+      }
+
+      to {
+        opacity: 0;
+        right: calc(100% + 0.75rem);
       }
     }
   `;
@@ -160,6 +178,7 @@
       navigator.clipboard.writeText(content);
 
       button.classList.add('copied');
+      button.classList.remove('slide-out');
 
       if (this.timeout) {
         clearTimeout(this.timeout);
@@ -167,6 +186,7 @@
 
       this.timeout = setTimeout(() => {
         button.classList.remove('copied');
+        button.classList.add('slide-out');
       }, delayBeforeHidingCopyCheckmark);
     };
 
