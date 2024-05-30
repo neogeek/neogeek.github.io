@@ -43,8 +43,11 @@
       display: block;
       position: absolute;
       padding: 0.25rem 0.5rem;
-      right: calc(100% + 0.5rem);
       border-radius: 0.25rem;
+      animation-duration: 200ms;
+      animation-name: slide-in;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -74,6 +77,16 @@
       button.copied span {
         color: #fff;
         background-color: #000;
+      }
+    }
+
+    @keyframes slide-in {
+      from {
+        right: calc(100% + 1rem);
+      }
+
+      to {
+        right: calc(100% + 0.5rem);
       }
     }
   `;
