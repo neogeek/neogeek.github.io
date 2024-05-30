@@ -31,8 +31,20 @@
       cursor: pointer;
     }
 
-    button:hover {
+    button svg:hover {
       opacity: 0.5;
+    }
+
+    button span {
+      display: none;
+    }
+
+    button.copied span {
+      display: block;
+      position: absolute;
+      padding: 0.25rem 0.5rem;
+      right: calc(100% + 0.5rem);
+      border-radius: 0.25rem;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -40,8 +52,13 @@
         fill: #fff;
       }
 
-      button.active svg {
+      button.copied svg {
         stroke: #fff;
+      }
+
+      button.copied span {
+        color: #000;
+        background-color: #fff;
       }
     }
 
@@ -50,8 +67,13 @@
         fill: #000;
       }
 
-      button.active svg {
+      button.copied svg {
         stroke: #000;
+      }
+
+      button.copied span {
+        color: #fff;
+        background-color: #000;
       }
     }
   `;
@@ -121,10 +143,10 @@
 
       navigator.clipboard.writeText(content);
 
-      button.classList.add('active');
+      button.classList.add('copied');
 
       setTimeout(() => {
-        button.classList.remove('active');
+        button.classList.remove('copied');
       }, delayBeforeHidingCopyCheckmark);
     };
 
@@ -135,6 +157,12 @@
      */
     clipboardButton = () => {
       const button = document.createElement('button');
+
+      const span = document.createElement('span');
+
+      span.appendChild(document.createTextNode('Copied!'));
+
+      button.appendChild(span);
 
       button.appendChild(this.clipboardIcon());
 
