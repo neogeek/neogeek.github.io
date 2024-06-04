@@ -129,7 +129,7 @@ For the final example, we will take an example often found in React tutorials wh
 1. Set an event listener to fire when clicked, that increments the count and updates the contents of the button.
 
 ```html
-<interaction-element></interaction-element>
+<interaction-example></interaction-example>
 
 <script>
   class InteractionExample extends HTMLElement {
@@ -154,7 +154,7 @@ For the final example, we will take an example often found in React tutorials wh
     }
   }
 
-  customElements.define('interaction-element', InteractionExample);
+  customElements.define('interaction-example', InteractionExample);
 </script>
 ```
 

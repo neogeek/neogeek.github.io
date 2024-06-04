@@ -37,7 +37,7 @@ class InteractionExample extends HTMLElement {
   }
 }
 
-customElements.define('interaction-element', InteractionExample);
+customElements.define('interaction-example', InteractionExample);
 ```
 
 ## [React](https://react.dev/)
