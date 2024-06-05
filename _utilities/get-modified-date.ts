@@ -8,7 +8,7 @@ const getModifiedDate = async (path: string) => {
     `git log -1 --pretty="format:%ci" ${path}`
   );
 
-  return new Date(lastModified);
+  return lastModified ? new Date(lastModified) : new Date();
 };
 
 export default getModifiedDate;
