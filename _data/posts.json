@@ -1,5 +1,11 @@
 [
   {
+    "date": "06/07/2024",
+    "path": "./posts/using-react-and-web-components-together.md",
+    "title": "Using React and Web Components Together",
+    "subtitle": "Using React and Web Components in the same codebase"
+  },
+  {
     "date": "05/29/2024",
     "path": "./posts/unity-ui-toolkit-at-runtime.md",
     "title": "Unity UI Toolkit at Runtime",
