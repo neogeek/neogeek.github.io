@@ -2,7 +2,7 @@
 
 <div class="image">
   <figure>
-    <img src="/images/web-components-vs-the-world/header.svg" alt="The phrase web components on the left with the right populated with five different logos of other javascript frameworks like React and Angular." />
+    <img src="/images/web-components-vs-the-world/header.svg" alt="The phrase Web Components on the left with the right populated with five different logos of other javascript frameworks like React and Angular." />
   </figure>
 </div>
 

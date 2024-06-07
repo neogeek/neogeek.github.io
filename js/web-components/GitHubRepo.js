@@ -137,7 +137,7 @@
     }
 
     /**
-     * Returns a style tag for use within the web component shadow DOM.
+     * Returns a style tag for use within the Web Component shadow DOM.
      *
      * @returns {HTMLStyleElement}
      */
