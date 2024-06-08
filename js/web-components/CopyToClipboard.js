@@ -22,10 +22,11 @@
 
     button {
       position: absolute;
-      top: 1rem;
-      right: 1rem;
+      top: 0.9rem;
+      right: 0.9rem;
       padding: 0;
       font-size: 1rem;
+      line-height: 1;
       border: none;
       background: none;
       cursor: pointer;
