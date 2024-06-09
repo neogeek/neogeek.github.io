@@ -5,12 +5,6 @@ import { html } from 'onlybuild';
 
 import { writeFileAndMakeDir } from 'onlybuild/build';
 
-import { globby } from 'globby';
-
-import calculateTimeToRead from './_utilities/calc-ttr.js';
-import getModifiedDate from './_utilities/get-modified-date.js';
-import parseFrontMatter from './_utilities/parse-front-matter.js';
-import renderMarkdown from './_utilities/render-markdown.js';
 import renderRss from './_utilities/render-rss.js';
 
 import head from './_includes/head.js';
@@ -20,68 +14,13 @@ import footer from './_includes/footer.js';
 import config from './_data/config.json';
 import projects from './_data/projects.json';
 
-const postPaths = await globby(['./posts/*.md']);
+import { getPosts, getPostsByYear } from './_utilities/posts.js';
 
-const posts = (
-  await Promise.all(
-    postPaths.map(async path => {
-      const { data, content } = parseFrontMatter(await readFile(path, 'utf8'));
-
-      if (data.draft && process.env.NODE_ENV !== 'development') {
-        return;
-      }
-
-      if (data) {
-        const date = new Date(data.date);
-
-        data.date = date;
-
-        data.dateString = date.toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
-        });
-
-        data.lastModifiedDateString = (
-          await getModifiedDate(path)
-        ).toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
-        });
-
-        data.ttr = calculateTimeToRead(content).toString();
-      }
-
-      let markdown = await renderMarkdown(content);
-
-      markdown = markdown
-        .replace(/<pre>/g, '<copy-to-clipboard><pre>')
-        .replace(/<\/pre>/g, '</pre></copy-to-clipboard>');
-
-      return { path, data, content, markdown };
-    })
-  )
-).filter(Boolean);
-
-const sortedPosts = posts.sort(
-  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
-);
-
-const postsGroupedByYear = sortedPosts.reduce((years, post) => {
-  const date = new Date(post.data.date);
-
-  if (!years[date.getFullYear()]) {
-    years[date.getFullYear()] = [];
-  }
-
-  years[date.getFullYear()].push(post);
-
-  return years;
-}, {});
+const posts = await getPosts();
+const postsGroupedByYear = await getPostsByYear();
 
 await Promise.all(
-  sortedPosts.map(async post => {
+  posts.map(async post => {
     await writeFileAndMakeDir(
       join('build', parse(post.path).name, 'index.html'),
       html`<!DOCTYPE html>

@@ -1,14 +1,12 @@
 import { html } from 'onlybuild';
 
 import config from '../_data/config.json';
-import posts from '../_data/posts.json';
 
 type configType = typeof config;
-type postsType = typeof posts;
 
 const renderRss = (
   config: configType,
-  posts: postsType
+  posts: any
 ) => html`<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -26,11 +24,11 @@ const renderRss = (
         );
 
         return html`<item>
-          <title>${post.title}</title>
+          <title>${post.data.title}</title>
           <link>${href}</link>
-          <description>${post.subtitle}</description>
+          <description>${post.data.subtitle}</description>
           <guid isPermaLink="true">${href}</guid>
-          <pubDate>${new Date(post.date).toUTCString()}</pubDate>
+          <pubDate>${new Date(post.data.date).toUTCString()}</pubDate>
         </item>`;
       })
       .join('')}
