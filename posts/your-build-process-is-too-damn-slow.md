@@ -1,3 +1,9 @@
+---
+title: Your Build Process Is Too Damn Slow
+subtitle: Load AssetBundles from a local server to speed up mobile development testing.
+date: 08/16/2018
+---
+
 # Your Build Process Is Too Damn Slow
 
 **TL:DR** — Load AssetBundles from a local server to speed up mobile development testing. See repo linked below.

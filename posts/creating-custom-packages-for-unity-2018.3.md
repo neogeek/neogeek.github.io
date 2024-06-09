@@ -1,3 +1,9 @@
+---
+title: Creating Custom Packages for Unity 2018.3
+subtitle: Isolate key components of your Unity game or app using Unity's new package manager.
+date: 02/01/2019
+---
+
 # Creating Custom Packages for Unity 2018.3
 
 > **tl:dr** - Check out [https://github.com/neogeek/unity-package-example](https://github.com/neogeek/unity-package-example) to see what is required for publishing a custom Unity Package using git.

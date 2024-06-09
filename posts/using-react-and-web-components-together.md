@@ -1,3 +1,9 @@
+---
+title: Using React and Web Components Together
+subtitle: Using React and Web Components in the same codebase
+date: 06/07/2024
+---
+
 # Using React and Web Components Together
 
 <div class="images">

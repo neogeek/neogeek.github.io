@@ -1,3 +1,9 @@
+---
+title: Deploy a Static Site to Cloudflare in Seconds
+subtitle: I used Amazon S3 for years, but Cloudflare Pages won me over instantly for hosting simple static sites.
+date: 05/07/2024
+---
+
 # Deploy a Static Site to Cloudflare in Seconds
 
 Over the years I've promoted the use of Amazon S3 for hosting static websites. But the more I work with it, and the more I struggle helping people through the process of setting it up, the more I realize it's far too obnoxious for what you get out of it. Between setting up IAM policies, random Python errors via the CLI tool, and debugging deployments via CI platforms, I was frustrated and looking for alternatives.

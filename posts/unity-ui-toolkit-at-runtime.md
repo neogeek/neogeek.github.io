@@ -1,3 +1,9 @@
+---
+title: Unity UI Toolkit at Runtime
+subtitle: Dynamically populating data at runtime using Unity UI Toolkit
+date: 05/29/2024
+---
+
 # Unity UI Toolkit at Runtime
 
 <div class="image">

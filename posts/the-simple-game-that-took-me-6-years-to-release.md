@@ -1,3 +1,9 @@
+---
+title: The Simple Game That Took Me 6 Years to Release
+subtitle: I created a playable prototype for a simple game in 2018, but it took until 2024 to release it.
+date: 04/29/2024
+---
+
 # The Simple Game That Took Me 6 Years to Release
 
 ![](/images/the-simple-game-that-took-me-6-years-to-release/header.svg)

@@ -5,8 +5,11 @@ import { html } from 'onlybuild';
 
 import { writeFileAndMakeDir } from 'onlybuild/build';
 
+import { globby } from 'globby';
+
 import calculateTimeToRead from './_utilities/calc-ttr.js';
 import getModifiedDate from './_utilities/get-modified-date.js';
+import parseFrontMatter from './_utilities/parse-front-matter.js';
 import renderMarkdown from './_utilities/render-markdown.js';
 import renderRss from './_utilities/render-rss.js';
 
@@ -15,45 +18,58 @@ import header from './_includes/header.js';
 import footer from './_includes/footer.js';
 
 import config from './_data/config.json';
-import drafts from './_data/drafts.json';
-import posts from './_data/posts.json';
 import projects from './_data/projects.json';
 
-const sortedPosts = [
-  ...posts,
-  ...(process.env.NODE_ENV === 'development' ? drafts : [])
-].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const postPaths = await globby(['./posts/*.md']);
 
-await Promise.all(
-  sortedPosts.map(async post => {
-    post['dateString'] = new Date(post.date).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+const posts = (
+  await Promise.all(
+    postPaths.map(async path => {
+      const { data, content } = parseFrontMatter(await readFile(path, 'utf8'));
 
-    post['lastModifiedDateString'] = (
-      await getModifiedDate(post.path)
-    ).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+      if (data.draft && process.env.NODE_ENV !== 'development') {
+        return;
+      }
 
-    post['content'] = await readFile(post.path, 'utf8');
+      if (data) {
+        const date = new Date(data.date);
 
-    post['markdown'] = renderMarkdown(post['content']);
+        data.date = date;
 
-    post['markdown'] = post['markdown']
-      .replace(/<pre>/g, '<copy-to-clipboard><pre>')
-      .replace(/<\/pre>/g, '</pre></copy-to-clipboard>');
+        data.dateString = date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
 
-    post['ttr'] = calculateTimeToRead(post['content']).toString();
-  })
+        data.lastModifiedDateString = (
+          await getModifiedDate(path)
+        ).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+        data.ttr = calculateTimeToRead(content).toString();
+      }
+
+      let markdown = await renderMarkdown(content);
+
+      markdown = markdown
+        .replace(/<pre>/g, '<copy-to-clipboard><pre>')
+        .replace(/<\/pre>/g, '</pre></copy-to-clipboard>');
+
+      return { path, data, content, markdown };
+    })
+  )
+).filter(Boolean);
+
+const sortedPosts = posts.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
 
 const postsGroupedByYear = sortedPosts.reduce((years, post) => {
-  const date = new Date(post.date);
+  const date = new Date(post.data.date);
 
   if (!years[date.getFullYear()]) {
     years[date.getFullYear()] = [];
@@ -72,8 +88,8 @@ await Promise.all(
         <html lang="en">
           <head>
             ${head({
-              title: post.title,
-              subtitle: post.subtitle
+              title: post.data.title,
+              subtitle: post.data.subtitle
             })}
           </head>
           <body>
@@ -82,24 +98,24 @@ await Promise.all(
               <a href="/">← Home</a>
             </header>
             <main class="post">
-              <h1>${post.title}</h1>
+              <h1>${post.data.title}</h1>
               <p>
                 Published
-                <time datetime="${new Date(post['dateString']).toISOString()}"
-                  >${post['dateString']}</time
+                <time datetime="${post.data.date.toISOString()}"
+                  >${post.data.dateString}</time
                 >
-                ${post['dateString'] !== post['lastModifiedDateString']
+                ${post.data.dateString !== post.data.lastModifiedDateString
                   ? html`&#8226; Last Updated
                       <time
                         datetime="${new Date(
-                          post['lastModifiedDateString']
+                          post.data.lastModifiedDateString
                         ).toISOString()}"
-                        >${post['lastModifiedDateString']}</time
+                        >${post.data.lastModifiedDateString}</time
                       >`
                   : ''}
-                &#8226; ${post['ttr']}
+                &#8226; ${post.data.ttr}
               </p>
-              ${post['markdown'].replace(/<h1>.+\<\/h1>/gis, '')}
+              ${post.markdown.replace(/<h1>.+\<\/h1>/gis, '')}
             </main>
             <footer>${footer}</footer>
           </body>
@@ -130,21 +146,20 @@ export default html`<!DOCTYPE html>
                 ${postsGroupedByYear[year].map(post => {
                   return html`<li class="blog-post">
                     <h4>
-                      ${drafts.includes(post) ? '[DRAFT]' : ''}
+                      ${post.data.draft ? '[DRAFT]' : ''}
                       <a
                         href="${post.path
                           .replace(dirname(post.path), '')
                           .replace(/\.md$/, '')}"
-                        >${post.title}</a
+                        >${post.data.title}</a
                       >
                     </h4>
-                    <p>${post.subtitle}</p>
+                    <p>${post.data.subtitle}</p>
                     <p>
-                      <time
-                        datetime="${new Date(post['dateString']).toISOString()}"
-                        >${post['dateString']}</time
+                      <time datetime="${post.data.date.toISOString()}"
+                        >${post.data.dateString}</time
                       >
-                      &#8226; ${post['ttr']}
+                      &#8226; ${post.data.ttr}
                     </p>
                   </li>`;
                 })}

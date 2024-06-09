@@ -14,6 +14,6 @@ const marked = new Marked(
   })
 );
 
-const renderMarkdown = (contents: string) => marked.parse(contents);
+const renderMarkdown = async (contents: string) => await marked.parse(contents);
 
 export default renderMarkdown;

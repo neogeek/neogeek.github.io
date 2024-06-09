@@ -1,3 +1,9 @@
+---
+title: Let's Make Web Components Happen
+subtitle: Stop trying to make Web Components happen! It's not going to happen.
+date: 05/16/2024
+---
+
 # Let's Make Web Components Happen
 
 <div class="images">

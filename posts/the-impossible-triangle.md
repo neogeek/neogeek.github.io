@@ -1,3 +1,9 @@
+---
+title: The Impossible Triangle
+subtitle: The impossible triangle and the art of Brazilian artist Romero Britto are both inspirations of mine and I wanted to create something that not only captured the essence of these two inspirations but presented them in my own way.
+date: 02/28/2017
+---
+
 # The Impossible Triangle
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3100 1000" width="3100" height="1000">

@@ -1,3 +1,9 @@
+---
+title: Scott Makes a Game Engine
+subtitle: It happened. It finally happened. I'm building my own custom game engine.
+date: 10/27/2023
+---
+
 # Scott Makes a Game Engine
 
 It happened. It finally happened. I'm building my own custom game engine.

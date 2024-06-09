@@ -1,3 +1,9 @@
+---
+title: Yet Another Static Site Generator
+subtitle: There are hundreds of static site generators. Why not one more?
+date: 05/07/2024
+---
+
 # Yet Another Static Site Generator
 
 <div class="images">

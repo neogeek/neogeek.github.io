@@ -1,3 +1,9 @@
+---
+title: CandyCoded First Public Beta!
+subtitle: I'm super excited to announce the first public beta of my Unity library CandyCoded!
+date: 03/25/2018
+---
+
 # CandyCoded First Public Beta!
 
 I'm super excited to announce the first public beta of my Unity library [CandyCoded](https://github.com/neogeek/CandyCoded)!
