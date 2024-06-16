@@ -43,6 +43,32 @@ a .icon {
   vertical-align: middle;
 }
 
+a[href^='http']:after {
+  content: '';
+  margin: 0 0.25rem 0 0.5rem;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+@media (prefers-color-scheme: light) {
+  a[href^='http']:after {
+    background-image: url('/images/icons/external-url-light.svg');
+  }
+  a[href^='http']:hover:after {
+    background-image: url('/images/icons/external-url-dark.svg');
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  a[href^='http']:after {
+    background-image: url('/images/icons/external-url-dark.svg');
+  }
+  a[href^='http']:hover:after {
+    background-image: url('/images/icons/external-url-light.svg');
+  }
+}
+
 a .icon {
   margin-left: 0.5rem;
   width: auto;
