@@ -16,6 +16,7 @@
     --main-background-color: #eee;
     --code-foreground-color: #0086b3;
     --code-background-color: #ffffff;
+    --table-background-color: #eeee;
     --github-repo-foreground-color: #000;
     --github-repo-background-color: #ffffff;
   }
@@ -33,6 +34,7 @@
     --main-background-color: #1d1d21;
     --code-foreground-color: #ebff87;
     --code-background-color: #292937;
+    --table-background-color: #222;
     --github-repo-foreground-color: #fff;
     --github-repo-background-color: #292937;
   }

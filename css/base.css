@@ -128,15 +128,14 @@ time {
 }
 
 table {
-  margin: var(--vertical-margin) 0;
+  margin: var(--vertical-margin) auto;
   width: 100%;
-  border-spacing: 1rem;
-  border-collapse: separate;
+  border-collapse: collapse;
   overflow: auto;
 }
 
 table tr th {
-  padding-bottom: 1rem;
+  padding: 0.5rem;
   border-bottom: 0.1rem solid var(--main-foreground-color);
 }
 
@@ -145,12 +144,17 @@ table tr th:not([align]) {
 }
 
 table tr td {
+  padding: 0.5rem;
   vertical-align: top;
 }
 
 table tbody {
   width: 100%;
   overflow: auto;
+}
+
+table tbody tr:nth-child(odd) td {
+  background-color: var(--table-background-color);
 }
 
 img,
