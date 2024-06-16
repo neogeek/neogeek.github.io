@@ -2,7 +2,6 @@
 title: You (Probably) Don't Need That Auth Library
 subtitle: I wondered this many years ago, when trying to setup Google Login with OAuth, and what I learned surprised me.
 date: 06/16/2024
-draft: true
 ---
 
 # You (Probably) Don't Need That Auth Library
