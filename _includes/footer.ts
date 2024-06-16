@@ -8,6 +8,6 @@ const rssIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" c
 
 export default html`<p>
   &copy; Scott Doxey 2006&ndash;${new Date().getFullYear()} &#8226;
-  <a href="/use">Use</a> &#8226; <a href="/now">Now</a> &#8226;
+  <a href="/uses">Uses</a> &#8226; <a href="/now">Now</a> &#8226;
   <a href="/feed.xml">RSS Feed${rssIcon}</a>
 </p>`;

@@ -1,10 +1,10 @@
-# Use
+# Uses
 
 What does Scott use for development/gaming?
 
 <div class="image">
   <figure>
-    <img src="/images/use/desk.jpg" alt="Picture of my abnormally clean desk." />
+    <img src="/images/uses/desk.jpg" alt="Picture of my abnormally clean desk." />
     <figcaption>My desk never looks this clean.</figcaption>
   </figure>
 </div>

@@ -9,7 +9,7 @@ import getModifiedDate from './_utilities/get-modified-date.js';
 import head from './_includes/head.js';
 import footer from './_includes/footer.js';
 
-const lastModifiedDate = await getModifiedDate('use.md');
+const lastModifiedDate = await getModifiedDate('uses.md');
 
 export default html`<!DOCTYPE html>
   <html lang="en">
@@ -24,7 +24,7 @@ export default html`<!DOCTYPE html>
         <a href="/">← Home</a>
       </header>
       <main class="use">
-        ${new Marked().parse(await readFile('use.md', 'utf8'))}
+        ${new Marked().parse(await readFile('uses.md', 'utf8'))}
       </main>
       <footer>
         <p>
