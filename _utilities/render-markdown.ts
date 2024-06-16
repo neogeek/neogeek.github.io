@@ -1,10 +1,12 @@
 import { Marked } from 'marked';
 
+import markedFootnote from 'marked-footnote';
 import { markedHighlight } from 'marked-highlight';
 
 import hljs from 'highlight.js';
 
 const marked = new Marked(
+  markedFootnote(),
   markedHighlight({
     langPrefix: 'hljs language-',
     highlight(code, lang) {
