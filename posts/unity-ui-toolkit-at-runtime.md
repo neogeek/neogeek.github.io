@@ -77,7 +77,7 @@ public struct RandomUserPicture
 
 Then I tested to make sure I could read from the [randomuser.me](https://randomuser.me/) API.
 
-> **Note:** The following code snippet requires installing the `com.unity.nuget.newtonsoft-json` package via the Unity Package Manager.
+> ⚠️ **Note:** The following code snippet requires installing the `com.unity.nuget.newtonsoft-json` package via the Unity Package Manager.
 
 **DynamicDataList.cs**
 
@@ -138,7 +138,7 @@ Next, lets add "Hello, World" text in this layout.
 
 Drag a **Visual Element** from the **Library** into the **Hierarchy** above. Then drag a **Label** into the **Visual Element** to it looks like the screenshot below.
 
-> **Note:** The parent **Visual Element** is not required to render the text, it just makes it easier to change it's position after the fact.
+> ⚠️ **Note:** The parent **Visual Element** is not required to render the text, it just makes it easier to change it's position after the fact.
 
 <div class="images">
   <figure>

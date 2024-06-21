@@ -29,7 +29,7 @@ setupunity() {
 
 ## Create required files
 
-> **Note:** All of the following steps are _required_. There are additional things you can add like documentation, tests and other properties to the `package.json` file as recommended by the [Package Validation Suite](https://docs.unity3d.com/Packages/com.unity.package-validation-suite@0.4/manual/index.html), which only works on local packages, not custom git installs.
+> ⚠️ **Note:** All of the following steps are _required_. There are additional things you can add like documentation, tests and other properties to the `package.json` file as recommended by the [Package Validation Suite](https://docs.unity3d.com/Packages/com.unity.package-validation-suite@0.4/manual/index.html), which only works on local packages, not custom git installs.
 
 ### `package.json`
 
@@ -74,7 +74,7 @@ deploy:
 	git subtree push --prefix Assets origin upm
 ```
 
-> **Note:** The Makefile will only work on MacOS, not Windows.
+> ⚠️ **Note:** The Makefile will only work on MacOS, not Windows.
 
 ## Pushing git repo
 
