@@ -1,4 +1,4 @@
-import { readFile, writeFile } from 'node:fs/promises';
+import { writeFile } from 'node:fs/promises';
 import { dirname, join, parse } from 'node:path';
 
 import { html } from 'onlybuild';
