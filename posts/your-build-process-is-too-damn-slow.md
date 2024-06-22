@@ -6,11 +6,15 @@ date: 08/16/2018
 
 # Your Build Process Is Too Damn Slow
 
-**TL:DR** — Load AssetBundles from a local server to speed up mobile development testing. See repo linked below.
+<div class="banner">
+<p>This blog post has been updated to work with the latest version Unity 2022.3</p>
+</div>
 
-> <https://github.com/neogeek/your-build-process-is-too-damn-slow>
+**TL:DR** — Load AssetBundles from a local server to speed up mobile development testing. See the repo linked below.
 
-We have all been there. Hit build and run. Wait. Wait some more. Pick up your Nintendo Switch and play a bit of your favorite roguelike. All while periodically glancing up at your computer to see if it finished. After it completes, you pick up your mobile device, start testing and right away something is broken. Time to rinse and repeat.
+> GitHub Repo: <https://github.com/neogeek/your-build-process-is-too-damn-slow>
+
+We have all been there. Hit build and run. Wait. Wait some more. Pick up your Nintendo Switch and play a bit of your favorite roguelike. All while periodically glancing up at your computer to see if it is finished. After it is complete, you pick up your mobile device and start testing, and right away, something is broken. Time to rinse and repeat.
 
 <div class="images">
   <figure>
@@ -21,19 +25,21 @@ We have all been there. Hit build and run. Wait. Wait some more. Pick up your Ni
 
 This process is not conducive to a productive work environment.
 
-Luckily there is a better way.
+Luckily, there is a better way.
 
 ## 🎉 Introducing AssetBundles
 
-You may have heard of asset bundles before now and thought it is a useful idea, but you don't have a use for them. Until now that is.
+You may have heard of asset bundles before now and thought they were a useful idea, but you don't have a use for them. Until now, that is.
 
-AssetBundles can be used to speed up your build process by allowing you to build the majority of your app once and then continually bundle and load a single scene from a remote local server for quick iteration. This is most useful when building mobile apps as the roundtrip from Unity to Xcode/Android Studio to a device is slow.
+AssetBundles can be used to speed up your build process by allowing you to build the majority of your app once and then continually bundle and load a single scene from a remote local server for quick iteration. This is most useful when building mobile apps, as the roundtrip from Unity to Xcode/Android Studio to a device is slow.
 
-## 🔨 Creating your first AssetBundle file
+## 📦 Creating AssetBundle Files
 
-First things first, picking the scene that will be loaded as an AssetBundle from a local server. Once you have determined what scene you will be using, you will tag it and build it using a custom script.
+First, pick the scenes or assets that will be loaded from an AssetBundle hosted on a local server. Once you have determined what scenes or assets you will be using, you will tag it and build it using a custom script.
 
-To tag your scene, first select the scene file from the Assets panel, then navigate to the bottom of the inspector to find the Asset Labels sections. Select the drop-down on the left and set a unique name for the bundle.
+> ⚠️ **Note:** You can not mix scenes and assets in the same tag as they are loaded differently.
+
+To tag your scene or asset, select it from the Assets panel, then navigate to the bottom of the inspector to find the Asset Labels sections. Select the drop-down on the left and set a unique name for the bundle.
 
 <div class="images">
   <figure>
@@ -41,7 +47,7 @@ To tag your scene, first select the scene file from the Assets panel, then navig
   </figure>
 </div>
 
-Next, add the following script to your project. This file will add an item to the Assets drop-down/right click menu for creating AssetBundles marked with asset bundle labels. Once you select this, a folder will be created and populated with the generated AssetBundles.
+Next, add the following script to your project. This file will add an item to the Asset panel's drop-down/right-click menu for creating AssetBundles. Once you select this, a folder will be created and populated with the generated AssetBundles.
 
 ```csharp
 #if UNITY_EDITOR
@@ -49,116 +55,31 @@ Next, add the following script to your project. This file will add an item to th
 using System.IO;
 using UnityEditor;
 
-public class CreateAssetBundles
+public static class CreateAssetBundles
 {
     [MenuItem("Assets/Build AssetBundles")]
-    static void BuildAllAssetBundles()
+    private static void BuildAllAssetBundles()
     {
-        string assetBundleDirectory = "Assets/AssetBundles";
+        var assetBundleDirectory = "Assets/AssetBundles";
+
         if (!Directory.Exists(assetBundleDirectory))
         {
             Directory.CreateDirectory(assetBundleDirectory);
         }
-        BuildPipeline.BuildAssetBundles(assetBundleDirectory, BuildAssetBundleOptions.None, EditorUserBuildSettings.activeBuildTarget);
+
+        BuildPipeline.BuildAssetBundles(assetBundleDirectory, BuildAssetBundleOptions.None,
+            EditorUserBuildSettings.activeBuildTarget);
     }
 }
 
 #endif
 ```
 
-> For more information about the bundle process, refer to this section of the Unity documentation <https://docs.unity3d.com/Manual/AssetBundles-Workflow.html>
+> For more information about the bundling process, refer to this section of the Unity documentation <https://docs.unity3d.com/Manual/AssetBundles-Workflow.html>
 
-## 🎭 Setting up the scenes
+## 🌎 Serving AssetBundles Locally
 
-Next, we set up the scene that will manage the loading of the bundled scene dynamically after tapping a button on the screen.
-
-First, add a Button component to the screen via GameObject > UI > Button. Place it somewhere out of the way of other interactions in your bundled scene and give it a proper label.
-
-Next, create a script that will be used to control the button interaction and to load the bundle. Once created, attach to the button that you created in the previous step.
-
-```csharp
-using System.Collections;
-using UnityEngine;
-using UnityEngine.Networking;
-using UnityEngine.SceneManagement;
-
-public class LoadSceneFromAssetBundle : MonoBehaviour
-{
-
-    [SerializeField]
-    private string assetBundleUrl;
-
-    [SerializeField]
-    private string scenePath;
-
-    private Scene sceneRef;
-
-    public void HandleButtonClick()
-    {
-
-        StartCoroutine(LoadAssetBundle());
-
-    }
-
-    private IEnumerator LoadAssetBundle()
-    {
-
-        if (sceneRef.IsValid())
-        {
-
-            yield return SceneManager.UnloadSceneAsync(sceneRef);
-
-        }
-
-        using (UnityWebRequest uwr = UnityWebRequestAssetBundle.GetAssetBundle(assetBundleUrl))
-        {
-
-            yield return uwr.SendWebRequest();
-
-            if (uwr.isNetworkError || uwr.isHttpError)
-            {
-
-                Debug.Log(uwr.error);
-
-            }
-            else
-            {
-
-                AssetBundle bundle = DownloadHandlerAssetBundle.GetContent(uwr);
-
-                if (bundle.isStreamedSceneAssetBundle)
-                {
-
-                    yield return SceneManager.LoadSceneAsync(scenePath, LoadSceneMode.Additive);
-
-                    sceneRef = SceneManager.GetSceneByPath(scenePath);
-
-                    SceneManager.SetActiveScene(sceneRef);
-
-                }
-
-                bundle.Unload(false);
-
-            }
-
-        }
-
-    }
-
-}
-```
-
-Next, you need to fill in the proper information into the inspector values as seen below.
-
-<div class="images">
-  <figure>
-    <img src="/images/your-build-process-is-too-damn-slow/load-scene-from-asset-bundle.png" alt="Screenshot of the Unity inspector." />
-  </figure>
-</div>
-
-## 📦 Start the local server to host the AssetBundle files
-
-Open Terminal and navigate to your project. Paste the following command in and press enter. This command will start a simple Python server in the folder where the AssetBundle files are.
+Open Terminal and navigate to your project directory. Paste the following command in and press enter. This command will start a simple Python server in the folder where the AssetBundle files are.
 
 ```bash
 $ (cd Assets/AssetBundles && python3 -m http.server 8000)
@@ -166,36 +87,317 @@ $ (cd Assets/AssetBundles && python3 -m http.server 8000)
 
 Once the server is running, navigate to <http://localhost:8000/> to make sure it's working. You should see a list of the same files that you can see from Unity.
 
-Ok, let us see if this works.
+## 🔧 Setup AssetBundle Utilities
 
-<div class="images">
-  <figure>
-    <img src="/images/your-build-process-is-too-damn-slow/demo.gif" alt="Screen capture of a scene getting loaded from an Asset Bundle." />
-  </figure>
-</div>
+Let's create a script to manage downloading and loading asset bundles and the contents within them.
 
-Nice!
+### DownloadAssetBundle
 
-## 🚢 Ship It!
+First, let's create a method to download asset bundles. I've added comments in the method explaining each part.
 
-Now, to get this running in a mobile environment, you need to change your build target to either iOS or Android and change the Asset Bundle URL to point to the IP address of the computer you are serving from.
+```csharp
+using System;
+using System.Collections;
+using System.IO;
+using System.Net;
+using System.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
-To get the IP address of your computer run the following from Terminal.
+public static class AssetBundleUtilities
+{
 
-Hope this helps you as it has me!
+    public static async Task DownloadAssetBundle(string assetBundleDirectory, string assetBundleUrl,
+        Action<float> progressCallback, Action<Exception> errorCallback)
+    {
+        // Create the asset bundle directory if it doesn't exist.
+        if (!Directory.Exists(assetBundleDirectory))
+        {
+            Directory.CreateDirectory(assetBundleDirectory);
+        }
 
-## ✏️ Important Note!
+        // Combine your asset bundle directory with the file name of the asset bundle you are downloading.
+        var bundlePath = Path.Combine(assetBundleDirectory, Path.GetFileName(assetBundleUrl));
 
-Wait! Before you go, if you are building for iOS (and maybe Android), you have to do one more thing to make sure things don't crash and burn around you.
+        // If the asset bundle already exists, return. This prevents re-downloading the same
+        // asset bundle more than once.
+        if (File.Exists(bundlePath))
+        {
+            return;
+        }
 
-Navigate to Edit > Project Settings > Player, then open Other Settings. Towards the bottom, you will find an option labeled Strip Engine Code. Uncheck this. If you don't, you'll end up with an EXC_BAD_ACCESS error when loading an AssetBundle.
+        // Create a request to download the asset bundle.
+        using var request = new UnityWebRequest(assetBundleUrl, UnityWebRequest.kHttpVerbGET);
 
-<div class="images">
-  <figure>
-    <img src="/images/your-build-process-is-too-damn-slow/settings.png" alt="Screenshot of the Unity settings panel." />
-  </figure>
-</div>
+        // Attach a download handler to the request. This will automatically save the file if the
+        // download is successful.
+        request.downloadHandler = new DownloadHandlerFile(bundlePath) { removeFileOnAbort = true };
 
-Why? I'm not entirely sure. I'm still learning!
+        // Start the request for the asset bundle.
+        var operation = request.SendWebRequest();
 
-If you want to dig into what Unity has to say about that option check out the documentation <https://docs.unity3d.com/Manual/iphone-playerSizeOptimization.html>
+        // Report the progress using the progressCallback method until the operation is completed.
+        while (!operation.isDone)
+        {
+            progressCallback(operation.progress);
+
+            await Task.Yield();
+        }
+
+        if (request.result != UnityWebRequest.Result.Success)
+        {
+            // If not successful, the errorCallback method is called with a WebException.
+            errorCallback(new WebException($"Failed to download asset bundle: {request.error}"));
+        }
+        else
+        {
+            // If successful, the progressCallback method is called with the final progress.
+            progressCallback(operation.progress);
+        }
+    }
+
+}
+```
+
+Call this method from an async method like `Start` or via `Task.Run`.
+
+```csharp
+private async void Start()
+{
+    var assetBundleDirectory = Path.Combine(Application.persistentDataPath, "AssetBundles");
+
+    var bundleUrl = "http://localhost:8000/samplescene";
+
+    await AssetBundleUtilities.DownloadAssetBundle(assetBundleDirectory, bundleUrl,
+        progress => Debug.Log($"Downloading: {progress * 100}%"),
+        error => Debug.LogError($"Error: {error.Message}"));
+}
+```
+
+You can also load multiple asset bundles using `Task.WhenAll`.
+
+```csharp
+private async void Start()
+{
+    var assetBundleDirectory = Path.Combine(Application.persistentDataPath, "AssetBundles");
+
+    await Task.WhenAll(new List<Task>()
+    {
+        AssetBundleUtilities.DownloadAssetBundle(assetBundleDirectory,
+            "http://localhost:8000/samplescene",
+            progress => Debug.Log($"Downloading: {progress * 100}%"),
+            error => Debug.LogError($"Error: {error.Message}")),
+        AssetBundleUtilities.DownloadAssetBundle(assetBundleDirectory,
+            "http://localhost:8000/prefabs",
+            progress => Debug.Log($"Downloading: {progress * 100}%"),
+            error => Debug.LogError($"Error: {error.Message}"))
+    });
+}
+```
+
+### LoadAssetBundle
+
+Next, we will create a method (in the same class) for loading asset bundles already stored on the device. As before, I've added comments in the method explaining each part.
+
+```csharp
+public static IEnumerator LoadAssetBundle(string assetBundleDirectory, string bundleName,
+    Action<float> progressCallback, Action<AssetBundle> loadedCallback, Action<Exception> errorCallback)
+{
+    // Combine the asset bundle directory with the name of the asset bundle you are loading.
+    var bundlePath = Path.Combine(assetBundleDirectory, bundleName);
+
+    // If the asset bundle doesn't exist, throw an error.
+    if (!File.Exists(bundlePath))
+    {
+        errorCallback(new FileNotFoundException($"Failed to load asset bundle: {bundleName}"));
+
+        yield break;
+    }
+
+    // Create a request to load the asset bundle.
+    var bundleLoadRequest = AssetBundle.LoadFromFileAsync(bundlePath);
+
+    // Report the progress using the progressCallback method until the operation is completed.
+    while (!bundleLoadRequest.isDone)
+    {
+        progressCallback(bundleLoadRequest.progress);
+
+        yield return null;
+    }
+
+    var assetBundle = bundleLoadRequest.assetBundle;
+
+    if (!assetBundle)
+    {
+        assetBundle.Unload(false);
+
+        // If not successful, the errorCallback method is called with a FileNotFoundException.
+        errorCallback(new FileNotFoundException($"Failed to load asset bundle: {bundleName}"));
+    }
+    else
+    {
+        // If successful, the progressCallback method is called with the final progress.
+        progressCallback(bundleLoadRequest.progress);
+
+        // Finally, call the loadedCallback method with the loaded asset bundle resource.
+        loadedCallback(assetBundle);
+    }
+}
+```
+
+But before we use this, we need to reference it from another method. This is because you can store _either_ scenes or non-scene assets in asset bundles, and we need to load them into Unity using specific logic, but the logic to load them from a file into memory is the same.
+
+### LoadSceneFromAssetBundle
+
+First, let's learn how to load a scene from an asset bundle.
+
+```csharp
+public static IEnumerator LoadSceneFromAssetBundle(string assetBundleDir, string bundleName, string scenePath,
+    LoadSceneMode loadSceneMode, Action<float> progressCallback, Action<Exception> errorCallback)
+{
+    // Create a reference for the asset bundle.
+    AssetBundle assetBundle = null;
+
+    // Load the asset bundle and use the loadedCallback to store the reference in the local variable above.
+    yield return LoadAssetBundle(assetBundleDir, bundleName, progressCallback,
+        bundle => assetBundle = bundle, errorCallback);
+
+    // If not successful, the errorCallback method is called with a FileNotFoundException.
+    if (assetBundle == null)
+    {
+        errorCallback(new FileNotFoundException($"Failed to load asset bundle: {bundleName}"));
+
+        yield break;
+    }
+
+    // If the asset bundle does not contain scenes, the errorCallback method is called with an
+    // InvalidOperationException.
+    if (!assetBundle.isStreamedSceneAssetBundle)
+    {
+        assetBundle.Unload(false);
+
+        errorCallback(new InvalidOperationException("Can only load a scene using this method."));
+
+        yield break;
+    }
+
+    // If the requested scene is not found, the errorCallback method is called with a FileNotFoundException.
+    if (Array.Find(assetBundle.GetAllScenePaths(), path => path.Equals(scenePath)) == null)
+    {
+        assetBundle.Unload(false);
+
+        errorCallback(new FileNotFoundException($"Scene {scenePath} not found in asset bundle {bundleName}."));
+
+        yield break;
+    }
+
+    // If successful, the scene is loaded using the LoadSceneMode (Single or Additive)
+    var sceneLoadRequest = SceneManager.LoadSceneAsync(scenePath, loadSceneMode);
+
+    yield return sceneLoadRequest;
+
+    assetBundle.Unload(false);
+}
+```
+
+To use this method, call it using `StartCoroutine`.
+
+```csharp
+public void HandleLoadSceneButtonClick()
+{
+    var assetBundleDirectory = Path.Combine(Application.persistentDataPath, "AssetBundles");
+
+    var bundleUrl = "http://localhost:8000/samplescene";
+
+    var scenePath = "Assets/Scenes/SceneToLoadViaURL.unity";
+
+    StartCoroutine(AssetBundleUtilities.LoadSceneFromAssetBundle(
+            assetBundleDirectory,
+            Path.GetFileName(bundleUrl),
+            scenePath, LoadSceneMode.Additive,
+            progress => Debug.Log($"Loading: {progress * 100}%"),
+            error => Debug.LogError($"Error: {error.Message}")));
+}
+```
+
+### LoadAssetFromAssetBundle
+
+Next, we will learn how to load an asset from an asset bundle.
+
+```csharp
+public static IEnumerator LoadAssetFromAssetBundle<T>(string assetBundleDir, string bundleName, string assetPath,
+    Action<float> progressCallback,
+    Action<T> instantiateCallback, Action<Exception> errorCallback)
+    where T : UnityEngine.Object
+{
+    // Create a reference for the asset bundle.
+    AssetBundle assetBundle = null;
+
+    // Load the asset bundle and use the loadedCallback to store the reference in the local variable above.
+    yield return LoadAssetBundle(assetBundleDir, bundleName, progressCallback,
+        bundle => assetBundle = bundle, errorCallback);
+
+    // If not successful, the errorCallback method is called with a FileNotFoundException.
+    if (assetBundle == null)
+    {
+        errorCallback(new FileNotFoundException($"Failed to load asset bundle: {bundleName}"));
+
+        yield break;
+    }
+
+    // If the asset bundle contains scenes, the errorCallback method is called with an InvalidOperationException.
+    if (assetBundle.isStreamedSceneAssetBundle)
+    {
+        assetBundle.Unload(false);
+
+        errorCallback(new InvalidOperationException("Can not load a scene using this method."));
+
+        yield break;
+    }
+
+    // Load the requested asset using the given path.
+    var assetLoadRequest = assetBundle.LoadAssetAsync<T>(assetPath);
+
+    yield return assetLoadRequest;
+
+    if (assetLoadRequest.asset == null)
+    {
+        // If not successful, the errorCallback method is called with a FileNotFoundException.
+        errorCallback(new FileNotFoundException($"Asset {assetPath} not found in asset bundle {bundleName}."));
+    }
+    else
+    {
+        // If successful, the instantiateCallback method is called with the asset type-casted to the requested type.
+        instantiateCallback(assetLoadRequest.asset as T);
+    }
+
+    assetBundle.Unload(false);
+}
+```
+
+To use this method, call it using `StartCoroutine`.
+
+```csharp
+public void HandleLoadAssetButtonClick()
+{
+    var assetBundleDirectory = Path.Combine(Application.persistentDataPath, "AssetBundles");
+
+    var bundleUrl = "http://localhost:8000/prefabs";
+
+    var assetPath = "Assets/Prefabs/Cube.prefab";
+
+    StartCoroutine(AssetBundleUtilities.LoadAssetFromAssetBundle<GameObject>(
+            assetBundleDirectory,
+            Path.GetFileName(bundleUrl), assetPath,
+            progress => Debug.Log($"Loading: {progress * 100}%"),
+            prefab => Instantiate(prefab, Vector3.zero, Quaternion.identity),
+            error => Debug.LogError($"Error: {error.Message}")));
+}
+```
+
+## 🎉 Putting it all Together
+
+Using these utility methods, you can easily get started downloading and loading Asset Bundles in Unity. How you organize your project to get these performance gains is up to you and your team. (I plan on making a follow-up post on that as well.)
+
+If you want to give this code a try without needing to set up your own project, the GitHub repo <https://github.com/neogeek/your-build-process-is-too-damn-slow> contains all of this code and bundled assets.

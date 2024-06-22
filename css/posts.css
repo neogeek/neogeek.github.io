@@ -12,6 +12,16 @@
   margin: 5rem auto 10rem;
 }
 
+.post .banner {
+  margin: 3rem 0;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--main-background-color);
+  text-align: center;
+  background-color: var(--link-color);
+}
+
 .image,
 .images {
   margin: var(--section-margin) 0;
