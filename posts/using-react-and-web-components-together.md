@@ -2,6 +2,7 @@
 title: Using React and Web Components Together
 subtitle: Using React and Web Components in the same codebase
 date: 06/07/2024
+previous: web-components-vs-the-world
 ---
 
 # Using React and Web Components Together

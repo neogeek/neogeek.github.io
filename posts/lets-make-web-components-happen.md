@@ -2,6 +2,7 @@
 title: Let's Make Web Components Happen
 subtitle: Stop trying to make Web Components happen! It's not going to happen.
 date: 05/16/2024
+next: web-components-vs-the-world
 ---
 
 # Let's Make Web Components Happen

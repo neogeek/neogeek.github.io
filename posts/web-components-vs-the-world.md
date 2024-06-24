@@ -2,6 +2,8 @@
 title: Web Components vs. the World
 subtitle: Comparing Web Components to React, Solid.js, Vue.js, Svelte and Angular.
 date: 05/17/2024
+previous: lets-make-web-components-happen
+next: using-react-and-web-components-together
 ---
 
 # Web Components vs. the World

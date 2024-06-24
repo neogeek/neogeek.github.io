@@ -21,8 +21,15 @@ const postsGroupedByYear = await getPostsByYear();
 
 await Promise.all(
   posts.map(async post => {
+    var previousPost = post.data.previous
+      ? posts.find(({ path }) => path.match(post.data.previous))
+      : null;
+    var nextPost = post.data.next
+      ? posts.find(({ path }) => path.match(post.data.next))
+      : null;
+
     await writeFileAndMakeDir(
-      join('build', parse(post.path).name, 'index.html'),
+      join('build', post.path, 'index.html'),
       html`<!DOCTYPE html>
         <html lang="en">
           <head>
@@ -55,6 +62,27 @@ await Promise.all(
                 &#8226; ${post.data.ttr}
               </p>
               ${post.markdown}
+
+              <nav class="post-navigation">
+                ${previousPost
+                  ? html`<div class="previous-post">
+                      <p>
+                        Previous Post<br />
+                        <a href="/${previousPost.path}/"
+                          >${previousPost.data.title}</a
+                        >
+                      </p>
+                    </div>`
+                  : null}
+                ${nextPost
+                  ? html`<div class="next-post">
+                      <p>
+                        Next Post<br />
+                        <a href="/${nextPost.path}/">${nextPost.data.title}</a>
+                      </p>
+                    </div>`
+                  : null}
+              </nav>
             </main>
             <footer>${footer}</footer>
           </body>

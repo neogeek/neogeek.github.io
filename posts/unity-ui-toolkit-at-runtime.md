@@ -2,6 +2,7 @@
 title: Unity UI Toolkit at Runtime
 subtitle: Dynamically populating data at runtime using Unity UI Toolkit
 date: 05/29/2024
+next: unity-ui-toolkit-custom-elements
 ---
 
 # Unity UI Toolkit at Runtime

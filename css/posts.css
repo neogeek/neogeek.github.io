@@ -136,3 +136,35 @@ github-repo {
     transform: scaleX(1);
   }
 }
+
+.post-navigation {
+  margin: 5rem 0 0 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 'previous' 'next';
+}
+
+@media (min-width: 50rem) {
+  .post-navigation {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'previous next';
+  }
+}
+
+.post-navigation .previous-post {
+  grid-area: previous;
+}
+
+.post-navigation .previous-post a:before {
+  content: '⬅ ';
+}
+
+.post-navigation .next-post {
+  grid-area: next;
+  text-align: right;
+}
+
+.post-navigation .next-post a:after {
+  content: ' ⮕';
+}

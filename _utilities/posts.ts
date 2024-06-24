@@ -1,4 +1,5 @@
 import { readFile } from 'node:fs/promises';
+import { parse } from 'node:path';
 
 import { globby } from 'globby';
 
@@ -51,7 +52,7 @@ const getPosts = async () => {
           .replace(/<pre>/g, '<copy-to-clipboard><pre>')
           .replace(/<\/pre>/g, '</pre></copy-to-clipboard>');
 
-        return { path, data, content, markdown };
+        return { path: parse(path).name, data, content, markdown };
       })
     )
   )
