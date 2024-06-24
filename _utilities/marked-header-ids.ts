@@ -1,14 +1,17 @@
 const markedHeaderIds = () => ({
   useNewRenderer: true,
   renderer: {
-    heading({ text, depth }) {
-      if (depth === 2) {
+    heading(token) {
+      const text = this.parser.parseInline(token.tokens);
+      const level = token.depth;
+
+      if (level === 2) {
         const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
 
-        return `<h${depth} id="${escapedText}"><a href="#${escapedText}">${text}</a></h${depth}>`;
+        return `<h${level} id="${escapedText}"><a href="#${escapedText}">${text}</a></h${level}>`;
       }
 
-      return `<h${depth}>${text}</h${depth}>`;
+      return `<h${level}>${text}</h${level}>`;
     }
   }
 });
