@@ -45,7 +45,7 @@ const getPosts = async () => {
           data.ttr = calculateTimeToRead(content).toString();
         }
 
-        let markdown = await renderMarkdown(content);
+        let markdown = await renderMarkdown(content.replace(/^# [^\n]+/, ''));
 
         markdown = markdown
           .replace(/<pre>/g, '<copy-to-clipboard><pre>')

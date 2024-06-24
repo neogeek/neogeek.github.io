@@ -22,6 +22,28 @@
   background-color: var(--link-color);
 }
 
+.post h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.post h2 a:before {
+  content: '# ';
+  opacity: 0.25;
+}
+
+@media (min-width: 80rem) {
+  .post h2 a:before {
+    margin-left: -2.5rem;
+    position: absolute;
+  }
+}
+
+.post h2 a:hover {
+  color: unset;
+  background-color: unset;
+}
+
 .image,
 .images {
   margin: var(--section-margin) 0;

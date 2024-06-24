@@ -54,7 +54,7 @@ await Promise.all(
                   : ''}
                 &#8226; ${post.data.ttr}
               </p>
-              ${post.markdown.replace(/<h1>.+\<\/h1>/gis, '')}
+              ${post.markdown}
             </main>
             <footer>${footer}</footer>
           </body>
