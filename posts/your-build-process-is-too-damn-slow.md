@@ -49,27 +49,37 @@ To tag your scene or asset, select it from the Assets panel, then navigate to th
 
 Next, add the following script to your project. This file will add an item to the Asset panel's drop-down/right-click menu for creating AssetBundles. Once you select this, a folder will be created and populated with the generated AssetBundles.
 
+> ⚠️ **Note:** Take note of the use of the `activeBuildTarget` reference. This is because Asset Bundles must be built and loaded using the same build target. You can't load Asset Bundles built for macOS on iOS, for example.
+
 ```csharp
+// https://github.com/neogeek/your-build-process-is-too-damn-slow/blob/main/Assets/Scripts/CreateAssetBundles.cs
+
 #if UNITY_EDITOR
 
 using System.IO;
 using UnityEditor;
+using UnityEngine;
 
 public static class CreateAssetBundles
 {
+
     [MenuItem("Assets/Build AssetBundles")]
     private static void BuildAllAssetBundles()
     {
-        var assetBundleDirectory = "Assets/AssetBundles";
+        var assetBundleDirectory =
+            Path.Combine("Assets/AssetBundles", EditorUserBuildSettings.activeBuildTarget.ToString());
 
         if (!Directory.Exists(assetBundleDirectory))
         {
             Directory.CreateDirectory(assetBundleDirectory);
         }
 
-        BuildPipeline.BuildAssetBundles(assetBundleDirectory, BuildAssetBundleOptions.None,
+        BuildPipeline.BuildAssetBundles(
+            assetBundleDirectory,
+            BuildAssetBundleOptions.None,
             EditorUserBuildSettings.activeBuildTarget);
     }
+
 }
 
 #endif
