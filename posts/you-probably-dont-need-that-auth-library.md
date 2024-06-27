@@ -60,7 +60,7 @@ See the difference? While some of them support 2.0, others have yet to make it p
 
 Now, let's take a look at those URLs.
 
-### `/auth`
+### /auth
 
 This is the URL used to redirect you to the provider's authentication confirm page.
 
@@ -74,7 +74,7 @@ const redirectUrl =
   `&access_type=offline&response_type=code&prompt=consent&scope=https://www.googleapis.com/auth/userinfo.email`;
 ```
 
-### `/token` with `code`
+### /token with code
 
 Once you confirm, the page will redirect you back to your app with a `code` parameter in the URL's hash. You then use this code to fetch the tokens you will use to make further requests. Note that this token is single-use and only valid for about 30 seconds.
 
@@ -110,7 +110,7 @@ An example response from this request:
 }
 ```
 
-### `/token` with `refresh_token`
+### /token with refresh_token
 
 And finally, when the access token you got from the request above expires, you can use the refresh token to get another one.
 

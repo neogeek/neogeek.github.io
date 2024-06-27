@@ -31,7 +31,7 @@ setupunity() {
 
 > ⚠️ **Note:** All of the following steps are _required_. There are additional things you can add like documentation, tests and other properties to the `package.json` file as recommended by the [Package Validation Suite](https://docs.unity3d.com/Packages/com.unity.package-validation-suite@0.4/manual/index.html), which only works on local packages, not custom git installs.
 
-### `package.json`
+### package.json
 
 Open up your favorite text editor and create a new file named `package.json` with the following contents in the `Assets/` folder of your project. If you plan on storing the package files in a separate folder like `Assets/Plugins/UnityPackageExample`, place it in there. Change the values of the file to match your project.
 
