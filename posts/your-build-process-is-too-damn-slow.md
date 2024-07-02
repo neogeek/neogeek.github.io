@@ -155,15 +155,15 @@ public static class AssetBundleUtilities
             await Task.Yield();
         }
 
-        if (request.result != UnityWebRequest.Result.Success)
-        {
-            // If not successful, the errorCallback method is called with a WebException.
-            errorCallback(new WebException($"Failed to download asset bundle: {request.error}"));
-        }
-        else
+        if (request.result == UnityWebRequest.Result.Success)
         {
             // If successful, the progressCallback method is called with the final progress.
             progressCallback(operation.progress);
+        }
+        else
+        {
+            // If not successful, the errorCallback method is called with a WebException.
+            errorCallback(new WebException($"Failed to download asset bundle: {request.error}"));
         }
     }
 
