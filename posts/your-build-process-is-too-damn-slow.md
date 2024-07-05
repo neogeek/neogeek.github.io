@@ -119,7 +119,7 @@ public static class AssetBundleUtilities
 {
 
     public static async Task DownloadAssetBundle(string assetBundleDirectory, string assetBundleUrl,
-        Action<float> progressCallback, Action<Exception> errorCallback)
+        Action<float> progressCallback = default, Action<Exception> errorCallback = default)
     {
         // Create the asset bundle directory if it doesn't exist.
         if (!Directory.Exists(assetBundleDirectory))
@@ -150,7 +150,7 @@ public static class AssetBundleUtilities
         // Report the progress using the progressCallback method until the operation is completed.
         while (!operation.isDone)
         {
-            progressCallback(operation.progress);
+            progressCallback?.Invoke(operation.progress);
 
             await Task.Yield();
         }
@@ -158,12 +158,14 @@ public static class AssetBundleUtilities
         if (request.result == UnityWebRequest.Result.Success)
         {
             // If successful, the progressCallback method is called with the final progress.
-            progressCallback(operation.progress);
+            progressCallback?.Invoke(operation.progress);
         }
         else
         {
+            Debug.LogError(request.error);
+
             // If not successful, the errorCallback method is called with a WebException.
-            errorCallback(new WebException($"Failed to download asset bundle: {request.error}"));
+            errorCallback?.Invoke(new WebException($"Failed to download asset bundle: {request.error}"));
         }
     }
 
