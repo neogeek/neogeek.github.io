@@ -7,7 +7,7 @@ What's Scott up to right now(ish)?
 - 👷‍♂️ Doing contract work in Unity and the web.
 - 🎧 Listening to [Hyperdrama by Justice](https://open.spotify.com/album/6ooBxhsOVedpX4zPTCyL86?si=M6UHSgdUQteKj2Cgw2X0Ag)
 - 🎮 Playing too much [Destiny 2](https://www.bungie.net/7/en/Destiny/) on XBOX and PC.
-  - I started a brand new character and have made it through two of the legacy DLC story lines: Shadowkeep and Beyond Light.
+  - I started a brand new character and have made it through three of the legacy DLC story lines: Shadowkeep, Beyond Light and The Witch Queen.
 - 🃏 Recently released my first game to both iOS and Android! [flipjacksgame.com](https://flipjacksgame.com/)!
 - 🎹 Working on my next game which is an untitled rhythm game played using MIDI controller.
   - 📦 I'm releasing a lot of the logic as an [open source package on GitHub](https://github.com/neogeek/rhythm-game-utilities)!
