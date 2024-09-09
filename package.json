@@ -2,14 +2,14 @@
   "name": "neogeek.dev",
   "type": "module",
   "devDependencies": {
-    "@types/node": "22.1.0",
+    "@types/node": "22.5.4",
     "globby": "14.0.2",
     "highlight.js": "11.10.0",
-    "marked": "13.0.3",
-    "marked-footnote": "1.2.2",
-    "marked-highlight": "2.1.3",
-    "onlybuild": "1.6.3",
-    "yaml": "2.5.0"
+    "marked": "14.1.2",
+    "marked-footnote": "1.2.4",
+    "marked-highlight": "2.1.4",
+    "onlybuild": "1.6.4",
+    "yaml": "2.5.1"
   },
   "scripts": {
     "build": "onlybuild",
