@@ -1,6 +1,6 @@
 ---
 title: Rendering Objects in Unity That Don't Exist
-subtitle: Recently I was exploring simple ways of animating entities in canvas and happened upon this trick with the jQuery animate method.
+subtitle: Learn how to renders hundreds or thousands of objects in Unity without using GameObjects.
 date: 06/27/2024
 ---
 
