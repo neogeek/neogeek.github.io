@@ -50,7 +50,8 @@ const getPosts = async () => {
 
         markdown = markdown
           .replace(/<pre>/g, '<copy-to-clipboard><pre>')
-          .replace(/<\/pre>/g, '</pre></copy-to-clipboard>');
+          .replace(/<\/pre>/g, '</pre></copy-to-clipboard>')
+          .replace(/<!\-\-.*\-\->/gs, '');
 
         return { path: parse(path).name, data, content, markdown };
       })
