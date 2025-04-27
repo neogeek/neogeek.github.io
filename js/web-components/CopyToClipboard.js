@@ -4,10 +4,10 @@
   const delayBeforeHidingCopyCheckmark = 1000;
 
   const styles = css`
-    @import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/github.min.css')
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/github.min.css')
     (prefers-color-scheme: light);
 
-    @import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/dracula.min.css')
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/dracula.min.css')
     (prefers-color-scheme: dark);
 
     div {
