@@ -1,6 +1,6 @@
 import { html } from 'onlybuild';
 
-import config from '../_data/config.json' assert { type: 'json' };
+import config from '../_data/config.json' with { type: 'json' };
 
 const header = ({ title, subtitle } = { title: '', subtitle: '' }) => html`
   <meta charset="utf-8" />
