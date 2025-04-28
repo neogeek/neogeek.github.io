@@ -8,13 +8,13 @@ import getModifiedDate from './get-modified-date.js';
 import calculateTimeToRead from './calc-ttr.js';
 import renderMarkdown from './render-markdown.js';
 
-const getPostPaths = async () => await globby(['./posts/*.md']);
+const getTalkPaths = async () => await globby(['./talks/**/*.md']);
 
-const getPosts = async () => {
-  const posts = (
+const getTalks = async () => {
+  const talks = (
     await Promise.all(
       (
-        await getPostPaths()
+        await getTalkPaths()
       ).map(async path => {
         let name = parse(path).name;
 
@@ -59,7 +59,7 @@ const getPosts = async () => {
           .replace(/<\/pre>/g, '</pre></copy-to-clipboard>')
           .replace(/<!\-\-.*\-\->/gs, '');
 
-        return { path: name, data, content, markdown };
+        return { path: `talks/${name}`, data, content, markdown };
       })
     )
   )
@@ -69,21 +69,7 @@ const getPosts = async () => {
         new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
     );
 
-  return posts;
+  return talks;
 };
 
-const getPostsByYear = async () => {
-  return (await getPosts()).reduce((years, post) => {
-    const date = new Date(post.data.date);
-
-    if (!years[date.getFullYear()]) {
-      years[date.getFullYear()] = [];
-    }
-
-    years[date.getFullYear()].push(post);
-
-    return years;
-  }, {});
-};
-
-export { getPostPaths, getPosts, getPostsByYear };
+export { getTalkPaths, getTalks };

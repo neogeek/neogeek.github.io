@@ -1,5 +1,5 @@
 import { writeFile } from 'node:fs/promises';
-import { dirname, join, parse } from 'node:path';
+import { dirname, join } from 'node:path';
 
 import { html } from 'onlybuild';
 
@@ -11,13 +11,15 @@ import head from './_includes/head.js';
 import header from './_includes/header.js';
 import footer from './_includes/footer.js';
 
-import config from './_data/config.json';
-import projects from './_data/projects.json';
+import config from './_data/config.json' with { type: 'json' };
+import projects from './_data/projects.json' with { type: 'json' };;
 
 import { getPosts, getPostsByYear } from './_utilities/posts.js';
+import { getTalks } from './_utilities/talks.js';
 
 const posts = await getPosts();
 const postsGroupedByYear = await getPostsByYear();
+const talks = await getTalks();
 
 await Promise.all(
   posts.map(async post => {
@@ -83,6 +85,50 @@ await Promise.all(
                     </div>`
                   : null}
               </nav>
+            </main>
+            <footer>${footer}</footer>
+          </body>
+        </html>`
+    );
+  })
+);
+
+await Promise.all(
+  talks.map(async talk => {
+    await writeFileAndMakeDir(
+      join('build', talk.path, 'index.html'),
+      html`<!DOCTYPE html>
+        <html lang="en">
+          <head>
+            ${head({
+              title: talk.data.title,
+              subtitle: talk.data.subtitle
+            })}
+          </head>
+          <body>
+            <div class="progress"></div>
+            <header>
+              <a href="/">← Home</a>
+            </header>
+            <main class="post">
+              <h1>${talk.data.title}</h1>
+              <p>
+                Published
+                <time datetime="${talk.data.date.toISOString()}"
+                  >${talk.data.dateString}</time
+                >
+                ${talk.data.dateString !== talk.data.lastModifiedDateString
+                  ? html`&#8226; Last Updated
+                      <time
+                        datetime="${new Date(
+                          talk.data.lastModifiedDateString
+                        ).toISOString()}"
+                        >${talk.data.lastModifiedDateString}</time
+                      >`
+                  : ''}
+                &#8226; ${talk.data.ttr}
+              </p>
+              ${talk.markdown}
             </main>
             <footer>${footer}</footer>
           </body>
