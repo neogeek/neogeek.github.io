@@ -820,8 +820,6 @@ int Screensaver::get_speed() { return speed; }
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log();
-
             currentSlide = parseNumberFromHash(
               entry.target.getAttribute('href')
             );
@@ -835,7 +833,7 @@ int Screensaver::get_speed() { return speed; }
         });
       },
       {
-        threshold: 0.2,
+        threshold: 1,
       }
     ).observe(slide);
   });
