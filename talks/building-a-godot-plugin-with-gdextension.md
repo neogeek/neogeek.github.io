@@ -793,9 +793,10 @@ int Screensaver::get_speed() { return speed; }
 
   const slides = Array.from(document.querySelectorAll('a[href^="#"][name]'));
 
+  const firstSlide = slides[0];
   const lastSlide = slides[slides.length - 1];
 
-  const minSlides = 0;
+  const minSlides = parseNumberFromHash(firstSlide.getAttribute('href'));
   const maxSlides = parseNumberFromHash(lastSlide.getAttribute('href'));
 
   let currentSlide = location.hash ? parseNumberFromHash(location.hash) : 0;
