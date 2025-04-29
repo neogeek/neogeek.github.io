@@ -28,6 +28,7 @@ a[href*="#"][name] img {
 }
 
 .instructions p {
+  margin: 0 1rem;
   display: inline-block;
 }
 
