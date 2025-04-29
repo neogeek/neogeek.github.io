@@ -632,6 +632,148 @@ int Screensaver::get_speed() { return speed; }
   <img src="/images/talks/building-a-godot-plugin-with-gdextension/slide-18.jpg" />
 </a>
 
+So far we have worked with primatives, but what if we wanted to send an array of values from godot to our plugin and run a calculation.
+
+Lets start with sending an array of integers to a method to add the values together.
+
+1. First start with adding the following to `include/mathf.hpp`:
+
+   ```cpp
+   #include <godot_cpp/classes/object.hpp>
+   #include <godot_cpp/variant/array.hpp>
+
+   using namespace godot;
+
+   auto sum(Array values) -> int
+   {
+       auto count = 0;
+
+       for (auto i = 0; i < values.size(); i += 1)
+       {
+           if (values[i].get_type() == Variant::INT)
+           {
+               int variant = values[i];
+
+               count += variant;
+           }
+       }
+
+       return count;
+   }
+   ```
+
+1. Add the following to `include/godot_cpp_plugin.hpp`
+
+   ```cpp
+   static int sum(const Array &values);
+   ```
+
+1. And then add the following to `include/godot_cpp_plugin.cpp`
+
+   ```cpp
+   void godot_cpp_plugin::_bind_methods()
+   {
+       ClassDB::bind_static_method("godot_cpp_plugin", D_METHOD("sum", "values"),
+                                   &godot_cpp_plugin::sum);
+   }
+
+   int godot_cpp_plugin::sum(const Array &values) { return Mathf::sum(values); }
+   ```
+
+1. And then use it in Godot with the following:
+
+   ```gdscript
+   var sum = godot_cpp_plugin.sum([1, 2, 3, 4, 5])
+
+   print(sum)
+   ```
+
+We can also take a dictionary of values and return a subset of the values based on a key.
+
+1. Create a new file `include/convert.hpp`
+
+   ```cpp
+   #pragma once
+
+   #include <string>
+   #include <vector>
+
+   #include <godot_cpp/classes/object.hpp>
+   #include <godot_cpp/variant/array.hpp>
+
+   using namespace godot;
+
+   namespace Convert
+   {
+
+   auto get_key_values(Array values, const String &key) -> Array
+   {
+       std::vector<std::string> urls;
+
+       for (auto i = 0; i < values.size(); i += 1)
+       {
+           if (values[i].get_type() == Variant::DICTIONARY)
+           {
+               Dictionary variant = values[i];
+
+               Array keys = variant.keys();
+
+               if (keys.has(key))
+               {
+                   String url = variant[key];
+
+                   urls.push_back(url.utf8().get_data());
+               }
+           }
+       }
+
+       Array godot_urls;
+
+       for (auto const &url : urls)
+       {
+           godot_urls.append(url.c_str());
+       }
+
+       return godot_urls;
+   }
+
+   } // namespace Convert
+   ```
+
+1. Add the following to `include/godot_cpp_plugin.hpp`
+
+   ```cpp
+   #include <godot_cpp/variant/array.hpp>
+
+   static Array get_key_values(const Array &values, const String &key);
+   ```
+
+1. And then add the following to `include/godot_cpp_plugin.cpp`
+
+   ```cpp
+   #include "convert.hpp"
+
+   void godot_cpp_plugin::_bind_methods()
+   {
+       ClassDB::bind_static_method("godot_cpp_plugin",
+                                   D_METHOD("get_key_values", "values", "key"),
+                                   &godot_cpp_plugin::get_key_values);
+   }
+
+   Array godot_cpp_plugin::get_key_values(const Array &values, const String &key)
+   {
+       return Convert::get_key_values(values, key);
+   }
+   ```
+
+1. And then use it in Godot with the following:
+
+   ```gdscript
+   var urls = godot_cpp_plugin.get_key_values([{"name": "Google", "url":"http://google.com"}], "url")
+
+   print(urls)
+   ```
+
 <a href="#19" name="19">
   <img src="/images/talks/building-a-godot-plugin-with-gdextension/slide-19.jpg" />
 </a>
