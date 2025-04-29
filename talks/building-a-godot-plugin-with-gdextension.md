@@ -13,24 +13,42 @@ a[href*="#"][name] {
 
 a[href*="#"][name] img {
   display: block;
-}
-
-img {
   border-radius: 0.5rem;
 }
 
+.instructions {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.instructions img {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.instructions p {
+  display: inline-block;
+}
+
 @media (prefers-color-scheme: light) {
-  img {
+  a[href*="#"][name] img {
     border: 0.35rem solid #4693FF;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  img {
+  a[href*="#"][name] img {
     border: 0.35rem solid #ffda1f;
   }
 }
 </style>
+
+<div class="instructions">
+  <img src="/images/talks/building-a-godot-plugin-with-gdextension/key_left.svg" />
+  <p>Use the left and right arrow keys to navigate the slides</p>
+  <img src="/images/talks/building-a-godot-plugin-with-gdextension/key_right.svg" />
+</div>
 
 <a href="#1" name="1">
   <img src="/images/talks/building-a-godot-plugin-with-gdextension/slide-1.jpg" />
