@@ -192,6 +192,12 @@ renderer/rendering_method.mobile="gl_compatibility"
    .sconsign.dblite
    ```
 
+1. Run scons in the root of your project:
+
+   ```bash
+   scons
+   ```
+
 <a href="#13" name="13">
   <img src="/images/talks/building-a-godot-plugin-with-gdextension/slide-13.jpg" />
 </a>
