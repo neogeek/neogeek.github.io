@@ -345,7 +345,7 @@ renderer/rendering_method.mobile="gl_compatibility"
 
 1. Update the `.gitignore` file to the following contents:
 
-   ```
+   ```text
    .scons_cache/
 
    .sconsign.dblite
