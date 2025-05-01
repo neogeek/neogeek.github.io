@@ -80,6 +80,12 @@ a[href*="#"][name] img {
 </a>
 
 1. Install [git](https://git-scm.com/)
+
+   ```bash
+   git config --global user.name "Your Name"
+   git config --global user.email "youremail@yourdomain.com"
+   ```
+
 1. Install [brew](https://brew.sh/)
 
    ```bash
@@ -106,6 +112,12 @@ a[href*="#"][name] img {
 </a>
 
 1. Install [git](https://git-scm.com/)
+
+   ```bash
+   git config --global user.name "Your Name"
+   git config --global user.email "youremail@yourdomain.com"
+   ```
+
 1. Install [python](http://python.org/) (and make sure to check off add to env variable)
 1. Install scons
 
@@ -124,6 +136,11 @@ a[href*="#"][name] img {
 
    ```bash
    sudo apt install git
+   ```
+
+   ```bash
+   git config --global user.name "Your Name"
+   git config --global user.email "youremail@yourdomain.com"
    ```
 
 1. Install python and scons
