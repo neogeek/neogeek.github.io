@@ -220,6 +220,16 @@ renderer/rendering_method.mobile="gl_compatibility"
   <img src="/images/talks/building-a-godot-plugin-with-gdextension/slide-13.jpg" />
 </a>
 
+1. Create `compile_flags.txt` with the following contents:
+
+   ```txt
+   -std=c++17
+   -Iinclude
+   -Igodot-cpp/gdextension
+   -Igodot-cpp/gen/include
+   -Igodot-cpp/include
+   ```
+
 1. Create `GodotCppPlugin.gdextension` with the following contents:
 
    ```toml
