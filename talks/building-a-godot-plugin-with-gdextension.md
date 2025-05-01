@@ -118,6 +118,7 @@ a[href*="#"][name] img {
    git config --global user.email "youremail@yourdomain.com"
    ```
 
+1. Install [Visual Studio](https://visualstudio.microsoft.com/vs/community/) (with Desktop development with C++)
 1. Install [python](http://python.org/) (and make sure to check off add to env variable)
 1. Install scons
 
