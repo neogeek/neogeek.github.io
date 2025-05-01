@@ -226,7 +226,7 @@ renderer/rendering_method.mobile="gl_compatibility"
    [configuration]
 
    entry_symbol = "godot_cpp_plugin_entry"
-   compatibility_minimum = 4.4
+   compatibility_minimum = 4.3
    reloadable = true
 
    [libraries]
