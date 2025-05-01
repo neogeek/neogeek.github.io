@@ -357,6 +357,10 @@ renderer/rendering_method.mobile="gl_compatibility"
 
 1. Run `scons` again to build the project with the new files.
 
+   ```bash
+   scons
+   ```
+
 <a href="#14" name="14">
   <img src="/images/talks/building-a-godot-plugin-with-gdextension/slide-14.jpg" />
 </a>
