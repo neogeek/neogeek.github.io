@@ -1023,7 +1023,7 @@ We can also take a dictionary of values and return a subset of the values based 
               entry.target.getAttribute('href')
             );
 
-            history.pushState(
+            history.replaceState(
               null,
               '',
               `${window.location.pathname}#${currentSlide}`
