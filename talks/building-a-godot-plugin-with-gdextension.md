@@ -603,6 +603,23 @@ renderer/rendering_method.mobile="gl_compatibility"
    }
    ```
 
+1. Finally, we let the plugin know that this new node exists by adding it to the `include/register_types.cpp` file:
+
+   ```cpp
+   #include "screensaver.hpp"
+
+   void initialize_godot_cpp_plugin(ModuleInitializationLevel p_level)
+   {
+       if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE)
+       {
+           return;
+       }
+
+       GDREGISTER_VIRTUAL_CLASS(godot_cpp_plugin);
+       GDREGISTER_RUNTIME_CLASS(Screensaver);
+   }
+   ```
+
 <a href="#16" name="16">
   <img src="/images/talks/building-a-godot-plugin-with-gdextension/slide-16.jpg" />
 </a>
