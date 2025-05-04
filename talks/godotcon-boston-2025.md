@@ -1,5 +1,5 @@
 ---
-title: GodotCon Boston 2025
+title: GodotCon Boston 2025 Wallpapers
 subtitle: Wallpapers I made for GodotCon Boston 2025
 date: 05/05/2025
 ---
