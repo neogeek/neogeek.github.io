@@ -996,6 +996,12 @@ We can also take a dictionary of values and return a subset of the values based 
   <img src="/images/talks/building-a-godot-plugin-with-gdextension/slide-20.jpg" />
 </a>
 
+### Additional Links
+
+- [Official Godot GDExtensions Documentation](https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/what_is_gdextension.html)
+- [Official Godot GDExtensions Template Repo](https://github.com/godotengine/godot-cpp-template)
+- [Wallpapers used during this talk](/talks/godotcon-boston-2025)
+
 <script>
 (() => {
   const parseNumberFromHash = (value) => {
