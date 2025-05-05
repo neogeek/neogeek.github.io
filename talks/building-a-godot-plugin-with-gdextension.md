@@ -786,6 +786,7 @@ Lets start with sending an array of integers to a method to add the values toget
    ```cpp
    void godot_cpp_plugin::_bind_methods()
    {
+       // Add this line to existing godot_cpp_plugin::_bind_methods method:
        ClassDB::bind_static_method("godot_cpp_plugin", D_METHOD("sum", "values"),
                                    &godot_cpp_plugin::sum);
    }
@@ -891,6 +892,7 @@ We can also take a dictionary of values and return a subset of the values based 
 
    void godot_cpp_plugin::_bind_methods()
    {
+       // Add this line to existing godot_cpp_plugin::_bind_methods method:
        ClassDB::bind_static_method("godot_cpp_plugin",
                                    D_METHOD("get_key_values", "values", "key"),
                                    &godot_cpp_plugin::get_key_values);
