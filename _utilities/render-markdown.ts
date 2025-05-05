@@ -13,7 +13,12 @@ const marked = new Marked(
     langPrefix: 'hljs language-',
     highlight(code, lang) {
       const language = hljs.getLanguage(lang) ? lang : 'plaintext';
-      return hljs.highlight(code, { language }).value;
+      return hljs.highlight(
+        ['gdscript', 'python'].includes(lang)
+          ? code.replace(/^( {2}|\t)/gm, '\t')
+          : code,
+        { language }
+      ).value;
     }
   }),
   markedHeaderIds()
