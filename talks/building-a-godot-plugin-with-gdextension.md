@@ -817,7 +817,7 @@ We can also take a dictionary of values and return a subset of the values based 
 
    auto get_key_values(Array values, const String &key) -> Array
    {
-       std::vector<std::string> urls;
+       std::vector<std::string> internalValues;
 
        for (auto i = 0; i < values.size(); i += 1)
        {
@@ -829,21 +829,21 @@ We can also take a dictionary of values and return a subset of the values based 
 
                if (keys.has(key))
                {
-                   String url = variant[key];
+                   String value = variant[key];
 
-                   urls.push_back(url.utf8().get_data());
+                   internalValues.push_back(value.utf8().get_data());
                }
            }
        }
 
-       Array godot_urls;
+       Array godot_values;
 
-       for (auto const &url : urls)
+       for (auto const &value : internalValues)
        {
-           godot_urls.append(url.c_str());
+           godot_values.append(value.c_str());
        }
 
-       return godot_urls;
+       return godot_values;
    }
 
    } // namespace Convert
