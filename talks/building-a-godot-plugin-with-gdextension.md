@@ -534,6 +534,8 @@ renderer/rendering_method.mobile="gl_compatibility"
 
 1. Next, create a matching header file (`include/screensaver.hpp`) and source file (`include/screensaver.cpp`) in your plugin repo:
 
+   **include/screensaver.hpp**
+
    ```cpp
    #pragma once
 
@@ -566,6 +568,8 @@ renderer/rendering_method.mobile="gl_compatibility"
 
    } // namespace godot
    ```
+
+   **include/screensaver.cpp**
 
    ```cpp
    #include "screensaver.hpp"
