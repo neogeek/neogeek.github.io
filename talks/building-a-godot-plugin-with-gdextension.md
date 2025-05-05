@@ -335,23 +335,23 @@ renderer/rendering_method.mobile="gl_compatibility"
    folder = "build/addons/GodotCppPlugin"
 
    if env["platform"] == "macos":
-       file_name = "libGodotCppPlugin.{}.{}".format(env["platform"], env["target"])
+     file_name = "libGodotCppPlugin.{}.{}".format(env["platform"], env["target"])
 
-       library = env.SharedLibrary(
-           "{}/{}.framework/{}".format(folder, file_name, file_name),
-           source=sources
-       )
+     library = env.SharedLibrary(
+       "{}/{}.framework/{}".format(folder, file_name, file_name),
+       source=sources
+     )
    else:
-       library = env.SharedLibrary(
-           "{}/libGodotCppPlugin{}{}"
-               .format(folder, env["suffix"], env["SHLIBSUFFIX"]),
-           source=sources,
-       )
+     library = env.SharedLibrary(
+       "{}/libGodotCppPlugin{}{}"
+         .format(folder, env["suffix"], env["SHLIBSUFFIX"]),
+       source=sources,
+     )
 
    gdextension_copy = env.Command(
-       target="{}/GodotCppPlugin.gdextension".format(folder),
-       source="GodotCppPlugin.gdextension",
-       action=Copy("$TARGET", "$SOURCE")
+     target="{}/GodotCppPlugin.gdextension".format(folder),
+     source="GodotCppPlugin.gdextension",
+     action=Copy("$TARGET", "$SOURCE")
    )
 
    env.Depends(gdextension_copy, library)

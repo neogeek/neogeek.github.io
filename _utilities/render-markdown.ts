@@ -15,7 +15,9 @@ const marked = new Marked(
       const language = hljs.getLanguage(lang) ? lang : 'plaintext';
       return hljs.highlight(
         ['gdscript', 'python'].includes(lang)
-          ? code.replace(/^( {2}|\t)/gm, '\t')
+          ? code.replace(/^( {2}|\t)+/gm, match => {
+              return '\t'.repeat(match.length / 2);
+            })
           : code,
         { language }
       ).value;
