@@ -238,6 +238,17 @@ renderer/rendering_method.mobile="gl_compatibility"
    -Igodot-cpp/include
    ```
 
+1. (Optional) Create `.clang-format` with the following contents:
+
+   ```txt
+   AllowShortBlocksOnASingleLine: Never
+   BreakBeforeBraces: Allman
+   IndentWidth: 4
+   PointerAlignment: Right
+   TabWidth: 4
+   UseTab: Never
+   ```
+
 1. Create `GodotCppPlugin.gdextension` with the following contents:
 
    ```toml
