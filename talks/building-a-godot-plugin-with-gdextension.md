@@ -173,6 +173,14 @@ renderer/rendering_method.mobile="gl_compatibility"
   <img src="/images/talks/building-a-godot-plugin-with-gdextension/slide-11.jpg" />
 </a>
 
+1. Create a directory and setup a git repo
+
+   ```bash
+   mkdir godot-cpp-plugin
+   cd godot-cpp-plugin/
+   git init
+   ```
+
 1. Add the `godotengine/godot-cpp` repo as a submodule with:
 
    ```bash
@@ -180,10 +188,10 @@ renderer/rendering_method.mobile="gl_compatibility"
    ```
 
 1. Go into the `godot-cpp/` directory.
-1. Checkout the Godot `4.3` release with:
+1. Checkout the Godot `4.4` release with:
 
    ```bash
-   git checkout godot-4.3-stable
+   git checkout godot-4.4-stable
    ```
 
 1. Commit changes.
@@ -236,7 +244,7 @@ renderer/rendering_method.mobile="gl_compatibility"
    [configuration]
 
    entry_symbol = "godot_cpp_plugin_entry"
-   compatibility_minimum = 4.3
+   compatibility_minimum = 4.4
    reloadable = true
 
    [libraries]
@@ -254,6 +262,8 @@ renderer/rendering_method.mobile="gl_compatibility"
 1. Create `include/register_types.hpp` with the following contents:
 
    ```cpp
+   #pragma once
+
    #include <godot_cpp/core/class_db.hpp>
 
    using namespace godot;
@@ -461,6 +471,7 @@ renderer/rendering_method.mobile="gl_compatibility"
            return;
        }
 
+       // Add this line to existing initialize_godot_cpp_plugin method:
        GDREGISTER_VIRTUAL_CLASS(godot_cpp_plugin);
    }
    ```
@@ -616,6 +627,8 @@ renderer/rendering_method.mobile="gl_compatibility"
        }
 
        GDREGISTER_VIRTUAL_CLASS(godot_cpp_plugin);
+
+       // Add this line to existing initialize_godot_cpp_plugin method:
        GDREGISTER_RUNTIME_CLASS(Screensaver);
    }
    ```
@@ -739,7 +752,29 @@ Lets start with sending an array of integers to a method to add the values toget
 1. Add the following to `include/godot_cpp_plugin.hpp`
 
    ```cpp
-   static int sum(const Array &values);
+   #pragma once
+
+   #include <godot_cpp/classes/object.hpp>
+   #include <godot_cpp/core/class_db.hpp>
+   #include <godot_cpp/variant/string.hpp>
+
+   using namespace godot;
+
+   class godot_cpp_plugin : public Object
+   {
+       GDCLASS(godot_cpp_plugin, Object)
+
+     protected:
+       static void _bind_methods();
+
+     public:
+       static float lerp(float a, float b, float t);
+
+       static float inverse_lerp(float a, float b, float v);
+
+       // Add the following new static method to the existing godot_cpp_plugin class:
+       static int sum(const Array &values);
+   };
    ```
 
 1. And then add the following to `include/godot_cpp_plugin.cpp`
@@ -817,9 +852,32 @@ We can also take a dictionary of values and return a subset of the values based 
 1. Add the following to `include/godot_cpp_plugin.hpp`
 
    ```cpp
+   #pragma once
+
+   #include <godot_cpp/classes/object.hpp>
+   #include <godot_cpp/core/class_db.hpp>
+   #include <godot_cpp/variant/string.hpp>
    #include <godot_cpp/variant/array.hpp>
 
-   static Array get_key_values(const Array &values, const String &key);
+   using namespace godot;
+
+   class godot_cpp_plugin : public Object
+   {
+       GDCLASS(godot_cpp_plugin, Object)
+
+     protected:
+       static void _bind_methods();
+
+     public:
+       static float lerp(float a, float b, float t);
+
+       static float inverse_lerp(float a, float b, float v);
+
+       static int sum(const Array &values);
+
+       // Add the following new static method to the existing godot_cpp_plugin class:
+       static Array get_key_values(const Array &values, const String &key);
+   };
    ```
 
 1. And then add the following to `include/godot_cpp_plugin.cpp`
@@ -1001,6 +1059,7 @@ We can also take a dictionary of values and return a subset of the values based 
 - [Official Godot GDExtensions Documentation](https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/what_is_gdextension.html)
 - [Official Godot GDExtensions Template Repo](https://github.com/godotengine/godot-cpp-template)
 - [Wallpapers used during this talk](/talks/godotcon-boston-2025)
+- [Slides from this talk (PDF)](/images/talks/building-a-godot-plugin-with-gdextension/Building%20a%20Godot%20Plugin%20with%20GDExtension.pdf)
 
 <script>
 (() => {
