@@ -12,7 +12,7 @@ import header from './_includes/header.js';
 import footer from './_includes/footer.js';
 
 import config from './_data/config.json' with { type: 'json' };
-import projects from './_data/projects.json' with { type: 'json' };;
+import projects from './_data/projects.json' with { type: 'json' };
 
 import { getPosts, getPostsByYear } from './_utilities/posts.js';
 import { getTalks } from './_utilities/talks.js';

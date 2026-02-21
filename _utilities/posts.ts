@@ -13,9 +13,7 @@ const getPostPaths = async () => await globby(['./posts/*.md']);
 const getPosts = async () => {
   const posts = (
     await Promise.all(
-      (
-        await getPostPaths()
-      ).map(async path => {
+      (await getPostPaths()).map(async path => {
         let name = parse(path).name;
 
         if (name === 'README') {

@@ -13,9 +13,7 @@ const getTalkPaths = async () => await globby(['./talks/**/*.md']);
 const getTalks = async () => {
   const talks = (
     await Promise.all(
-      (
-        await getTalkPaths()
-      ).map(async path => {
+      (await getTalkPaths()).map(async path => {
         let name = parse(path).name;
 
         if (name === 'README') {

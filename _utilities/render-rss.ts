@@ -1,6 +1,6 @@
 import { html } from 'onlybuild';
 
-import config from '../_data/config.json';
+import config from '../_data/config.json' with { type: 'json' };
 
 type configType = typeof config;
 
