@@ -74,7 +74,7 @@ a[href*="#"][name] img {
     <li><a href="https://github.com/CandyCoded">https://github.com/CandyCoded</a></li>
     <li><a href="https://github.com/HandcrankEngine/HandcrankEngine">https://github.com/HandcrankEngine/HandcrankEngine</a></li>
     <li><a href="https://github.com/neogeek/cards-against-undefined">https://github.com/neogeek/cards-against-undefined</a></li>
-    <li><a href="http://doxdox.org/">http://doxdox.org/</a></li>
+    <li><a href="https://doxdox.org/">https://doxdox.org/</a></li>
 </ul>
 
 <a href="#4" name="4">
