@@ -46,9 +46,9 @@ a[href*="#"][name] img {
 </style>
 
 <div class="instructions">
-  <img src="/images/talks/building-a-godot-plugin-with-gdextension/key_left.svg" />
+  <img src="/images/talks/key_left.svg" />
   <p>Use the left and right arrow keys to navigate the slides</p>
-  <img src="/images/talks/building-a-godot-plugin-with-gdextension/key_right.svg" />
+  <img src="/images/talks/key_right.svg" />
 </div>
 
 <a href="#1" name="1">
