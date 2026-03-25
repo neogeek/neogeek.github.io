@@ -289,11 +289,6 @@ a[href*="#"][name] img {
 	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-45.jpg" />
 </a>
 
-<ul>
-    <li><a href="https://store.steampowered.com/app/1817230/HiFi_RUSH/">https://store.steampowered.com/app/1817230/HiFi_RUSH/</a></li>
-    <li><a href="https://store.steampowered.com/app/247080/Crypt_of_the_NecroDancer/">https://store.steampowered.com/app/247080/Crypt_of_the_NecroDancer/</a></li>
-</ul>
-
 <a href="#46" name="46">
 	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-46.jpg" />
 </a>
@@ -310,18 +305,9 @@ a[href*="#"][name] img {
 	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-49.jpg" />
 </a>
 
-<ul>
-    <li><a href="https://github.com/rhythm-game-utilities/unity-example">https://github.com/rhythm-game-utilities/unity-example</a></li>
-    <li><a href="https://github.com/rhythm-game-utilities/godot-example">https://github.com/rhythm-game-utilities/godot-example</a></li>
-</ul>
-
 <a href="#50" name="50">
 	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-50.jpg" />
 </a>
-
-<ul>
-    <li><a href="https://github.com/rhythm-game-utilities/sdl-example">https://github.com/rhythm-game-utilities/sdl-example</a></li>
-</ul>
 
 <a href="#51" name="51">
 	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-51.jpg" />
@@ -333,6 +319,72 @@ a[href*="#"][name] img {
 
 <a href="#53" name="53">
 	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-53.jpg" />
+</a>
+
+<a href="#54" name="54">
+	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-54.jpg" />
+</a>
+
+<a href="#55" name="55">
+	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-55.jpg" />
+</a>
+
+<a href="#56" name="56">
+	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-56.jpg" />
+</a>
+
+<a href="#57" name="57">
+	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-57.jpg" />
+</a>
+
+<a href="#58" name="58">
+	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-58.jpg" />
+</a>
+
+<ul>
+    <li><a href="https://store.steampowered.com/app/1817230/HiFi_RUSH/">https://store.steampowered.com/app/1817230/HiFi_RUSH/</a></li>
+    <li><a href="https://store.steampowered.com/app/247080/Crypt_of_the_NecroDancer/">https://store.steampowered.com/app/247080/Crypt_of_the_NecroDancer/</a></li>
+</ul>
+
+<a href="#59" name="59">
+	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-59.jpg" />
+</a>
+
+<a href="#60" name="60">
+	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-60.jpg" />
+</a>
+
+<a href="#61" name="61">
+	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-61.jpg" />
+</a>
+
+<a href="#62" name="62">
+	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-62.jpg" />
+</a>
+
+<ul>
+    <li><a href="https://github.com/rhythm-game-utilities/unity-example">https://github.com/rhythm-game-utilities/unity-example</a></li>
+    <li><a href="https://github.com/rhythm-game-utilities/godot-example">https://github.com/rhythm-game-utilities/godot-example</a></li>
+</ul>
+
+<a href="#63" name="63">
+	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-63.jpg" />
+</a>
+
+<ul>
+    <li><a href="https://github.com/rhythm-game-utilities/sdl-example">https://github.com/rhythm-game-utilities/sdl-example</a></li>
+</ul>
+
+<a href="#64" name="64">
+	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-64.jpg" />
+</a>
+
+<a href="#65" name="65">
+	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-65.jpg" />
+</a>
+
+<a href="#66" name="66">
+	<img src="/images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/slide-66.jpg" />
 </a>
 
 <script src="/js/slides.js"></script>
