@@ -392,6 +392,7 @@ a[href*="#"][name] img {
 ### Additional Links
 
 - [Slides from this talk (PDF)](</images/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/How%20to%20Build%20a%20Rhythm%20Game%20in%20(Almost)%20Any%20Game%20Engine.pdf>)
+- [Slides from this talk (Godot)](https://github.com/neogeek/how-to-build-a-rhythm-game-talk)
 
 <!--
 magick -density 200 How\ to\ Build\ a\ Rhythm\ Game\ in\ \(Almost\)\ Any\ Game\ Engine.pdf  -quality 100 -crop 100%x100%-0-1 +repage -scene 1 slide.jpg
