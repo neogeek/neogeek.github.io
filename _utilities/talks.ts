@@ -1,14 +1,14 @@
 import { readFile } from 'node:fs/promises';
 import { parse, basename } from 'node:path';
 
-import { globby } from 'globby';
+import { findFiles } from 'onlybuild';
 
 import parseFrontMatter from './parse-front-matter.js';
 import getModifiedDate from './get-modified-date.js';
 import calculateTimeToRead from './calc-ttr.js';
 import renderMarkdown from './render-markdown.js';
 
-const getTalkPaths = async () => await globby(['./talks/**/*.md']);
+const getTalkPaths = async () => await findFiles(['./talks/**/*.md']);
 
 const getTalks = async () => {
   const talks = (

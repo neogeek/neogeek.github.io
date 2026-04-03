@@ -1,14 +1,14 @@
 import { readFile } from 'node:fs/promises';
 import { parse, basename } from 'node:path';
 
-import { globby } from 'globby';
+import { findFiles } from 'onlybuild';
 
 import parseFrontMatter from './parse-front-matter.js';
 import getModifiedDate from './get-modified-date.js';
 import calculateTimeToRead from './calc-ttr.js';
 import renderMarkdown from './render-markdown.js';
 
-const getPostPaths = async () => await globby(['./posts/*.md']);
+const getPostPaths = async () => await findFiles(['./posts/*.md']);
 
 const getPosts = async () => {
   const posts = (

@@ -3,7 +3,6 @@
   "type": "module",
   "devDependencies": {
     "@types/node": "25.5.0",
-    "globby": "16.2.0",
     "highlight.js": "11.11.1",
     "marked": "17.0.5",
     "marked-footnote": "1.4.0",
