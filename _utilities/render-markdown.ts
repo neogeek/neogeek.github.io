@@ -5,6 +5,8 @@ import { markedHighlight } from 'marked-highlight';
 
 import hljs from 'highlight.js';
 
+import '../js/thirdparty/highlight.js/gdscript.js';
+
 import markedHeaderIds from './marked-header-ids.js';
 
 const marked = new Marked(
