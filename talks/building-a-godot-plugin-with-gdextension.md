@@ -497,9 +497,9 @@ renderer/rendering_method.mobile="gl_compatibility"
    extends Node
 
    func _ready() -> void:
-       var value = godot_cpp_plugin.lerp(0, 10, 0.5)
+     var value = godot_cpp_plugin.lerp(0, 10, 0.5)
 
-       print(value) # 5.0
+     print(value) # 5.0
    ```
 
 <a href="#15" name="15">
