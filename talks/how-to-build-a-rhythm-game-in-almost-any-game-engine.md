@@ -45,6 +45,16 @@ a[href*="#"][name] img {
 }
 </style>
 
+<div class="video-container">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube-nocookie.com/embed/q1GLGHx4TFs"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</div>
+
 <div class="instructions">
   <img src="/images/talks/key_left.svg" />
   <p>Use the left and right arrow keys to navigate the slides</p>
