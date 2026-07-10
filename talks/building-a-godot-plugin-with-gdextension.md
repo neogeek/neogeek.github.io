@@ -1,5 +1,5 @@
 ---
-title: Building a Godot Plugin with GDExtension
+title: Building a Godot Plugin with GDExtension (2025)
 subtitle: The outline of a workshop given at GodotCon 2025 in Boston, MA
 date: 05/05/2025
 ---
