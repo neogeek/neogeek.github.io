@@ -188,10 +188,10 @@ renderer/rendering_method.mobile="gl_compatibility"
    ```
 
 1. Go into the `godot-cpp/` directory.
-1. Checkout the Godot `4.4` release with:
+1. Checkout the Godot `4.3` release with:
 
    ```bash
-   git checkout godot-4.4-stable
+   git checkout godot-4.3-stable
    ```
 
 1. Commit changes.
@@ -255,7 +255,7 @@ renderer/rendering_method.mobile="gl_compatibility"
    [configuration]
 
    entry_symbol = "godot_cpp_plugin_entry"
-   compatibility_minimum = 4.4
+   compatibility_minimum = 4.3
    reloadable = true
 
    [libraries]
