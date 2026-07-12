@@ -13,7 +13,8 @@
   "scripts": {
     "build": "onlybuild",
     "watch": "NODE_ENV=development npx nodemon --ext \"*.*\" --ignore ./build -x \"npm run build\"",
-    "serve": "npx http-server ./build -o"
+    "serve": "npx http-server ./build -o",
+    "dev": "npx concurrently \"npm run watch\" \"npm run serve\""
   },
   "private": true
 }
