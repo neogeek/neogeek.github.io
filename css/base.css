@@ -142,6 +142,16 @@ blockquote > p {
   padding: 1rem 1.5rem;
 }
 
+details {
+  margin: 2rem 1rem;
+}
+
+details summary {
+  padding: 1rem;
+  color: var(--details-summary-foreground-color);
+  background-color: var(--details-summary-background-color);
+}
+
 hr {
   margin: 4rem auto;
   border: 0;
