@@ -33,19 +33,22 @@ const getPosts = async () => {
 
           data.date = date;
 
+          data.modified = await getModifiedDate(path);
+
           data.dateString = date.toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
           });
 
-          data.lastModifiedDateString = (
-            await getModifiedDate(path)
-          ).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          });
+          data.lastModifiedDateString = data.modified.toLocaleDateString(
+            'en-US',
+            {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            }
+          );
 
           data.ttr = calculateTimeToRead(content).toString();
         }
