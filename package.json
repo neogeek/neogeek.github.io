@@ -2,9 +2,9 @@
   "name": "neogeek.dev",
   "type": "module",
   "devDependencies": {
-    "@types/node": "25.5.0",
+    "@types/node": "26.1.1",
     "highlight.js": "11.11.1",
-    "marked": "18.0.5",
+    "marked": "18.0.6",
     "marked-footnote": "1.4.0",
     "marked-highlight": "2.2.4",
     "onlybuild": "2.2.0",
