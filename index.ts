@@ -52,12 +52,10 @@ await Promise.all(
                 <time datetime="${post.data.date.toISOString()}"
                   >${post.data.dateString}</time
                 >
-                ${post.data.dateString !== post.data.lastModifiedDateString
+                ${post.data.modified > post.data.date &&
+                post.data.dateString !== post.data.lastModifiedDateString
                   ? html`&#8226; Last Updated
-                      <time
-                        datetime="${new Date(
-                          post.data.lastModifiedDateString
-                        ).toISOString()}"
+                      <time datetime="${post.data.modified.toISOString()}"
                         >${post.data.lastModifiedDateString}</time
                       >`
                   : ''}
@@ -117,12 +115,10 @@ await Promise.all(
                 <time datetime="${talk.data.date.toISOString()}"
                   >${talk.data.dateString}</time
                 >
-                ${talk.data.dateString !== talk.data.lastModifiedDateString
+                ${talk.data.modified > talk.data.date &&
+                talk.data.dateString !== talk.data.lastModifiedDateString
                   ? html`&#8226; Last Updated
-                      <time
-                        datetime="${new Date(
-                          talk.data.lastModifiedDateString
-                        ).toISOString()}"
+                      <time datetime="${talk.data.modified.toISOString()}"
                         >${talk.data.lastModifiedDateString}</time
                       >`
                   : ''}
