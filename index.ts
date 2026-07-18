@@ -126,7 +126,6 @@ await Promise.all(
                         >${talk.data.lastModifiedDateString}</time
                       >`
                   : ''}
-                &#8226; ${talk.data.ttr}
               </p>
               ${talk.markdown}
             </main>
