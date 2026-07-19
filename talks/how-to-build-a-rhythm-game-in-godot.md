@@ -691,7 +691,7 @@ func _input(_event: InputEvent) -> void:
 		note_hit.emit(accuracy, accuracy_ratio)
 ```
 
-3. Create a new script for handling the rendering and updating of UI:
+3. Create a new script for handling the rendering and updating of the score UI:
 
 ```gdscript
 extends Node
@@ -728,8 +728,11 @@ func _on_handle_input_note_missed() -> void:
 	update_ui(_score, _multiplier, "Miss")
 ```
 
-4. Create a new node and attach that UI update script to it.
-5. Add UI to the scene with this structure (or similar):
+4. Select the node with the input handling script attached to it and switch to the **Signals** tab in the inspector.
+5. Connect `note_hit(accuracy: int, accuracy_ratio: float)` to `_on_handle_input_note_hit(accuracy: int, accuracy_ratio: float)` on the UI update script.
+6. Connect `note_missed()` to `_on_handle_input_note_missed()` on the UI update script.
+7. Create a new node and attach that UI update script to it.
+8. Add UI to the scene with this structure (or similar):
    - Control
      - MarginContainer
        - PanelContainer
@@ -738,10 +741,7 @@ func _on_handle_input_note_missed() -> void:
              - Label (Score)
              - Label (Multiplier)
              - Label (Accuracy)
-6. Then connect the labels to the UI update script.
-7. Select the node with the input handling script attached to it and switch to the **Signals** tab in the inspector.
-8. Connect `note_hit(accuracy: int, accuracy_ratio: float)` to `_on_handle_input_note_hit(accuracy: int, accuracy_ratio: float)` on the UI update script.
-9. Connect `note_missed()` to `_on_handle_input_note_missed()` on the UI update script.
+9. Then connect the labels to the UI update script.
 
 <script src="/js/slides.js"></script>
 
