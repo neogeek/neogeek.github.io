@@ -104,17 +104,17 @@ a[href*="#"][name] img {
   <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-11.jpg" />
 </a>
 
+1. Moonscraper-Chart-Editor <a href="https://github.com/FireFox2000000/Moonscraper-Chart-Editor">https://github.com/FireFox2000000/Moonscraper-Chart-Editor</a>
+
 <a href="#12" name="12">
   <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-12.jpg" />
 </a>
 
-1. Moonscraper-Chart-Editor <a href="https://github.com/FireFox2000000/Moonscraper-Chart-Editor">https://github.com/FireFox2000000/Moonscraper-Chart-Editor</a>
+1. signal <a href="https://signalmidi.app/">https://signalmidi.app/</a>
 
 <a href="#13" name="13">
   <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-13.jpg" />
 </a>
-
-1. signal <a href="https://signalmidi.app/">https://signalmidi.app/</a>
 
 <a href="#14" name="14">
   <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-14.jpg" />
