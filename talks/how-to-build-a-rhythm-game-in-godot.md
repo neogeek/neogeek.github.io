@@ -82,12 +82,66 @@ a[href*="#"][name] img {
   <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-6.jpg" />
 </a>
 
+1. Rhythm Game Utilities <a href="https://rhythmgameutilities.com/">https://rhythmgameutilities.com/</a>
+
 <a href="#7" name="7">
   <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-7.jpg" />
 </a>
 
 <a href="#8" name="8">
   <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-8.jpg" />
+</a>
+
+<a href="#9" name="9">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-9.jpg" />
+</a>
+
+<a href="#10" name="10">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-10.jpg" />
+</a>
+
+1. Moonscraper-Chart-Editor <a href="https://github.com/FireFox2000000/Moonscraper-Chart-Editor">https://github.com/FireFox2000000/Moonscraper-Chart-Editor</a>
+
+<a href="#11" name="11">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-11.jpg" />
+</a>
+
+1. signal <a href="https://signalmidi.app/">https://signalmidi.app/</a>
+
+<a href="#12" name="12">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-12.jpg" />
+</a>
+
+<a href="#13" name="13">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-13.jpg" />
+</a>
+
+<a href="#14" name="14">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-14.jpg" />
+</a>
+
+<a href="#15" name="15">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-15.jpg" />
+</a>
+
+<a href="#16" name="16">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-16.jpg" />
+</a>
+
+<a href="#17" name="17">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-17.jpg" />
+</a>
+
+<a href="#18" name="18">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-18.jpg" />
+</a>
+
+<a href="#19" name="19">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-19.jpg" />
+</a>
+
+<a href="#20" name="20">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-20.jpg" />
 </a>
 
 ## Setup the project
@@ -742,6 +796,14 @@ func _on_handle_input_note_missed() -> void:
              - Label (Multiplier)
              - Label (Accuracy)
 9. Then connect the labels to the UI update script.
+
+<a href="#21" name="21">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-21.jpg" />
+</a>
+
+<a href="#22" name="22">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-22.jpg" />
+</a>
 
 <script src="/js/slides.js"></script>
 
