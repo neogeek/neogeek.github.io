@@ -148,10 +148,6 @@ a[href*="#"][name] img {
   <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-21.jpg" />
 </a>
 
-<a href="#22" name="22">
-  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-22.jpg" />
-</a>
-
 ## Setup the project
 
 > ⚠️ **Note:** Remember to commit after each major step so you can easily recover if issues occur.
@@ -805,12 +801,12 @@ func _on_handle_input_note_missed() -> void:
              - Label (Accuracy)
 9. Then connect the labels to the UI update script.
 
-<a href="#23" name="23">
-  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-23.jpg" />
+<a href="#22" name="22">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-22.jpg" />
 </a>
 
-<a href="#24" name="24">
-  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-24.jpg" />
+<a href="#23" name="23">
+  <img src="/images/talks/how-to-build-a-rhythm-game-in-godot/slide-23.jpg" />
 </a>
 
 <script src="/js/slides.js"></script>
