@@ -43,6 +43,7 @@
       border-radius: 0.25rem;
       opacity: 0;
       right: calc(100% + 1rem);
+      user-select: none;
     }
 
     button.copied span {
