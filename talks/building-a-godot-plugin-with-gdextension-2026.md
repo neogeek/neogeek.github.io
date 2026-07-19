@@ -1088,7 +1088,8 @@ We can also take a dictionary of values and return a subset of the values based 
              path: artifacts/
 
          - name: Sign and notarize generated files (macOS)
-           env:
+           uses: neogeek/sign-and-notarize@v1.1.2
+           with:
              APPLE_ID: ${{ secrets.APPLE_ID }}
              APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
              APPLE_DEVELOPER_NAME: ${{ secrets.APPLE_DEVELOPER_NAME }}
@@ -1096,8 +1097,7 @@ We can also take a dictionary of values and return a subset of the values based 
              MACOS_CERTIFICATE: ${{ secrets.MACOS_CERTIFICATE }}
              MACOS_CERTIFICATE_PWD: ${{ secrets.MACOS_CERTIFICATE_PWD }}
              MACOS_KEYCHAIN_PASSWORD: ${{ secrets.MACOS_KEYCHAIN_PASSWORD }}
-           run: |
-             ./bin/mac_sign_and_notarize.sh artifacts/addons/RhythmGameUtilities/
+             FRAMEWORK_PATH: 'artifacts/addons/RhythmGameUtilities/libRhythmGameUtilities.macos.template_debug.framework'
 
          - name: Upload build artifacts
            uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
