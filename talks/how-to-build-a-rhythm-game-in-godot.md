@@ -156,9 +156,9 @@ gdscript/warnings/confusable_capture_reassignment=2
 1. Switch to the 3D view
 1. Add the sun and the environment to the scene
 1. Add a `Camera3D` node to the scene
-1. Add an `AudioStreamPlayer` node to the scene
 1. Move the camera to `0.0, 10.0, 3.5`
 1. Rotate the camera to `-45.0, 0.0, 0.0`
+1. Add an `AudioStreamPlayer` node to the scene
 1. Save the scene
 
 ## Import the models
