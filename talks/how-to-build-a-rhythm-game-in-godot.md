@@ -747,8 +747,7 @@ func _on_handle_input_note_missed() -> void:
 
 ### Additional Links
 
-- [Official Godot GDExtensions Documentation](https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/what_is_gdextension.html)
-- [Official Godot GDExtensions Template Repo](https://github.com/godotengine/godot-cpp-template)
+- [Rhythm Game Utilities Godot Example](https://github.com/rhythm-game-utilities/godot-example)
 - [Slides from this talk (PDF)](/images/talks/how-to-build-a-rhythm-game-in-godot/How%20to%20Build%20a%20Rhythm%20Game%20in%20Godot.pdf)
 - [Rendering Objects in Godot That Don't Exist](/rendering-objects-in-godot-that-dont-exist/) - Blog Post
 
