@@ -238,7 +238,7 @@ func _load_song() -> void:
 
 ## Create the song resource asset
 
-1. Right click in the **FileSystem` panel and select **Create New > Resource\*\*.
+1. Right click in the **FileSystem** panel and select **Create New > Resource**.
 1. Find `SongResource` and hit **Create**
 1. Give it a name and save it next to your song assets
 1. Select the newly created resource assets and drag the `.mp3` file into the **Audio Stream** property.
