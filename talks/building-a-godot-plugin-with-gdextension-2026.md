@@ -931,12 +931,6 @@ We can also take a dictionary of values and return a subset of the values based 
   <img src="/images/talks/building-a-godot-plugin-with-gdextension-2026/slide-19.jpg" />
 </a>
 
--- add content --
-
-<a href="#20" name="20">
-  <img src="/images/talks/building-a-godot-plugin-with-gdextension-2026/slide-20.jpg" />
-</a>
-
 1. Create `.github/workflows/build.workflow.yml` in your repo and push the changes. Go to the Actions tab and find the `Build Godot Plugin` item in the sidebar. Click **Run Workflow**. This can take up to a half hour the first time, and 3 - 5 minutes on subsequent builds.
 
    ```yaml
@@ -1117,12 +1111,12 @@ We can also take a dictionary of values and return a subset of the values based 
        needs: [build-plugin, sign-and-notarize]
    ```
 
-<a href="#21" name="21">
-  <img src="/images/talks/building-a-godot-plugin-with-gdextension-2026/slide-21.jpg" />
+<a href="#20" name="20">
+  <img src="/images/talks/building-a-godot-plugin-with-gdextension-2026/slide-20.jpg" />
 </a>
 
-<a href="#22" name="22">
-  <img src="/images/talks/building-a-godot-plugin-with-gdextension-2026/slide-22.jpg" />
+<a href="#21" name="21">
+  <img src="/images/talks/building-a-godot-plugin-with-gdextension-2026/slide-21.jpg" />
 </a>
 
 ### Additional Links
