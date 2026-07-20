@@ -774,7 +774,7 @@ func update_ui(score: int, multiplier: float, accuracy: String) -> void:
 	accuracy_label.visible = not accuracy.is_empty()
 
 func _on_handle_input_note_hit(accuracy: int, accuracy_ratio: float) -> void:
-	_score += lerp(_score_min_increment, _score_max_increment, abs(accuracy_ratio)) * floor(_multiplier)
+	_score += lerp(_score_max_increment, _score_min_increment, abs(accuracy_ratio)) * floor(_multiplier)
 	_multiplier += _multiplier_increment
 
 	var accuracy_label_value: String = _accuracy_labels[accuracy - 1]
