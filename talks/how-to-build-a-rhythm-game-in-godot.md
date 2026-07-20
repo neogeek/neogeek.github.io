@@ -498,7 +498,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	var tick_offset := rhythm_game_utilities.convert_seconds_to_ticks(
 		audio_stream_player.get_playback_position(), song.song_data.resolution,
-        song.song_data.tempo_changes
+    song.song_data.tempo_changes
 	)
 
 	for i in song.song_data.beat_bars.size():
